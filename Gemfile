@@ -39,6 +39,8 @@ gem 'delayed_job'
 gem 'delayed_job_active_record'
 gem 'daemons'
 
+gem 'turbolinks'
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'byebug'
