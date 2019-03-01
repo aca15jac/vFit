@@ -37,7 +37,6 @@ gem 'cancancan'
 gem 'whenever'
 gem 'delayed_job'
 gem 'delayed_job_active_record'
-gem 'delayed-plugins-airbrake'
 gem 'daemons'
 
 group :development, :test do
