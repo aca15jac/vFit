@@ -4,7 +4,7 @@ development: &defaults
   host: epi-stu-gen-dbs1-pg.shef.ac.uk
   username: aca15jac
   password: '47ab24f2599aaf320b282cd8d720a345'
-  database: aca15jac_dev1
+  database: aca15jac_dev5
 
 test:
   <<: *defaults

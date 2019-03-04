@@ -8,7 +8,6 @@ gem 'thin'
 
 gem 'sqlite3', '~> 1.3.6', group: [:development, :test]
 gem 'pg'
-gem 'airbrake'
 
 gem 'haml-rails'
 gem 'sass-rails'
