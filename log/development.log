@@ -1499,3 +1499,167 @@ Processing by HomepageController#home as HTML
 Completed 200 OK in 44ms (Views: 43.1ms | ActiveRecord: 0.0ms)
 
 
+  [1m[35m (19.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(389766739450324740)[0m
+  ↳ bin/rails:9
+  [1m[35m (19.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateUsers (20190311214409)
+  [1m[35m (18.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (52.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190311214409_devise_create_users.rb:5
+  [1m[35m (23.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20190311214409_devise_create_users.rb:39
+  [1m[35m (38.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/migrate/20190311214409_devise_create_users.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (21.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190311214409"]]
+  ↳ bin/rails:9
+  [1m[35m (22.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (19.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (19.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (18.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (18.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(389766739450324740)[0m
+  ↳ bin/rails:9
+  [1m[35m (18.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (19.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (20.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "jacotcher1@sheffield.ac.uk"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (17.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Exists (16.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jacotcher1@sheffield.ac.uk"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (17.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:9
+Started GET "/" for 127.0.0.1 at 2019-03-11 22:11:54 +0000
+  [1m[35m (18.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Processing by HomepageController#home as HTML
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-03-11 22:11:54 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/james/.rvm/gems/ruby-2.4.4/gems/devise-4.6.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/james/.rvm/gems/ruby-2.4.4/gems/devise-4.6.1/app/views/devise/shared/_links.html.erb (1.4ms)
+  Rendered /home/james/.rvm/gems/ruby-2.4.4/gems/devise-4.6.1/app/views/devise/sessions/new.html.erb within layouts/application (28.7ms)
+Completed 200 OK in 504ms (Views: 425.4ms | ActiveRecord: 59.6ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-03-11 22:12:01 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GTGopl3086Hr0mAIvtkYUZ5MNbLyI3+G0v4bFujWlROBMdO1NLvuRGrfiH8oLcyUpE33UkI75t8X1Et4uXZ9hw==", "user"=>{"email"=>"jacotcher1@sheffield.ac.uk", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (20.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "jacotcher1@sheffield.ac.uk"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+Completed 401 Unauthorized in 24ms (ActiveRecord: 20.8ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GTGopl3086Hr0mAIvtkYUZ5MNbLyI3+G0v4bFujWlROBMdO1NLvuRGrfiH8oLcyUpE33UkI75t8X1Et4uXZ9hw==", "user"=>{"email"=>"jacotcher1@sheffield.ac.uk", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering /home/james/.rvm/gems/ruby-2.4.4/gems/devise-4.6.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/james/.rvm/gems/ruby-2.4.4/gems/devise-4.6.1/app/views/devise/shared/_links.html.erb (0.7ms)
+  Rendered /home/james/.rvm/gems/ruby-2.4.4/gems/devise-4.6.1/app/views/devise/sessions/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 142ms (Views: 26.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-03-11 22:12:10 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fub09siWh60hh4S/NVVpf4k5EGFuGHX2jERD6tcdMcHm5o/lodmaSKCKbMijob26szjSgd4A7K9JbhOEhr3ZVQ==", "user"=>{"email"=>"jacotcher1@sheffield.ac.uk", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (17.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "jacotcher1@sheffield.ac.uk"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+Completed 401 Unauthorized in 20ms (ActiveRecord: 17.9ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fub09siWh60hh4S/NVVpf4k5EGFuGHX2jERD6tcdMcHm5o/lodmaSKCKbMijob26szjSgd4A7K9JbhOEhr3ZVQ==", "user"=>{"email"=>"jacotcher1@sheffield.ac.uk", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering /home/james/.rvm/gems/ruby-2.4.4/gems/devise-4.6.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/james/.rvm/gems/ruby-2.4.4/gems/devise-4.6.1/app/views/devise/shared/_links.html.erb (0.7ms)
+  Rendered /home/james/.rvm/gems/ruby-2.4.4/gems/devise-4.6.1/app/views/devise/sessions/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 144ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-03-11 22:12:25 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4cUmLDwzSoxZfNypnXr2TFXReBn9cLyMy68D8beOb5R5xV0/VXxXadhxNN4LjiKJb9C6+U1oJdUOhVOf5i6HAA==", "user"=>{"email"=>"jacotcher1@sheffield.ac.uk", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (20.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "jacotcher1@sheffield.ac.uk"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+Completed 401 Unauthorized in 23ms (ActiveRecord: 20.9ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4cUmLDwzSoxZfNypnXr2TFXReBn9cLyMy68D8beOb5R5xV0/VXxXadhxNN4LjiKJb9C6+U1oJdUOhVOf5i6HAA==", "user"=>{"email"=>"jacotcher1@sheffield.ac.uk", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  Rendering /home/james/.rvm/gems/ruby-2.4.4/gems/devise-4.6.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/james/.rvm/gems/ruby-2.4.4/gems/devise-4.6.1/app/views/devise/shared/_links.html.erb (0.6ms)
+  Rendered /home/james/.rvm/gems/ruby-2.4.4/gems/devise-4.6.1/app/views/devise/sessions/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 147ms (Views: 25.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-11 22:12:27 +0000
+Processing by HomepageController#home as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-03-11 22:12:27 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/james/.rvm/gems/ruby-2.4.4/gems/devise-4.6.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/james/.rvm/gems/ruby-2.4.4/gems/devise-4.6.1/app/views/devise/shared/_links.html.erb (0.7ms)
+  Rendered /home/james/.rvm/gems/ruby-2.4.4/gems/devise-4.6.1/app/views/devise/sessions/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 27ms (Views: 26.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-03-11 22:12:29 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i3NNY6eIPKin0o6BmMbWMDWUOPdndPEt7LkE44QkshQTczZwzschTSbfZvYOMgL1D5X6F9dsaHQpk1SN1YRagA==", "user"=>{"email"=>"jacotcher1@sheffield.ac.uk", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (16.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "jacotcher1@sheffield.ac.uk"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+Completed 401 Unauthorized in 19ms (ActiveRecord: 16.9ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i3NNY6eIPKin0o6BmMbWMDWUOPdndPEt7LkE44QkshQTczZwzschTSbfZvYOMgL1D5X6F9dsaHQpk1SN1YRagA==", "user"=>{"email"=>"jacotcher1@sheffield.ac.uk", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering /home/james/.rvm/gems/ruby-2.4.4/gems/devise-4.6.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/james/.rvm/gems/ruby-2.4.4/gems/devise-4.6.1/app/views/devise/shared/_links.html.erb (0.7ms)
+  Rendered /home/james/.rvm/gems/ruby-2.4.4/gems/devise-4.6.1/app/views/devise/sessions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 158ms (Views: 30.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-03-11 22:12:31 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /home/james/.rvm/gems/ruby-2.4.4/gems/devise-4.6.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /home/james/.rvm/gems/ruby-2.4.4/gems/devise-4.6.1/app/views/devise/shared/_error_messages.html.erb (0.8ms)
+  Rendered /home/james/.rvm/gems/ruby-2.4.4/gems/devise-4.6.1/app/views/devise/shared/_links.html.erb (1.5ms)
+  Rendered /home/james/.rvm/gems/ruby-2.4.4/gems/devise-4.6.1/app/views/devise/registrations/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 42ms (Views: 40.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-03-11 22:12:43 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bneKYE/c2QVRHVvGRAtMGRRJACKucCLcHKNsMAwGjzkNfZ9BJU6LLMfbpycgVCmP0WvYJTeo6nSbMBDd4IaISQ==", "user"=>{"email"=>"jamiecotcher@yahoo.co.uk", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (17.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mUser Exists (17.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jamiecotcher@yahoo.co.uk"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[36mUser Create (22.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "jamiecotcher@yahoo.co.uk"], ["encrypted_password", "$2a$11$QJlAFJ8TzYIRD8nr7Cj1YORrxYpcvEykSuGN3aJ4qw01MoZ6dOpR2"], ["created_at", "2019-03-11 22:12:43.360494"], ["updated_at", "2019-03-11 22:12:43.360494"]]
+  ↳ bin/rails:9
+  [1m[35m (19.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Redirected to http://localhost:3000/
+Completed 302 Found in 315ms (ActiveRecord: 76.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-11 22:12:43 +0000
+Processing by HomepageController#home as HTML
+  [1m[36mUser Load (18.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering homepage/home.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (4.2ms)
+  Rendered layouts/_footer.html.haml (6.7ms)
+  Rendered homepage/home.html.haml within layouts/application (18.7ms)
+Completed 200 OK in 76ms (Views: 49.6ms | ActiveRecord: 18.1ms)
+
+
