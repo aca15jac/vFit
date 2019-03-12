@@ -1,0 +1,6 @@
+= render 'layouts/header'
+
+%p You are successfully logged in as #{@user.email}
+= link_to('Logout', destroy_user_session_path, method: :delete)
+
+= render 'layouts/footer'
