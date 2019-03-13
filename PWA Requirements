@@ -1,0 +1,5 @@
+Needs to be served over https
+
+Web App Manifest - a text file with application metadata to support home screen installation
+
+Service worker - client-side JS worker that can intercept network requests, modify responses, interact with local cahes, sync data in the background, and enable push notifications

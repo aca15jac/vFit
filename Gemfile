@@ -14,6 +14,8 @@ gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
 
+gem 'serviceworker-rails'
+
 gem 'jquery-rails'
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'
