@@ -4248,3 +4248,297 @@ Completed 200 OK in 368ms (Views: 260.1ms | ActiveRecord: 79.2ms)
 
 
 Started GET "/serviceworker.js" for 127.0.0.1 at 2019-03-13 14:08:53 +0000
+  [1m[35m (26.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/james/.rvm/gems/ruby-2.4.4/bin/annotate:23
+Started GET "/" for 127.0.0.1 at 2019-03-26 16:37:07 +0000
+  [1m[35m (22.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.1) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+request_store (1.4.1) lib/request_store/middleware.rb:19:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+rack (2.0.6) lib/rack/handler/thin.rb:22:in `run'
+rack (2.0.6) lib/rack/server.rb:297:in `start'
+railties (5.2.1) lib/rails/commands/server/server_command.rb:53:in `start'
+railties (5.2.1) lib/rails/commands/server/server_command.rb:147:in `block in perform'
+railties (5.2.1) lib/rails/commands/server/server_command.rb:142:in `tap'
+railties (5.2.1) lib/rails/commands/server/server_command.rb:142:in `perform'
+thor (0.20.3) lib/thor/command.rb:27:in `run'
+thor (0.20.3) lib/thor/invocation.rb:126:in `invoke_command'
+thor (0.20.3) lib/thor.rb:387:in `dispatch'
+railties (5.2.1) lib/rails/command/base.rb:65:in `perform'
+railties (5.2.1) lib/rails/command.rb:46:in `invoke'
+railties (5.2.1) lib/rails/commands.rb:18:in `<top (required)>'
+bin/rails:9:in `require'
+bin/rails:9:in `<top (required)>'
+spring (2.0.2) lib/spring/client/rails.rb:28:in `load'
+spring (2.0.2) lib/spring/client/rails.rb:28:in `call'
+spring (2.0.2) lib/spring/client/command.rb:7:in `call'
+spring (2.0.2) lib/spring/client.rb:30:in `run'
+spring (2.0.2) bin/spring:49:in `<top (required)>'
+spring (2.0.2) lib/spring/binstub.rb:31:in `load'
+spring (2.0.2) lib/spring/binstub.rb:31:in `<top (required)>'
+bin/spring:15:in `require'
+bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
+  [1m[35m (55.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(389766739450324740)[0m
+  ↳ bin/rails:9
+  [1m[35m (27.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateExercises (20190326163146)
+  [1m[35m (30.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (87.1ms)[0m  [1m[35mCREATE TABLE "exercises" ("id" bigserial primary key, "exercise_name" character varying, "muscle_type_1" character varying, "muscle_type_2" character varying, "muscle_type_3" character varying, "description" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190326163146_create_exercises.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (25.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190326163146"]]
+  ↳ bin/rails:9
+  [1m[35m (33.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (98.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (46.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (79.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (24.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(389766739450324740)[0m
+  ↳ bin/rails:9
+  [1m[35m (73.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2019-03-26 16:37:36 +0000
+  [1m[35m (23.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Processing by HomepageController#home as HTML
+Completed 401 Unauthorized in 26ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-03-26 16:37:42 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (217.8ms)
+Completed 200 OK in 1841ms (Views: 1597.5ms | ActiveRecord: 195.1ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-03-26 16:37:44 +0000
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-03-26 16:37:45 +0000
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-03-26 16:37:54 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 43ms (Views: 41.5ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (30.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(389766739450324740)[0m
+  ↳ bin/rails:9
+  [1m[35m (30.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddFirstNameToUsers (20190326170430)
+  [1m[35m (19.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (20.8ms)[0m  [1m[35mALTER TABLE "users" ADD "first_name" character varying[0m
+  ↳ db/migrate/20190326170430_add_first_name_to_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (19.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190326170430"]]
+  ↳ bin/rails:9
+  [1m[35m (20.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddLastNameToUsers (20190326170458)
+  [1m[35m (25.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (21.4ms)[0m  [1m[35mALTER TABLE "users" ADD "last_name" character varying[0m
+  ↳ db/migrate/20190326170458_add_last_name_to_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (28.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190326170458"]]
+  ↳ bin/rails:9
+  [1m[35m (20.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddGenderToUsers (20190326170506)
+  [1m[35m (22.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (19.3ms)[0m  [1m[35mALTER TABLE "users" ADD "gender" character varying[0m
+  ↳ db/migrate/20190326170506_add_gender_to_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (19.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190326170506"]]
+  ↳ bin/rails:9
+  [1m[35m (21.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddDateOfBirthToUsers (20190326170525)
+  [1m[35m (19.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (19.9ms)[0m  [1m[35mALTER TABLE "users" ADD "date_of_birth" date[0m
+  ↳ db/migrate/20190326170525_add_date_of_birth_to_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (20.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190326170525"]]
+  ↳ bin/rails:9
+  [1m[35m (24.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (23.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (21.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (20.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (19.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(389766739450324740)[0m
+  ↳ bin/rails:9
+  [1m[35m (19.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-03-26 17:10:19 +0000
+  [1m[35m (24.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (74.8ms)
+Completed 200 OK in 353ms (Views: 265.5ms | ActiveRecord: 66.3ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-03-26 17:10:20 +0000
+Started POST "/users" for 127.0.0.1 at 2019-03-26 17:10:48 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NzkR3bBQEMpmUBe26PmrkPEqHCj0d6pMO4InseALdmznklfoEREGg5+P8rGRr6r1O1TVI8Ct41/951THzpAZhQ==", "user"=>{"email"=>"jacotcher1@sheffield.ac.uk", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"", "last_name"=>"", "gender"=>"", "date_of_birth(1i)"=>"2019", "date_of_birth(2i)"=>"3", "date_of_birth(3i)"=>"26"}, "commit"=>"Sign up"}
+Unpermitted parameters: :first_name, :last_name, :gender, :date_of_birth(1i), :date_of_birth(2i), :date_of_birth(3i)
+  [1m[35m (21.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mUser Exists (24.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jacotcher1@sheffield.ac.uk"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (21.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 864ms (Views: 63.7ms | ActiveRecord: 67.1ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-03-26 17:10:49 +0000
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-03-26 17:10:50 +0000
+Started GET "/" for 127.0.0.1 at 2019-03-26 17:10:52 +0000
+Processing by HomepageController#home as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-03-26 17:10:52 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (12.4ms)
+Completed 200 OK in 65ms (Views: 63.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-03-26 17:10:53 +0000
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-03-26 17:10:54 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DqhqBHjaAXzTVz4FVXn84ffsEcMCY5/t2fmjYo/Uvq7eAywx2ZsXNSqI2wIsL/2EPZLYyDa51v4fnNAUoU/RRw==", "user"=>{"email"=>"jacotcher1@sheffield.ac.uk", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (21.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "jacotcher1@sheffield.ac.uk"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+Redirected to http://localhost:3000/
+Completed 302 Found in 374ms (ActiveRecord: 21.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-26 17:10:54 +0000
+Processing by HomepageController#home as HTML
+  [1m[36mUser Load (21.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering homepage/home.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (7.4ms)
+  Rendered layouts/_footer.html.haml (10.0ms)
+  Rendered homepage/home.html.haml within layouts/application (232.9ms)
+Completed 200 OK in 431ms (Views: 286.1ms | ActiveRecord: 21.0ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-03-26 17:10:55 +0000
+Started GET "/more" for 127.0.0.1 at 2019-03-26 17:27:55 +0000
+Started GET "/more/index" for 127.0.0.1 at 2019-03-26 17:27:56 +0000
+Processing by MoreController#index as HTML
+  [1m[36mUser Load (76.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering more/index.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (6.2ms)
+  Rendered layouts/_footer.html.haml (7.9ms)
+  Rendered more/index.html.haml within layouts/application (22.6ms)
+Completed 200 OK in 161ms (Views: 59.8ms | ActiveRecord: 76.3ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2019-03-26 18:04:26 +0000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"28A6N10zp3se5I5jHabyEBZszIScXw7T7fpAV+/HKCv0pSgPTCGBMSBOm+uNNy4uFDzM7O8EQlWcklwCZvA9Yw=="}
+  [1m[36mUser Load (23.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (19.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (19.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Redirected to http://localhost:3000/
+Completed 302 Found in 96ms (ActiveRecord: 62.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-26 18:04:26 +0000
+Processing by HomepageController#home as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-03-26 18:04:26 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (11.0ms)
+Completed 200 OK in 45ms (Views: 43.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-03-26 18:04:27 +0000
+Started GET "/users/password/new" for 127.0.0.1 at 2019-03-26 18:04:29 +0000
+Processing by Devise::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 83ms (Views: 53.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-03-26 18:04:32 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (30.3ms)
+Completed 200 OK in 70ms (Views: 68.7ms | ActiveRecord: 0.0ms)
+
+
