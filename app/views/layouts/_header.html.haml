@@ -1,2 +1,10 @@
-%header
+%header.header-grid
+  #mySidenav.sidenav
+    %a.closebtn{:href => "javascript:void(0)", :onclick => "closeNav()"} ×
+    %a{:href => "#"} About
+    %a{:href => "#"} Services
+    %a{:href => "#"} Clients
+    %a{:href => "#"} Contact
+  %span{:class => "burgermenu", :onclick => "openNav()", :style => "font-size:30px;cursor:pointer"} ☰
+
   %h1.title #{@title}
