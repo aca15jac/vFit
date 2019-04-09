@@ -1,9 +1,9 @@
 = render 'layouts/header'
 .padding-top
-= @muscles.each do |x|
-  %h1.text-center
+- @muscles.each do |x|
+  %h3.text-center
     = x.muscle_name + "(" + x.muscle_group + ")"
-  %table.table.table-striped.table-dark.width_85
+  %table.table.table-striped.table-dark.width_90
     %thead
       %tr
         %th{:scope => "col"} Exercise name
@@ -11,16 +11,17 @@
         %th{:scope => "col"} Secondary muscle
         %th{:scope => "col"} Tertiary muscle
     %tbody
-      = @exercises.each do |y|
-        = if y.muscle_type_1 == x.muscle_name
-          %tr
-            %td
-              = y.muscle_name
-            %td
-              = y.muscle_type_1
-            %td
-              = y.muscle_type_2
-            %td
-              = y.muscle_type_3
+    - exercise_list = Exercise.where(muscle_type_1: x.muscle_name).or(Exercise.where(muscle_type_2: x.muscle_name)).or(Exercise.where(muscle_type_3: x.muscle_name))
+    - exercise_list.each do |y|
+      %tr
+        %td
+          = y.exercise_name
+        %td
+          = y.muscle_type_1
+        %td
+          = y.muscle_type_2
+        %td
+          = y.muscle_type_3
+.padding-bottom
 
 = render 'layouts/footer'

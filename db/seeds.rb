@@ -26,7 +26,7 @@ Muscle.where(muscle_name:'Pectoralis Minor').first_or_create(muscle_group:'Chest
 #shoulders
 Muscle.where(muscle_name:'Anterior Deltoids').first_or_create(muscle_group:'Shoulders')
 Muscle.where(muscle_name:'Lateral Deltoids').first_or_create(muscle_group:'Shoulders')
-Muscle.where(muscle_name:'Posterior Deltoid').first_or_create(muscle_group:'Shoulders')
+Muscle.where(muscle_name:'Posterior Deltoids').first_or_create(muscle_group:'Shoulders')
 #abdominals
 Muscle.where(muscle_name:'Rectus Abdominis').first_or_create(muscle_group:'Abdominals')
 Muscle.where(muscle_name:'Transverse Abdominis').first_or_create(muscle_group:'Abdominals')
