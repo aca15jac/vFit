@@ -4,9 +4,9 @@
   text-align: center
 .footer-grid
   display: grid
-  grid-template-columns: 15vw 15vw 15vw 15vw 15vw
-  width: 75%
+  grid-template-columns: 20vw 20vw 20vw 20vw 20vw
   margin: 1em auto
+  text-align: center
 ul.footer-grid
   padding: 0
 .footer-grid-item
@@ -46,13 +46,16 @@ footer
       a
         text-decoration: none
         color: white
-
-
-
-
 .title
   text-align: center
   margin-top: auto
   margin-bottom: auto
   color: #919191
   padding-top: 1.5%
+
+@media only screen and (max-width: 375px)
+  footer
+    ul
+      li
+        a
+          font-size: 0.7em
