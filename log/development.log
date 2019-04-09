@@ -6180,3 +6180,1392 @@ Migrating to CreateMuscles (20190408141601)
   ↳ db/seeds.rb:38
   [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
   ↳ db/seeds.rb:38
+  [1m[35m (19.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/james/.rvm/gems/ruby-2.4.4/bin/annotate:23
+  [1m[35m (18.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (20.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "jacotcher1@sheffield.ac.uk"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (17.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Exists (16.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jacotcher1@sheffield.ac.uk"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (17.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:9
+  [1m[36mMuscle Load (19.0ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Biceps"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[35m (16.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mMuscle Create (16.8ms)[0m  [1m[32mINSERT INTO "muscles" ("muscle_name", "muscle_group", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["muscle_name", "Biceps"], ["muscle_group", "Arms"], ["created_at", "2019-04-09 11:16:10.104020"], ["updated_at", "2019-04-09 11:16:10.104020"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (18.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[36mMuscle Load (16.6ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Triceps"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[35m (17.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mMuscle Create (17.0ms)[0m  [1m[32mINSERT INTO "muscles" ("muscle_name", "muscle_group", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["muscle_name", "Triceps"], ["muscle_group", "Arms"], ["created_at", "2019-04-09 11:16:10.178846"], ["updated_at", "2019-04-09 11:16:10.178846"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (17.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[36mMuscle Load (16.9ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Forearms"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[35m (16.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mMuscle Create (17.6ms)[0m  [1m[32mINSERT INTO "muscles" ("muscle_name", "muscle_group", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["muscle_name", "Forearms"], ["muscle_group", "Arms"], ["created_at", "2019-04-09 11:16:10.252232"], ["updated_at", "2019-04-09 11:16:10.252232"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (17.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[36mMuscle Load (16.8ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Trapezius"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mMuscle Load (17.1ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Latissimus"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mMuscle Load (17.6ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Rhomboid"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mMuscle Load (16.3ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Lower Back"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[35m (16.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mMuscle Create (16.2ms)[0m  [1m[32mINSERT INTO "muscles" ("muscle_name", "muscle_group", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["muscle_name", "Lower Back"], ["muscle_group", "Back"], ["created_at", "2019-04-09 11:16:10.384981"], ["updated_at", "2019-04-09 11:16:10.384981"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (17.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[36mMuscle Load (16.7ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Traps(mid-back)"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (16.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mMuscle Create (19.1ms)[0m  [1m[32mINSERT INTO "muscles" ("muscle_name", "muscle_group", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["muscle_name", "Traps(mid-back)"], ["muscle_group", "Back"], ["created_at", "2019-04-09 11:16:10.456043"], ["updated_at", "2019-04-09 11:16:10.456043"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (20.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[36mMuscle Load (16.7ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Pectoralis Major"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mMuscle Load (16.5ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Pectoralis Minor"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:26
+  [1m[36mMuscle Load (16.7ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Anterior deltoids"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mMuscle Load (16.7ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Lateral deltoids"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[36mMuscle Load (16.8ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Posterior deltoid"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mMuscle Load (17.0ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Rectus abdominis"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:32
+  [1m[36mMuscle Load (16.9ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Transverse abdominals"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:33
+  [1m[36mMuscle Load (16.6ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Obliques"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:34
+  [1m[36mMuscle Load (16.2ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Hamstrings"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mMuscle Load (16.3ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Adductors"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:37
+  [1m[36mMuscle Load (16.7ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Abductors"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:38
+  [1m[36mMuscle Load (16.4ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Quadriceps"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mMuscle Load (16.2ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Calves"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:40
+  [1m[36mMuscle Load (16.5ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Gluteus"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:42
+  [1m[36mExercise Load (18.5ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Barbell Curl"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:48
+  [1m[35m (16.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:48
+  [1m[36mExercise Create (17.0ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "muscle_type_2", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["exercise_name", "Barbell Curl"], ["muscle_type_1", "Biceps"], ["muscle_type_2", "Forearms"], ["description", "While holding the upper arms stationary, curl the weights forward whilst contracting the biceps as you breathe out. Continue the movement until your biceps are fully contracted and the bar is at shoulder level. Hold the contracted position for a second and squeeze the biceps hard. Slowly bring the weight back down to the starting position."], ["created_at", "2019-04-09 11:16:10.858980"], ["updated_at", "2019-04-09 11:16:10.858980"]]
+  ↳ db/seeds.rb:48
+  [1m[35m (17.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:48
+  [1m[36mExercise Load (16.7ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Dumbbell Curl"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:49
+  [1m[35m (16.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:49
+  [1m[36mExercise Create (17.3ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "muscle_type_2", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["exercise_name", "Dumbbell Curl"], ["muscle_type_1", "Biceps"], ["muscle_type_2", "Forearms"], ["description", "Stand up or sit down with a straight back and a dumbbell in each hand at arm's length. Raise one dumbbell and twist your forearm until it is vertical and your palm faces the shoulder. Lower to original position and repeat with opposite arm."], ["created_at", "2019-04-09 11:16:10.931946"], ["updated_at", "2019-04-09 11:16:10.931946"]]
+  ↳ db/seeds.rb:49
+  [1m[35m (17.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:49
+  [1m[36mExercise Load (17.0ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Hammer Curl"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[35m (16.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mExercise Create (17.2ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "muscle_type_2", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["exercise_name", "Hammer Curl"], ["muscle_type_1", "Biceps"], ["muscle_type_2", "Forearms"], ["description", "Hold the dumbbells with a neutral grip (thumbs facing the ceiling). Slowly lift the dumbbell up to chest height. Return to starting position and repeat."], ["created_at", "2019-04-09 11:16:11.007561"], ["updated_at", "2019-04-09 11:16:11.007561"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (17.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[36mExercise Load (16.3ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Seated Tricep extensions"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:52
+  [1m[35m (16.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:52
+  [1m[36mExercise Create (16.9ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["exercise_name", "Seated Tricep extensions"], ["muscle_type_1", "Triceps"], ["description", "Sit on the bench and hold a dumbbell with both hands. Raise the dumbbell overhead at arms length, holding the weight up with the palms of your hands. Keep your elbows in while you lower the weight behind your head, your upper arms stationary. Raise the weight back to starting position."], ["created_at", "2019-04-09 11:16:11.080824"], ["updated_at", "2019-04-09 11:16:11.080824"]]
+  ↳ db/seeds.rb:52
+  [1m[35m (16.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:52
+  [1m[36mExercise Load (17.6ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Dips (Narrow elbows)"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:53
+  [1m[35m (16.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:53
+  [1m[36mExercise Create (17.0ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["exercise_name", "Dips (Narrow elbows)"], ["muscle_type_1", "Triceps"], ["description", "Hold your body at arms length aboce the bars. Inhale slowly and lower yourself downward. Keep your elbows close to your body and your torso upright. Exhale, and using your triceps raise your body back to the starting position."], ["created_at", "2019-04-09 11:16:11.154103"], ["updated_at", "2019-04-09 11:16:11.154103"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (16.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:53
+  [1m[36mExercise Load (16.4ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Cable push downs"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:54
+  [1m[35m (16.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:54
+  [1m[36mExercise Create (17.1ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["exercise_name", "Cable push downs"], ["muscle_type_1", "Triceps"], ["description", "Grip the pulley bar with palms facing down at shoulder width. Stand straight with a small forward incline. Keep your upper arms close to your body, and slowly bring the pulley bar down until your arms are fully extended. Pause when you are at the contracted position of the motion, then slowly raise the pulley back back to the starting point."], ["created_at", "2019-04-09 11:16:11.223004"], ["updated_at", "2019-04-09 11:16:11.223004"]]
+  ↳ db/seeds.rb:54
+  [1m[35m (17.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:54
+  [1m[36mExercise Load (16.2ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Bench Dips"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:55
+  [1m[35m (16.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mExercise Create (16.7ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["exercise_name", "Bench Dips"], ["muscle_type_1", "Triceps"], ["description", "Grip the edge of the bench with your hands, keep your feet together and legs straight. Lower your body straight down. Slowly press back up to the starting point. TIP: Make this harder by raising your feet off the floor and adding weight."], ["created_at", "2019-04-09 11:16:11.292377"], ["updated_at", "2019-04-09 11:16:11.292377"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (17.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[36mExercise Load (17.6ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Behind The Back Barbell Wrist Curl"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:57
+  [1m[35m (16.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:57
+  [1m[36mExercise Create (16.6ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["exercise_name", "Behind The Back Barbell Wrist Curl"], ["muscle_type_1", "Forearms"], ["description", "Stand straight and hold the barbell behind you using a pronated grip with your hands and feet shoulder-width apart. Slowly curl your wrists in a semi-circular motion upwards. Hold the barbell at the apex of the motion and then slowly lower the barbell back down to starting position."], ["created_at", "2019-04-09 11:16:11.362913"], ["updated_at", "2019-04-09 11:16:11.362913"]]
+  ↳ db/seeds.rb:57
+  [1m[35m (17.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:57
+  [1m[36mExercise Load (16.6ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Forearm curl"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[35m (16.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mExercise Create (17.3ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["exercise_name", "Forearm curl"], ["muscle_type_1", "Forearms"], ["description", "Grip the dumbell withyour palm facing upwards with your forearm rested against the bench. Slowly curl your wrist upwards i na semi-circular motion. Return to starting position and repeat."], ["created_at", "2019-04-09 11:16:11.435991"], ["updated_at", "2019-04-09 11:16:11.435991"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (17.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[36mExercise Load (16.6ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Seated Dumbell Shrugs"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[35m (16.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mExercise Create (17.1ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["exercise_name", "Seated Dumbell Shrugs"], ["muscle_type_1", "Trapezius"], ["description", "Sit on a bench with dumbells in both hands, palms facing your body, back straight. Elevate your shoulders and hold the contracted position at the apex of the motion. Slowly lower your shoulder back to starting position."], ["created_at", "2019-04-09 11:16:11.510292"], ["updated_at", "2019-04-09 11:16:11.510292"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (17.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[36mExercise Load (16.5ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Standing Smith Machine Shrugs"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:62
+  [1m[35m (16.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:62
+  [1m[36mExercise Create (17.1ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["exercise_name", "Standing Smith Machine Shrugs"], ["muscle_type_1", "Forearms"], ["description", "Place the bar on a lower rung so that when gripped your arms are fully extended and your back is straight. Grip at shoulder width, raise the bar with your shoulders and pause at the contracted position. Slowly lower the bar back to starting position."], ["created_at", "2019-04-09 11:16:11.584345"], ["updated_at", "2019-04-09 11:16:11.584345"]]
+  ↳ db/seeds.rb:62
+  [1m[35m (18.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:62
+  [1m[35m (17.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (18.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "jacotcher1@sheffield.ac.uk"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (17.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Exists (18.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jacotcher1@sheffield.ac.uk"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (16.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:9
+  [1m[36mMuscle Load (18.2ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Biceps"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mMuscle Load (18.1ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Triceps"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mMuscle Load (17.1ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Forearms"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mMuscle Load (16.5ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Trapezius"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mMuscle Load (16.5ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Latissimus"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mMuscle Load (17.0ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Upper back"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[35m (16.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mMuscle Create (16.8ms)[0m  [1m[32mINSERT INTO "muscles" ("muscle_name", "muscle_group", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["muscle_name", "Upper back"], ["muscle_group", "Back"], ["created_at", "2019-04-09 11:23:37.526559"], ["updated_at", "2019-04-09 11:23:37.526559"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (17.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[36mMuscle Load (16.3ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Lower Back"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mMuscle Load (16.2ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Pectoralis Major"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mMuscle Load (19.8ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Pectoralis Minor"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mMuscle Load (16.6ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Anterior deltoids"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mMuscle Load (15.9ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Lateral deltoids"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mMuscle Load (16.9ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Posterior deltoid"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[36mMuscle Load (16.4ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Rectus abdominis"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mMuscle Load (16.5ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Transverse abdominals"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:32
+  [1m[36mMuscle Load (16.6ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Obliques"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:33
+  [1m[36mMuscle Load (16.8ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Hamstrings"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mMuscle Load (18.1ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Adductors"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mMuscle Load (16.7ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Abductors"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:37
+  [1m[36mMuscle Load (17.1ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Quadriceps"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:38
+  [1m[36mMuscle Load (16.6ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Calves"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mMuscle Load (16.3ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Gluteus"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:41
+  [1m[36mExercise Load (17.4ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Barbell Curl"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:47
+  [1m[36mExercise Load (16.6ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Dumbbell Curl"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:48
+  [1m[36mExercise Load (17.9ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Hammer Curl"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:49
+  [1m[36mExercise Load (16.3ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Seated Tricep extensions"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:51
+  [1m[36mExercise Load (16.9ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Dips (Narrow elbows)"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:52
+  [1m[36mExercise Load (16.8ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Cable push downs"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:53
+  [1m[36mExercise Load (16.1ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Bench Dips"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:54
+  [1m[36mExercise Load (16.4ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Behind The Back Barbell Wrist Curl"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:56
+  [1m[36mExercise Load (16.3ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Forearm curl"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:57
+  [1m[36mExercise Load (16.2ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Seated Dumbell Shrugs"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:60
+  [1m[36mExercise Load (16.6ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Standing Smith Machine Shrugs"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mExercise Load (17.8ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Neutral Grip Pulldown"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:63
+  [1m[35m (16.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:63
+  [1m[36mExercise Create (17.6ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["exercise_name", "Neutral Grip Pulldown"], ["muscle_type_1", "Latissimus"], ["description", "Grip the bar with the palms facing forward, your hands need to be spaced out at a distance wider than shoulder width. As you have both arms extended in front of you holding the bar, bring your torso back around 30 degrees while sticking your chest out. Pull the bar down to about chin level or a little lower in a smooth movement whilst squeezing the shoulder blades together. After a second of squeezing, slowly raise the bar back to the starting position when your arms are fully extended."], ["created_at", "2019-04-09 11:23:38.122072"], ["updated_at", "2019-04-09 11:23:38.122072"]]
+  ↳ db/seeds.rb:63
+  [1m[35m (17.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:63
+  [1m[36mExercise Load (16.3ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Seated Cable Row"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:64
+  [1m[35m (16.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:64
+  [1m[36mExercise Create (16.7ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["exercise_name", "Seated Cable Row"], ["muscle_type_1", "Latissimus"], ["description", "\n    Sit with your back straight on the machine and grip the handles.\n    Pull the handles back using your arms. Your legs and torso should be at a 90° angle. Push out your chest.\n    Pull the handles towards your body until your hands are beside your abdomen.\n"], ["created_at", "2019-04-09 11:23:38.193962"], ["updated_at", "2019-04-09 11:23:38.193962"]]
+  ↳ db/seeds.rb:64
+  [1m[35m (16.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:64
+  [1m[36mExercise Load (16.3ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Bent Over Barbell Row"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:69
+  [1m[35m (16.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:69
+  [1m[36mExercise Create (17.3ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["exercise_name", "Bent Over Barbell Row"], ["muscle_type_1", "Latissimus"], ["description", "\n    Grab a barbell with a shoulder width pronated or supinated grip.\n    Bend forward at your hips while maintaining a flat back.\n    Pull the weight toward your upper abdomen.\n    Lower the weight in a controlled manner and repeat.\n"], ["created_at", "2019-04-09 11:23:38.264567"], ["updated_at", "2019-04-09 11:23:38.264567"]]
+  ↳ db/seeds.rb:69
+  [1m[35m (18.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:69
+  [1m[36mExercise Load (16.5ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Dumbell Row"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:75
+  [1m[35m (16.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:75
+  [1m[36mExercise Create (17.0ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["exercise_name", "Dumbell Row"], ["muscle_type_1", "Latissimus"], ["description", "\n    Place your right leg on the top end of the bench so that your knee and shin rest flat on the bench, your foot hanging off the end.\n    Bend your torso towards the floor and support yourself with your right arm by placing your palm flat against the bench.\n    Grip the weight with your left and, and pull it straight up to the side of your chest. Repeat the motion.\n    Switch the supporting leg and arm to work the other side.\n"], ["created_at", "2019-04-09 11:23:38.337397"], ["updated_at", "2019-04-09 11:23:38.337397"]]
+  ↳ db/seeds.rb:75
+  [1m[35m (17.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:75
+  [1m[35m (16.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(389766739450324740)[0m
+  ↳ bin/rails:9
+  [1m[35m (18.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddWeightedToExercises (20190409123312)
+  [1m[35m (16.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (18.9ms)[0m  [1m[35mALTER TABLE "exercises" ADD "weighted" boolean[0m
+  ↳ db/migrate/20190409123312_add_weighted_to_exercises.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (17.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190409123312"]]
+  ↳ bin/rails:9
+  [1m[35m (18.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (18.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (16.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (16.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (17.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(389766739450324740)[0m
+  ↳ bin/rails:9
+  [1m[35m (16.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (18.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (19.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "jacotcher1@sheffield.ac.uk"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (16.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Exists (16.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jacotcher1@sheffield.ac.uk"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (18.9ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:9
+  [1m[36mMuscle Load (18.8ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Biceps"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mMuscle Load (16.7ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Triceps"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mMuscle Load (16.7ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Forearms"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mMuscle Load (17.0ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Trapezius"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mMuscle Load (16.7ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Latissimus"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mMuscle Load (16.2ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Upper Back"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[35m (16.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mMuscle Create (17.4ms)[0m  [1m[32mINSERT INTO "muscles" ("muscle_name", "muscle_group", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["muscle_name", "Upper Back"], ["muscle_group", "Back"], ["created_at", "2019-04-09 12:42:47.003896"], ["updated_at", "2019-04-09 12:42:47.003896"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (19.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[36mMuscle Load (16.6ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Lower Back"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mMuscle Load (16.9ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Pectoralis Major"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mMuscle Load (16.8ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Pectoralis Minor"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mMuscle Load (16.3ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Anterior Deltoids"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[35m (16.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mMuscle Create (16.6ms)[0m  [1m[32mINSERT INTO "muscles" ("muscle_name", "muscle_group", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["muscle_name", "Anterior Deltoids"], ["muscle_group", "Shoulders"], ["created_at", "2019-04-09 12:42:47.135503"], ["updated_at", "2019-04-09 12:42:47.135503"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (17.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[36mMuscle Load (16.4ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Lateral Deltoids"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[35m (16.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mMuscle Create (16.7ms)[0m  [1m[32mINSERT INTO "muscles" ("muscle_name", "muscle_group", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["muscle_name", "Lateral Deltoids"], ["muscle_group", "Shoulders"], ["created_at", "2019-04-09 12:42:47.204916"], ["updated_at", "2019-04-09 12:42:47.204916"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (17.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[36mMuscle Load (16.7ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Posterior Deltoid"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[35m (16.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mMuscle Create (16.5ms)[0m  [1m[32mINSERT INTO "muscles" ("muscle_name", "muscle_group", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["muscle_name", "Posterior Deltoid"], ["muscle_group", "Shoulders"], ["created_at", "2019-04-09 12:42:47.277913"], ["updated_at", "2019-04-09 12:42:47.277913"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (17.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[36mMuscle Load (16.5ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Rectus Abdominis"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[35m (16.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mMuscle Create (17.1ms)[0m  [1m[32mINSERT INTO "muscles" ("muscle_name", "muscle_group", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["muscle_name", "Rectus Abdominis"], ["muscle_group", "Abdominals"], ["created_at", "2019-04-09 12:42:47.351818"], ["updated_at", "2019-04-09 12:42:47.351818"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (17.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[36mMuscle Load (18.4ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Transverse Abdominals"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:32
+  [1m[35m (16.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mMuscle Create (17.6ms)[0m  [1m[32mINSERT INTO "muscles" ("muscle_name", "muscle_group", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["muscle_name", "Transverse Abdominals"], ["muscle_group", "Abdominals"], ["created_at", "2019-04-09 12:42:47.427613"], ["updated_at", "2019-04-09 12:42:47.427613"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (17.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[36mMuscle Load (16.3ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Obliques"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:33
+  [1m[36mMuscle Load (17.2ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Hamstrings"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mMuscle Load (16.5ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Adductors"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mMuscle Load (16.2ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Abductors"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:37
+  [1m[36mMuscle Load (16.1ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Quadriceps"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:38
+  [1m[36mMuscle Load (16.0ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Calves"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mMuscle Load (16.2ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Gluteus"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:41
+  [1m[36mExercise Load (17.3ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Barbell Curl"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:47
+  [1m[35m (16.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mExercise Create (17.3ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "muscle_type_2", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["exercise_name", "Barbell Curl"], ["muscle_type_1", "Biceps"], ["muscle_type_2", "Forearms"], ["description", "\n  While holding the upper arms stationary, curl the weights forward whilst contracting the biceps as you breathe out.\n  Continue the movement until your biceps are fully contracted and the bar is at shoulder level.\n  Hold the contracted position for a second and squeeze the biceps hard.\n  Slowly bring the weight back down to the starting position."], ["created_at", "2019-04-09 12:42:47.688101"], ["updated_at", "2019-04-09 12:42:47.688101"], ["weighted", true]]
+  ↳ db/seeds.rb:47
+  [1m[35m (17.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[36mExercise Load (17.7ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Dumbbell Curl"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:52
+  [1m[35m (16.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:52
+  [1m[36mExercise Create (17.0ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "muscle_type_2", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["exercise_name", "Dumbbell Curl"], ["muscle_type_1", "Biceps"], ["muscle_type_2", "Forearms"], ["description", "\n  Stand up or sit down with a straight back and a dumbbell in each hand at arm's length.\n  Raise one dumbbell and twist your forearm until it is vertical and your palm faces the shoulder.\n  Lower to original position and repeat with opposite arm."], ["created_at", "2019-04-09 12:42:47.763291"], ["updated_at", "2019-04-09 12:42:47.763291"], ["weighted", true]]
+  ↳ db/seeds.rb:52
+  [1m[35m (17.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:52
+  [1m[36mExercise Load (16.8ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Hammer Curl"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:56
+  [1m[35m (16.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:56
+  [1m[36mExercise Create (17.4ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "muscle_type_2", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["exercise_name", "Hammer Curl"], ["muscle_type_1", "Biceps"], ["muscle_type_2", "Forearms"], ["description", "\n  Hold the dumbbells with a neutral grip (thumbs facing the ceiling).\n  Slowly lift the dumbbell up to chest height.\n  Return to starting position and repeat."], ["created_at", "2019-04-09 12:42:47.836854"], ["updated_at", "2019-04-09 12:42:47.836854"], ["weighted", true]]
+  ↳ db/seeds.rb:56
+  [1m[35m (17.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:56
+  [1m[36mExercise Load (17.1ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Seated Tricep extensions"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[35m (16.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mExercise Create (17.6ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["exercise_name", "Seated Tricep extensions"], ["muscle_type_1", "Triceps"], ["description", "\n  Sit on the bench and hold a dumbbell with both hands.\n  Raise the dumbbell overhead at arms length, holding the weight up with the palms of your hands.\n  Keep your elbows in while you lower the weight behind your head, your upper arms stationary.\n  Raise the weight back to starting position."], ["created_at", "2019-04-09 12:42:47.911644"], ["updated_at", "2019-04-09 12:42:47.911644"], ["weighted", true]]
+  ↳ db/seeds.rb:61
+  [1m[35m (17.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[36mExercise Load (16.6ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Dips (Narrow elbows)"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:66
+  [1m[35m (16.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:66
+  [1m[36mExercise Create (17.1ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["exercise_name", "Dips (Narrow elbows)"], ["muscle_type_1", "Triceps"], ["description", "\n  Hold your body at arms length aboce the bars.\n  Inhale slowly and lower yourself downward.\n  Keep your elbows close to your body and your torso upright.\n  Exhale, and using your triceps raise your body back to the starting position."], ["created_at", "2019-04-09 12:42:47.986111"], ["updated_at", "2019-04-09 12:42:47.986111"], ["weighted", true]]
+  ↳ db/seeds.rb:66
+  [1m[35m (17.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:66
+  [1m[36mExercise Load (16.9ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Cable push downs"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:71
+  [1m[35m (16.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mExercise Create (18.8ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["exercise_name", "Cable push downs"], ["muscle_type_1", "Triceps"], ["description", "\n  Grip the pulley bar with palms facing down at shoulder width.\n  Stand straight with a small forward incline.\n  Keep your upper arms close to your body, and slowly bring the pulley bar down until your arms are fully extended.\n  Pause when you are at the contracted position of the motion, then slowly raise the pulley back back to the starting point."], ["created_at", "2019-04-09 12:42:48.060579"], ["updated_at", "2019-04-09 12:42:48.060579"], ["weighted", true]]
+  ↳ db/seeds.rb:71
+  [1m[35m (17.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[36mExercise Load (16.7ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Bench Dips"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:76
+  [1m[35m (16.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:76
+  [1m[36mExercise Create (17.2ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["exercise_name", "Bench Dips"], ["muscle_type_1", "Triceps"], ["description", "\n  Grip the edge of the bench with your hands, keep your feet together and legs straight.\n  Lower your body straight down.\n  Slowly press back up to the starting point.\n  TIP: Make this harder by raising your feet off the floor and adding weight."], ["created_at", "2019-04-09 12:42:48.136796"], ["updated_at", "2019-04-09 12:42:48.136796"], ["weighted", true]]
+  ↳ db/seeds.rb:76
+  [1m[35m (17.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:76
+  [1m[36mExercise Load (16.3ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Behind The Back Barbell Wrist Curl"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:82
+  [1m[35m (16.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:82
+  [1m[36mExercise Create (17.7ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["exercise_name", "Behind The Back Barbell Wrist Curl"], ["muscle_type_1", "Forearms"], ["description", "\n  Stand straight and hold the barbell behind you using a pronated grip with your hands and feet shoulder-width apart.\n  Slowly curl your wrists in a semi-circular motion upwards.\n  Hold the barbell at the apex of the motion and then slowly lower the barbell back down to starting position."], ["created_at", "2019-04-09 12:42:48.209855"], ["updated_at", "2019-04-09 12:42:48.209855"], ["weighted", true]]
+  ↳ db/seeds.rb:82
+  [1m[35m (17.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:82
+  [1m[36mExercise Load (16.7ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Forearm curl"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[35m (16.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:86
+  [1m[36mExercise Create (17.1ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["exercise_name", "Forearm curl"], ["muscle_type_1", "Forearms"], ["description", "\n  Grip the dumbell withyour palm facing upwards with your forearm rested against the bench.\n  Slowly curl your wrist upwards in a semi-circular motion.\n  Return to starting position and repeat."], ["created_at", "2019-04-09 12:42:48.284719"], ["updated_at", "2019-04-09 12:42:48.284719"], ["weighted", true]]
+  ↳ db/seeds.rb:86
+  [1m[35m (17.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:86
+  [1m[36mExercise Load (18.6ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Seated Dumbell Shrugs"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:92
+  [1m[35m (16.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mExercise Create (16.8ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["exercise_name", "Seated Dumbell Shrugs"], ["muscle_type_1", "Trapezius"], ["description", "\n  Sit on a bench with dumbells in both hands, palms facing your body, back straight.\n  Elevate your shoulders and hold the contracted position at the apex of the motion.\n  Slowly lower your shoulder back to starting position."], ["created_at", "2019-04-09 12:42:48.360947"], ["updated_at", "2019-04-09 12:42:48.360947"], ["weighted", true]]
+  ↳ db/seeds.rb:92
+  [1m[35m (17.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[36mExercise Load (18.1ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Standing Smith Machine Shrugs"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:96
+  [1m[35m (16.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:96
+  [1m[36mExercise Create (16.8ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["exercise_name", "Standing Smith Machine Shrugs"], ["muscle_type_1", "Trapezius"], ["description", "\n  Place the bar on a lower rung so that when gripped your arms are fully extended and your back is straight.\n  Grip at shoulder width, raise the bar with your shoulders and pause at the contracted position.\n  Slowly lower the bar back to starting position."], ["created_at", "2019-04-09 12:42:48.437276"], ["updated_at", "2019-04-09 12:42:48.437276"], ["weighted", true]]
+  ↳ db/seeds.rb:96
+  [1m[35m (16.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:96
+  [1m[36mExercise Load (16.4ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Neutral Grip Pulldown"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:101
+  [1m[35m (15.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:101
+  [1m[36mExercise Create (16.9ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["exercise_name", "Neutral Grip Pulldown"], ["muscle_type_1", "Latissimus"], ["description", "\n  Grip the bar with the palms facing forward, your hands need to be spaced out at a distance wider than shoulder width.\n  As you have both arms extended in front of you holding the bar, bring your torso back around 30 degrees while sticking your chest out.\n  Pull the bar down to about chin level or a little lower in a smooth movement whilst squeezing the shoulder blades together.\n  After a second of squeezing, slowly raise the bar back to the starting position when your arms are fully extended."], ["created_at", "2019-04-09 12:42:48.505917"], ["updated_at", "2019-04-09 12:42:48.505917"], ["weighted", true]]
+  ↳ db/seeds.rb:101
+  [1m[35m (16.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:101
+  [1m[36mExercise Load (17.1ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Seated Cable Row"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:106
+  [1m[35m (16.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:106
+  [1m[36mExercise Create (17.3ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "muscle_type_2", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["exercise_name", "Seated Cable Row"], ["muscle_type_1", "Latissimus"], ["muscle_type_2", "Upper Back"], ["description", "\n    Sit with your back straight on the machine and grip the handles.\n    Pull the handles back using your arms. Your legs and torso should be at a 90° angle. Push out your chest.\n    Pull the handles towards your body until your hands are beside your abdomen.\n"], ["created_at", "2019-04-09 12:42:48.576592"], ["updated_at", "2019-04-09 12:42:48.576592"], ["weighted", true]]
+  ↳ db/seeds.rb:106
+  [1m[35m (19.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:106
+  [1m[36mExercise Load (16.3ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Bent Over Barbell Row"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:111
+  [1m[35m (16.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:111
+  [1m[36mExercise Create (16.6ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["exercise_name", "Bent Over Barbell Row"], ["muscle_type_1", "Latissimus"], ["description", "\n    Grab a barbell with a shoulder width pronated or supinated grip.\n    Bend forward at your hips while maintaining a flat back.\n    Pull the weight toward your upper abdomen.\n    Lower the weight in a controlled manner and repeat.\n"], ["created_at", "2019-04-09 12:42:48.649908"], ["updated_at", "2019-04-09 12:42:48.649908"], ["weighted", true]]
+  ↳ db/seeds.rb:111
+  [1m[35m (16.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:111
+  [1m[36mExercise Load (16.3ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Dumbell Row"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:117
+  [1m[35m (16.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:117
+  [1m[36mExercise Create (25.3ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "muscle_type_2", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["exercise_name", "Dumbell Row"], ["muscle_type_1", "Latissimus"], ["muscle_type_2", "Upper Back"], ["description", "\n    Place your right leg on the top end of the bench so that your knee and shin rest flat on the bench, your foot hanging off the end.\n    Bend your torso towards the floor and support yourself with your right arm by placing your palm flat against the bench.\n    Grip the weight with your left and, and pull it straight up to the side of your chest. Repeat the motion.\n    Switch the supporting leg and arm to work the other side.\n"], ["created_at", "2019-04-09 12:42:48.718493"], ["updated_at", "2019-04-09 12:42:48.718493"], ["weighted", true]]
+  ↳ db/seeds.rb:117
+  [1m[35m (16.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:117
+  [1m[36mExercise Load (16.4ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Deadlift"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:124
+  [1m[35m (16.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:124
+  [1m[36mExercise Create (16.7ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "muscle_type_2", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["exercise_name", "Deadlift"], ["muscle_type_1", "Upper Back"], ["muscle_type_2", "Lower Back"], ["description", "\n    Stand with your mid-foot under the bar and grip the bar with your hands, about a shoulder width apart.\n    Bend your knees, then lift the bar by straightening your back. It is important to keep your back straight.\n    Stand to your full height and hold.\n    Lower the bar to the floor by bending your knees and keeping your back straight.\n"], ["created_at", "2019-04-09 12:42:48.795819"], ["updated_at", "2019-04-09 12:42:48.795819"], ["weighted", true]]
+  ↳ db/seeds.rb:124
+  [1m[35m (17.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:124
+  [1m[36mExercise Load (17.7ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "45 Degree Back Extention"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:131
+  [1m[35m (17.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:131
+  [1m[36mExercise Create (18.3ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["exercise_name", "45 Degree Back Extention"], ["muscle_type_1", "Lower Back"], ["description", "\n    Position your thighs on the padding and hook your feet on the platform supports.\n    Keeping your back straight, slowly bend at your waist until your legs and back are at a 45° angle.\n    Slowly raise your body to the starting position.\n"], ["created_at", "2019-04-09 12:42:48.870739"], ["updated_at", "2019-04-09 12:42:48.870739"], ["weighted", true]]
+  ↳ db/seeds.rb:131
+  [1m[35m (17.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:131
+  [1m[36mExercise Load (16.8ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Bench Press"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:137
+  [1m[35m (16.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:137
+  [1m[36mExercise Create (17.1ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "muscle_type_2", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["exercise_name", "Bench Press"], ["muscle_type_1", "Pectoralis Major"], ["muscle_type_2", "Pectoralis Minor"], ["description", "\n    Lay flat on the bench with your feet on the ground.\n    With straight arms unrack the bar.\n    Lower the bar to your mid chest\n    Raise the bar until you've locked your elbows.\n    TIP: Hunch your shoulders as you lift to include your Pectoralis Minor as well as your Pectoralis Major\n"], ["created_at", "2019-04-09 12:42:48.947049"], ["updated_at", "2019-04-09 12:42:48.947049"], ["weighted", true]]
+  ↳ db/seeds.rb:137
+  [1m[35m (18.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:137
+  [1m[36mExercise Load (17.5ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Dumbell Bench Press"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:144
+  [1m[35m (17.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:144
+  [1m[36mExercise Create (18.6ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "muscle_type_2", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["exercise_name", "Dumbell Bench Press"], ["muscle_type_1", "Pectoralis Major"], ["muscle_type_2", "Pectoralis Minor"], ["description", "\n    Lay flat on the bench with your feet on the ground.\n    Raise the dumbells up above yourself until your elbows are locked.\n    Lower the dumbells to your the side of your torso\n"], ["created_at", "2019-04-09 12:42:49.023554"], ["updated_at", "2019-04-09 12:42:49.023554"], ["weighted", true]]
+  ↳ db/seeds.rb:144
+  [1m[35m (18.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:144
+  [1m[36mExercise Load (16.5ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Incline Bench Press"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:149
+  [1m[35m (16.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:149
+  [1m[36mExercise Create (16.9ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "muscle_type_2", "muscle_type_3", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["exercise_name", "Incline Bench Press"], ["muscle_type_1", "Pectoralis Major"], ["muscle_type_2", "Pectoralis Minor"], ["muscle_type_3", "Anterior Deltoid"], ["description", "\n    Raise the bench to a 30° - 45° angle\n    Lay on the bench and set your feet on the ground.\n    With straight arms, unrack the bar.\n    Lower the bar to your mid chest.\n    Raise the bar until you've locked your elbows.\n"], ["created_at", "2019-04-09 12:42:49.099640"], ["updated_at", "2019-04-09 12:42:49.099640"], ["weighted", true]]
+  ↳ db/seeds.rb:149
+  [1m[35m (17.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:149
+  [1m[36mExercise Load (16.6ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Incline Dumbell Bench Press"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:156
+  [1m[35m (16.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:156
+  [1m[36mExercise Create (64.6ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "muscle_type_2", "muscle_type_3", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["exercise_name", "Incline Dumbell Bench Press"], ["muscle_type_1", "Pectoralis Major"], ["muscle_type_2", "Pectoralis Minor"], ["muscle_type_3", "Anterior Deltoid"], ["description", "\n    Raise the bench to a 30° - 45° angle\n    Lay on the bench and set your feet on the ground.\n    Raise the dumbbells with straight arms then slowly lower them to about shoulder width.\n    Raise them again until your arms are locked and at the starting position again.\n"], ["created_at", "2019-04-09 12:42:49.170071"], ["updated_at", "2019-04-09 12:42:49.170071"], ["weighted", true]]
+  ↳ db/seeds.rb:156
+  [1m[35m (19.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:156
+  [1m[36mExercise Load (16.9ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Dips"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:162
+  [1m[35m (16.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:162
+  [1m[36mExercise Create (16.5ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "muscle_type_2", "muscle_type_3", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["exercise_name", "Dips"], ["muscle_type_1", "Pectoralis Major"], ["muscle_type_2", "Pectoralis Minor"], ["muscle_type_3", "Triceps"], ["description", "\n    Hold your body with arms locked above the bars.\n    Lower your body slowly while leaning forward, flare out your elbows\n    Raise your body above the bars until your arms are locked.\n"], ["created_at", "2019-04-09 12:42:49.292207"], ["updated_at", "2019-04-09 12:42:49.292207"], ["weighted", true]]
+  ↳ db/seeds.rb:162
+  [1m[35m (17.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:162
+  [1m[36mExercise Load (16.7ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Dumbell Flys"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:167
+  [1m[35m (17.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:167
+  [1m[36mExercise Create (17.1ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "muscle_type_2", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["exercise_name", "Dumbell Flys"], ["muscle_type_1", "Pectoralis Major"], ["muscle_type_2", "Pectoralis Minor"], ["description", "\n    Lay flat on the bench and place your feet on the ground.\n    Begin the exercise with the dumbbells held together above your chest, elbows slightly bent.\n    Simultaneously lower the weights to either side.\n    Pause when the weights are parallel to the bench, then raise your arms to the starting position.\n"], ["created_at", "2019-04-09 12:42:49.363249"], ["updated_at", "2019-04-09 12:42:49.363249"], ["weighted", true]]
+  ↳ db/seeds.rb:167
+  [1m[35m (17.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:167
+  [1m[36mExercise Load (18.2ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Cable Flys"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:173
+  [1m[35m (17.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:173
+  [1m[36mExercise Create (16.7ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "muscle_type_2", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["exercise_name", "Cable Flys"], ["muscle_type_1", "Pectoralis Major"], ["muscle_type_2", "Pectoralis Minor"], ["description", "\n  Stand with your back straight and a handle attached to a cable in each hand, holding the handle at arms length.\n  Keeping your arms horizontal, push the handles out in front of you and bring them to touch at the front.\n  Keeping your arms outstretched, slowly let your arms return to their original position."], ["created_at", "2019-04-09 12:42:49.435980"], ["updated_at", "2019-04-09 12:42:49.435980"], ["weighted", true]]
+  ↳ db/seeds.rb:173
+  [1m[35m (17.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:173
+  [1m[36mExercise Load (16.9ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Military Press"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:179
+  [1m[35m (17.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:179
+  [1m[36mExercise Create (18.0ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "muscle_type_2", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["exercise_name", "Military Press"], ["muscle_type_1", "Anterior Deltoids"], ["muscle_type_2", "Lateral Deltoids"], ["description", "\n  Start with the bar on a high rung so that you are able to get underneath it easily.\n  Put your arms shoulder width apart and derack the bar.\n  Raise the bar above your head until your arms are outstretched.\n  Slowly lower the bar infront of your face back to the original position."], ["created_at", "2019-04-09 12:42:49.508511"], ["updated_at", "2019-04-09 12:42:49.508511"], ["weighted", true]]
+  ↳ db/seeds.rb:179
+  [1m[35m (17.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:179
+  [1m[36mExercise Load (16.7ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Seated Dumbbell Shoulder Press "], ["LIMIT", 1]]
+  ↳ db/seeds.rb:184
+  [1m[35m (16.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:184
+  [1m[36mExercise Create (17.2ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "muscle_type_2", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["exercise_name", "Seated Dumbbell Shoulder Press "], ["muscle_type_1", "Anterior Deltoids"], ["muscle_type_2", "Lateral Deltoids"], ["description", "\n    Sit on a bench with back support. Raise the dumbbells to shoulder height with your palms forward.\n    Raise the dumbbells upwards and pause at the contracted position.\n    Lower the weights back to starting position.\n"], ["created_at", "2019-04-09 12:42:49.584094"], ["updated_at", "2019-04-09 12:42:49.584094"], ["weighted", true]]
+  ↳ db/seeds.rb:184
+  [1m[35m (17.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:184
+  [1m[36mExercise Load (18.7ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Side Lateral Raises "], ["LIMIT", 1]]
+  ↳ db/seeds.rb:189
+  [1m[35m (16.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:189
+  [1m[36mExercise Create (17.0ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "muscle_type_2", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["exercise_name", "Side Lateral Raises "], ["muscle_type_1", "Anterior Deltoids"], ["muscle_type_2", "Lateral Deltoids"], ["description", "\n    Stand up straight with dumbbells at either side, palms facing your hips.\n    Raise your arms on either side with a slight bend in your elbow until they are parallel with the floor. Pause at the top of the motion.\n    Slowly return your arms down to starting position.\n"], ["created_at", "2019-04-09 12:42:49.661121"], ["updated_at", "2019-04-09 12:42:49.661121"], ["weighted", true]]
+  ↳ db/seeds.rb:189
+  [1m[35m (17.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:189
+  [1m[36mExercise Load (17.4ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", " Bent-Over Rear Delt Raise "], ["LIMIT", 1]]
+  ↳ db/seeds.rb:194
+  [1m[35m (16.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:194
+  [1m[36mExercise Create (17.4ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "muscle_type_2", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["exercise_name", " Bent-Over Rear Delt Raise "], ["muscle_type_1", "Posterior Deltoids"], ["muscle_type_2", "Lateral Deltoids"], ["description", "\n    With dumbbells in either hand, bend your knees with your feet slightly bowed out. Arch your back above your knees, and start with the weights touching in front of your chest.\n    With bent elbows, raise your arms up to shoulder level, pausing at the at the end of the motion.\n    Slowly lower your arms back to starting position.\n"], ["created_at", "2019-04-09 12:42:49.736424"], ["updated_at", "2019-04-09 12:42:49.736424"], ["weighted", true]]
+  ↳ db/seeds.rb:194
+  [1m[35m (17.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:194
+  [1m[36mExercise Load (16.9ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Face pulls"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:199
+  [1m[35m (16.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:199
+  [1m[36mExercise Create (17.5ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "muscle_type_2", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["exercise_name", "Face pulls"], ["muscle_type_1", "Posterior Deltoids"], ["muscle_type_2", "Lateral Deltoids"], ["description", "\n    Facing the pulley, pull the weight towards you while keeping your arms parallel to the ground.\n    Pull your hands back to both sides of your head and hold the position.\n    Slowly return weight to starting position. Repeat.\n"], ["created_at", "2019-04-09 12:42:49.811373"], ["updated_at", "2019-04-09 12:42:49.811373"], ["weighted", true]]
+  ↳ db/seeds.rb:199
+  [1m[35m (17.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:199
+  [1m[36mExercise Load (16.5ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Weighted Crunches"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:205
+  [1m[35m (16.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:205
+  [1m[36mExercise Create (18.0ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["exercise_name", "Weighted Crunches"], ["muscle_type_1", ""], ["description", "\n    Lay flat on your back with your knees bent and your feet flat on the ground, about a foot from your lower back.\n    Place your fingertips on your temples with your palms facing out.\n    Draw your belly into the base of your spine to engage the muscles, then raise your head and shoulders off the floor.\n    Return to starting position and repeat.\n"], ["created_at", "2019-04-09 12:42:49.886348"], ["updated_at", "2019-04-09 12:42:49.886348"], ["weighted", true]]
+  ↳ db/seeds.rb:205
+  [1m[35m (17.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:205
+  [1m[36mExercise Load (16.6ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Weighted Forearm Plank"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:211
+  [1m[35m (16.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:211
+  [1m[36mExercise Create (16.8ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["exercise_name", "Weighted Forearm Plank"], ["muscle_type_1", ""], ["description", "\n    Place forearms on the ground with your elbows bent at a 90° angle aligned beneath your shoulders, with your arms parallel at shoulder-width.\n    Your feet should be together, with only your toes touching the floor.\n    Lift your belly off the floor and form a straight line from your heels to the crown of your head and hold.\n"], ["created_at", "2019-04-09 12:42:49.961742"], ["updated_at", "2019-04-09 12:42:49.961742"], ["weighted", true]]
+  ↳ db/seeds.rb:211
+  [1m[35m (19.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:211
+  [1m[36mExercise Load (18.0ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Roll-outs"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:216
+  [1m[35m (17.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:216
+  [1m[36mExercise Create (17.3ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["exercise_name", "Roll-outs"], ["muscle_type_1", ""], ["description", "\n    Hold the Ab Roller with both hands and kneel on the floor with your feet up and crossed.\n    Slowly roll the ab roller straight forward, stretching your body into a straight position.\n    After a pause at the stretched position, start pulling yourself back to the starting position. This should be a slow and controlled movement.\n"], ["created_at", "2019-04-09 12:42:50.039461"], ["updated_at", "2019-04-09 12:42:50.039461"], ["weighted", false]]
+  ↳ db/seeds.rb:216
+  [1m[35m (17.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:216
+  [1m[36mExercise Load (18.0ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Laying Leg Raises"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:221
+  [1m[35m (16.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:221
+  [1m[36mExercise Create (18.6ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["exercise_name", "Laying Leg Raises"], ["muscle_type_1", ""], ["description", "\n    Lay on your back with your arms palms down on either side.\n    Keep your legs together and as straight as possible.\n    Slowly raise your legs to a 90° angle, pause at this position, or as high as you can reach your legs, and then slowly lower your legs back down.\n    Duration of these movements should be slow so that you do not utilize momentum, enabling you to get the most out of the exercise.\n"], ["created_at", "2019-04-09 12:42:50.114012"], ["updated_at", "2019-04-09 12:42:50.114012"], ["weighted", false]]
+  ↳ db/seeds.rb:221
+  [1m[35m (17.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:221
+  [1m[36mExercise Load (16.6ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Obliques Side Bend"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:227
+  [1m[35m (16.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:227
+  [1m[36mExercise Create (16.2ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["exercise_name", "Obliques Side Bend"], ["muscle_type_1", "Obliques"], ["description", "\n  Stand up straight with the kettlebell in one hand.\n  Without bending forward or backward, and keeping your arm straight down by your side, bend to one side so the kettlebell is lowered to your knee\n  Straighten yourself so the kettlebell returns to it's original position."], ["created_at", "2019-04-09 12:42:50.187272"], ["updated_at", "2019-04-09 12:42:50.187272"], ["weighted", true]]
+  ↳ db/seeds.rb:227
+  [1m[35m (17.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:227
+  [1m[36mExercise Load (17.6ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Russian Twists"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:231
+  [1m[35m (16.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:231
+  [1m[36mExercise Create (17.9ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["exercise_name", "Russian Twists"], ["muscle_type_1", "Obliques"], ["description", "\n  Sit on the floor with your legs outstretched.\n  Lean slightly backwards so that your legs are off the floor and your are being held up by your core.\n  Lift the kettlebell from the floor to your side and rotate so that it is held on the other side of your body.\n  Repeat this movement going side to side.\n  Tip: Don't let the kettlebell touch the floor at each side to increase the efficiency of this exercise.\n  "], ["created_at", "2019-04-09 12:42:50.258024"], ["updated_at", "2019-04-09 12:42:50.258024"], ["weighted", true]]
+  ↳ db/seeds.rb:231
+  [1m[35m (17.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:231
+  [1m[36mMuscle Load (16.6ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Rectus Abdominis"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:239
+  [1m[36mMuscle Load (16.8ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Transverse Abdominals"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:240
+  [1m[36mMuscle Load (16.6ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Obliques"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:241
+  [1m[36mExercise Load (16.1ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", ""], ["LIMIT", 1]]
+  ↳ db/seeds.rb:246
+  [1m[35m (15.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:246
+  [1m[36mExercise Create (19.7ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["exercise_name", ""], ["muscle_type_1", ""], ["description", ""], ["created_at", "2019-04-09 12:42:50.381860"], ["updated_at", "2019-04-09 12:42:50.381860"], ["weighted", true]]
+  ↳ db/seeds.rb:246
+  [1m[35m (18.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:246
+  [1m[35m (18.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (20.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "jacotcher1@sheffield.ac.uk"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (16.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Exists (16.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jacotcher1@sheffield.ac.uk"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (16.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:9
+  [1m[36mMuscle Load (19.2ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Biceps"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mMuscle Load (17.6ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Triceps"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mMuscle Load (17.6ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Forearms"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mMuscle Load (16.9ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Trapezius"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mMuscle Load (17.4ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Latissimus"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mMuscle Load (16.3ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Upper Back"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mMuscle Load (16.3ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Lower Back"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mMuscle Load (16.7ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Pectoralis Major"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mMuscle Load (16.4ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Pectoralis Minor"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mMuscle Load (16.4ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Anterior Deltoids"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mMuscle Load (16.3ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Lateral Deltoids"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mMuscle Load (16.5ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Posterior Deltoid"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[36mMuscle Load (16.5ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Rectus Abdominis"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mMuscle Load (16.5ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Transverse Abdominis"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:32
+  [1m[35m (16.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mMuscle Create (17.1ms)[0m  [1m[32mINSERT INTO "muscles" ("muscle_name", "muscle_group", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["muscle_name", "Transverse Abdominis"], ["muscle_group", "Abdominals"], ["created_at", "2019-04-09 12:50:16.933697"], ["updated_at", "2019-04-09 12:50:16.933697"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (17.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[36mMuscle Load (17.0ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Obliques"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:33
+  [1m[36mMuscle Load (17.1ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Hamstrings"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mMuscle Load (17.2ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Adductors"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mMuscle Load (17.2ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Abductors"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:37
+  [1m[36mMuscle Load (16.8ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Quadriceps"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:38
+  [1m[36mMuscle Load (17.1ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Calves"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mMuscle Load (17.6ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Gluteus"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:41
+  [1m[36mExercise Load (18.7ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Barbell Curl"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:47
+  [1m[36mExercise Load (17.1ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Dumbbell Curl"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:52
+  [1m[36mExercise Load (16.9ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Hammer Curl"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:56
+  [1m[36mExercise Load (17.2ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Seated Tricep extensions"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mExercise Load (17.0ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Dips (Narrow elbows)"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:66
+  [1m[36mExercise Load (17.4ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Cable push downs"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:71
+  [1m[36mExercise Load (16.9ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Bench Dips"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:76
+  [1m[36mExercise Load (17.1ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Behind The Back Barbell Wrist Curl"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:82
+  [1m[36mExercise Load (17.1ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Forearm curl"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mExercise Load (18.4ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Seated Dumbell Shrugs"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:92
+  [1m[36mExercise Load (17.1ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Standing Smith Machine Shrugs"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:96
+  [1m[36mExercise Load (17.4ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Neutral Grip Pulldown"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:101
+  [1m[36mExercise Load (16.9ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Seated Cable Row"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:106
+  [1m[36mExercise Load (17.0ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Bent Over Barbell Row"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:111
+  [1m[36mExercise Load (16.9ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Dumbell Row"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:117
+  [1m[36mExercise Load (17.0ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Deadlift"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:124
+  [1m[36mExercise Load (17.2ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "45 Degree Back Extention"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:131
+  [1m[36mExercise Load (17.1ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Bench Press"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:137
+  [1m[36mExercise Load (17.3ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Dumbell Bench Press"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:144
+  [1m[36mExercise Load (16.7ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Incline Bench Press"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:149
+  [1m[36mExercise Load (17.0ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Incline Dumbell Bench Press"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:156
+  [1m[36mExercise Load (18.3ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Dips"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:162
+  [1m[36mExercise Load (17.0ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Dumbell Flys"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:167
+  [1m[36mExercise Load (17.1ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Cable Flys"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:173
+  [1m[36mExercise Load (17.0ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Military Press"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:179
+  [1m[36mExercise Load (17.0ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Seated Dumbbell Shoulder Press "], ["LIMIT", 1]]
+  ↳ db/seeds.rb:184
+  [1m[36mExercise Load (16.5ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Side Lateral Raises "], ["LIMIT", 1]]
+  ↳ db/seeds.rb:189
+  [1m[36mExercise Load (16.9ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", " Bent-Over Rear Delt Raise "], ["LIMIT", 1]]
+  ↳ db/seeds.rb:194
+  [1m[36mExercise Load (16.8ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Face pulls"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:199
+  [1m[36mExercise Load (17.6ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Weighted Crunches"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:205
+  [1m[35m (16.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:205
+  [1m[36mExercise Create (18.4ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["exercise_name", "Weighted Crunches"], ["muscle_type_1", "Rectus Abdominis"], ["description", "\n    Lay flat on your back with your knees bent and your feet flat on the ground, about a foot from your lower back.\n    Place your fingertips on your temples with your palms facing out.\n    Draw your belly into the base of your spine to engage the muscles, then raise your head and shoulders off the floor.\n    Return to starting position and repeat.\n"], ["created_at", "2019-04-09 12:50:17.765514"], ["updated_at", "2019-04-09 12:50:17.765514"], ["weighted", true]]
+  ↳ db/seeds.rb:205
+  [1m[35m (17.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:205
+  [1m[36mExercise Load (16.4ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Weighted Forearm Plank"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:211
+  [1m[35m (17.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:211
+  [1m[36mExercise Create (17.5ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "muscle_type_2", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["exercise_name", "Weighted Forearm Plank"], ["muscle_type_1", "Rectus Abdominis"], ["muscle_type_2", "Transverse Abdominis"], ["description", "\n    Place forearms on the ground with your elbows bent at a 90° angle aligned beneath your shoulders, with your arms parallel at shoulder-width.\n    Your feet should be together, with only your toes touching the floor.\n    Place your weight on your back, just above the bottom.\n    Lift your belly off the floor and form a straight line from your heels to the crown of your head and hold for 1 minute.\n"], ["created_at", "2019-04-09 12:50:17.837959"], ["updated_at", "2019-04-09 12:50:17.837959"], ["weighted", true]]
+  ↳ db/seeds.rb:211
+  [1m[35m (17.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:211
+  [1m[36mExercise Load (17.5ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Roll-outs"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:217
+  [1m[35m (17.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:217
+  [1m[36mExercise Create (17.7ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "muscle_type_2", "muscle_type_3", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["exercise_name", "Roll-outs"], ["muscle_type_1", "Transverse Abdominis"], ["muscle_type_2", "Rectus Abdominis"], ["muscle_type_3", "Obliques"], ["description", "\n    Hold the Ab Roller with both hands and kneel on the floor with your feet up and crossed.\n    Slowly roll the ab roller straight forward, stretching your body into a straight position.\n    After a pause at the stretched position, start pulling yourself back to the starting position. This should be a slow and controlled movement.\n"], ["created_at", "2019-04-09 12:50:17.914813"], ["updated_at", "2019-04-09 12:50:17.914813"], ["weighted", false]]
+  ↳ db/seeds.rb:217
+  [1m[35m (18.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:217
+  [1m[36mExercise Load (17.4ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Laying Leg Raises"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:222
+  [1m[35m (16.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:222
+  [1m[36mExercise Create (17.5ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "muscle_type_2", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["exercise_name", "Laying Leg Raises"], ["muscle_type_1", "Rectus Abdominis"], ["muscle_type_2", "Transverse Abdominis"], ["description", "\n    Lay on your back with your arms palms down on either side.\n    Keep your legs together and as straight as possible.\n    Slowly raise your legs to a 90° angle, pause at this position, or as high as you can reach your legs, and then slowly lower your legs back down.\n    Duration of these movements should be slow so that you do not utilize momentum, enabling you to get the most out of the exercise.\n"], ["created_at", "2019-04-09 12:50:17.992662"], ["updated_at", "2019-04-09 12:50:17.992662"], ["weighted", false]]
+  ↳ db/seeds.rb:222
+  [1m[35m (17.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:222
+  [1m[36mExercise Load (16.9ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Obliques Side Bend"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:228
+  [1m[35m (17.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:228
+  [1m[36mExercise Create (18.2ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["exercise_name", "Obliques Side Bend"], ["muscle_type_1", "Obliques"], ["description", "\n  Stand up straight with the kettlebell in one hand.\n  Without bending forward or backward, and keeping your arm straight down by your side, bend to one side so the kettlebell is lowered to your knee\n  Straighten yourself so the kettlebell returns to it's original position."], ["created_at", "2019-04-09 12:50:18.070405"], ["updated_at", "2019-04-09 12:50:18.070405"], ["weighted", true]]
+  ↳ db/seeds.rb:228
+  [1m[35m (17.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:228
+  [1m[36mExercise Load (18.6ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Russian Twists"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:232
+  [1m[35m (16.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:232
+  [1m[36mExercise Create (17.6ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["exercise_name", "Russian Twists"], ["muscle_type_1", "Obliques"], ["description", "\n  Sit on the floor with your legs outstretched.\n  Lean slightly backwards so that your legs are off the floor and your are being held up by your core.\n  Lift the kettlebell from the floor to your side and rotate so that it is held on the other side of your body.\n  Repeat this movement going side to side.\n  Tip: Don't let the kettlebell touch the floor at each side to increase the efficiency of this exercise.\n  "], ["created_at", "2019-04-09 12:50:18.149035"], ["updated_at", "2019-04-09 12:50:18.149035"], ["weighted", true]]
+  ↳ db/seeds.rb:232
+  [1m[35m (17.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:232
+  [1m[35m (17.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (18.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "jacotcher1@sheffield.ac.uk"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (16.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Exists (16.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jacotcher1@sheffield.ac.uk"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (16.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:9
+  [1m[36mMuscle Load (18.5ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Biceps"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mMuscle Load (19.0ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Triceps"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mMuscle Load (16.8ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Forearms"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mMuscle Load (16.6ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Trapezius"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mMuscle Load (16.7ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Latissimus"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mMuscle Load (17.2ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Upper Back"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mMuscle Load (16.8ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Lower Back"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mMuscle Load (16.6ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Pectoralis Major"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mMuscle Load (16.4ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Pectoralis Minor"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mMuscle Load (16.4ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Anterior Deltoids"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mMuscle Load (16.3ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Lateral Deltoids"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mMuscle Load (16.6ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Posterior Deltoid"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[36mMuscle Load (16.6ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Rectus Abdominis"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mMuscle Load (23.1ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Transverse Abdominis"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:32
+  [1m[36mMuscle Load (25.2ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Obliques"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:33
+  [1m[36mMuscle Load (18.2ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Hamstrings"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mMuscle Load (16.8ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Adductors"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mMuscle Load (17.4ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Abductors"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:37
+  [1m[36mMuscle Load (16.7ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Quadriceps"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:38
+  [1m[36mMuscle Load (16.9ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Calves"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mMuscle Load (18.7ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Gluteus"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:41
+  [1m[36mExercise Load (18.4ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Barbell Curl"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:47
+  [1m[36mExercise Load (16.6ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Dumbbell Curl"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:52
+  [1m[36mExercise Load (16.8ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Hammer Curl"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:56
+  [1m[36mExercise Load (16.5ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Seated Tricep extensions"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mExercise Load (17.4ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Dips (Narrow elbows)"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:66
+  [1m[36mExercise Load (16.6ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Cable push downs"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:71
+  [1m[36mExercise Load (16.6ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Bench Dips"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:76
+  [1m[36mExercise Load (17.1ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Behind The Back Barbell Wrist Curl"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:82
+  [1m[36mExercise Load (17.9ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Forearm curl"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mExercise Load (16.8ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Seated Dumbell Shrugs"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:92
+  [1m[36mExercise Load (17.3ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Standing Smith Machine Shrugs"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:96
+  [1m[36mExercise Load (16.8ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Neutral Grip Pulldown"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:101
+  [1m[36mExercise Load (16.9ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Seated Cable Row"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:106
+  [1m[36mExercise Load (16.5ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Bent Over Barbell Row"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:111
+  [1m[36mExercise Load (17.0ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Dumbell Row"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:117
+  [1m[36mExercise Load (16.7ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Deadlift"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:124
+  [1m[36mExercise Load (16.6ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "45 Degree Back Extention"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:131
+  [1m[36mExercise Load (16.8ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Bench Press"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:137
+  [1m[36mExercise Load (16.7ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Dumbell Bench Press"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:144
+  [1m[36mExercise Load (16.6ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Incline Bench Press"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:149
+  [1m[36mExercise Load (16.9ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Incline Dumbell Bench Press"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:156
+  [1m[36mExercise Load (16.9ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Dips"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:162
+  [1m[36mExercise Load (17.1ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Dumbell Flys"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:167
+  [1m[36mExercise Load (16.9ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Cable Flys"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:173
+  [1m[36mExercise Load (16.5ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Military Press"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:179
+  [1m[36mExercise Load (16.4ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Seated Dumbbell Shoulder Press "], ["LIMIT", 1]]
+  ↳ db/seeds.rb:184
+  [1m[36mExercise Load (16.5ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Side Lateral Raises "], ["LIMIT", 1]]
+  ↳ db/seeds.rb:189
+  [1m[36mExercise Load (18.2ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", " Bent-Over Rear Delt Raise "], ["LIMIT", 1]]
+  ↳ db/seeds.rb:194
+  [1m[36mExercise Load (16.8ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Face pulls"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:199
+  [1m[36mExercise Load (18.3ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Weighted Crunches"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:205
+  [1m[36mExercise Load (17.6ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Weighted Forearm Plank"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:211
+  [1m[36mExercise Load (17.1ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Roll-outs"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:217
+  [1m[36mExercise Load (16.4ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Laying Leg Raises"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:222
+  [1m[36mExercise Load (16.6ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Obliques Side Bend"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:228
+  [1m[36mExercise Load (18.2ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Russian Twists"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:232
+  [1m[36mExercise Load (17.1ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Stiff Leg Deadlifts"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:241
+  [1m[35m (16.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:241
+  [1m[36mExercise Create (18.1ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["exercise_name", "Stiff Leg Deadlifts"], ["muscle_type_1", "Hamstrings"], ["description", "\n    Stand with a barbell at your shins with your feet shoulder width apart.\n    Bend forward at your hips and keep your knees as fully extended as possible.\n    Grab the barbell and then extend your hips while maintaining a straight back.\n    From the standing position, lower the weight in a controlled manner.\n    You can either lower the weight to the floor or before you touch the floor, depending on your mobility.\n"], ["created_at", "2019-04-09 13:04:32.370076"], ["updated_at", "2019-04-09 13:04:32.370076"], ["weighted", true]]
+  ↳ db/seeds.rb:241
+  [1m[35m (21.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:241
+  [1m[36mExercise Load (17.1ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Squat"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:248
+  [1m[35m (27.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:248
+  [1m[36mExercise Create (17.5ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "muscle_type_2", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["exercise_name", "Squat"], ["muscle_type_1", "Hamstrings"], ["muscle_type_2", "Quadriceps"], ["description", "\n    Stand with your feet shoulder-width apart. Maintain the natural arch in your back, squeezing your shoulder blades and raising your chest.\n    Grip the bar across your shoulders and support it on your upper back. Unwrack the bar by straightening your legs, and take a step back.\n    Bend your knees as you lower the weight without altering the form of your back until your hips are below your knees.\n    Raise the bar back to starting position, lift with your legs and exhale at the top.\n"], ["created_at", "2019-04-09 13:04:32.461449"], ["updated_at", "2019-04-09 13:04:32.461449"], ["weighted", true]]
+  ↳ db/seeds.rb:248
+  [1m[35m (17.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:248
+  [1m[36mExercise Load (16.7ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Hamstring Curl"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:254
+  [1m[35m (16.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:254
+  [1m[36mExercise Create (17.4ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["exercise_name", "Hamstring Curl"], ["muscle_type_1", "Hamstrings"], ["description", "\n    Lay down on the machine, placing your legs beneath the padded lever. Position your legs so that the padded lever is below your calve muscles.\n    Support yourself by grabbing the side handles of the machine, and slowly raise the weight with your legs, toes pointed straight.\n    Pause at the apex of the motion, then slowly return to starting position.\n"], ["created_at", "2019-04-09 13:04:32.536133"], ["updated_at", "2019-04-09 13:04:32.536133"], ["weighted", true]]
+  ↳ db/seeds.rb:254
+  [1m[35m (18.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:254
+  [1m[36mExercise Load (18.1ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Leg Press"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:260
+  [1m[35m (16.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:260
+  [1m[36mExercise Create (17.3ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["exercise_name", "Leg Press"], ["muscle_type_1", "Quadriceps"], ["description", "\n    Place your legs on the platform with your feet at shoulder width.\n    Release the weight and extend your legs fully, without locking your knees.\n    Lower the weight until your legs are at a 90° angle (but DO NOT allow your butt and lower back to rise off of the pad. This will put your lower back in a rounded position, which is very dangerous.)\n    Raise the weight back to starting position.\n"], ["created_at", "2019-04-09 13:04:32.612849"], ["updated_at", "2019-04-09 13:04:32.612849"], ["weighted", true]]
+  ↳ db/seeds.rb:260
+  [1m[35m (17.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:260
+  [1m[36mExercise Load (17.8ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Leg Extension"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:266
+  [1m[35m (17.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:266
+  [1m[36mExercise Create (237.4ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["exercise_name", "Leg Extension"], ["muscle_type_1", "Quadriceps"], ["description", "\n    Sit on the machine with your back against the cushion and adjust the machine you are using so that your knees are at a 90° angle at the starting position.\n    Raise the weight by extending your knees outward, then lower your leg to the starting position. Both movements should be done in a slow, controlled motion.\n"], ["created_at", "2019-04-09 13:04:32.690574"], ["updated_at", "2019-04-09 13:04:32.690574"], ["weighted", true]]
+  ↳ db/seeds.rb:266
+  [1m[35m (17.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:266
+  [1m[36mExercise Load (17.0ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Goblet Squat"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:270
+  [1m[35m (16.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:270
+  [1m[36mExercise Create (17.4ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["exercise_name", "Goblet Squat"], ["muscle_type_1", "Quadriceps"], ["description", "\n    Hold the weight tucked into your upper chest area, keeping your elbows in. Your feet should be slightly wider than shoulder width.\n    Sink down into the squat, keeping your elbows inside the track of your knees.\n    Push through your heels while keeping your chest up and return to starting position.\n"], ["created_at", "2019-04-09 13:04:32.987003"], ["updated_at", "2019-04-09 13:04:32.987003"], ["weighted", true]]
+  ↳ db/seeds.rb:270
+  [1m[35m (18.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:270
+  [1m[36mExercise Load (16.5ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Standing calf raises"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:276
+  [1m[35m (16.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:276
+  [1m[36mExercise Create (17.3ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["exercise_name", "Standing calf raises"], ["muscle_type_1", "Calves"], ["description", "\n    Adjust the machine in accordance with your height and place your shoulders underneath the padded lever.\n    The balls of your feet should be supporting your weight on the calve block, your heels extending off of it.\n    Extend your heels upwards while keeping your knees stationary, and pause at the contracted position.\n    Slowly return to the starting position. Repeat.\n"], ["created_at", "2019-04-09 13:04:33.063593"], ["updated_at", "2019-04-09 13:04:33.063593"], ["weighted", true]]
+  ↳ db/seeds.rb:276
+  [1m[35m (17.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:276
+  [1m[36mExercise Load (17.1ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Seated calf raises"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:282
+  [1m[35m (18.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:282
+  [1m[36mExercise Create (18.0ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["exercise_name", "Seated calf raises"], ["muscle_type_1", "Calves"], ["description", "\n    Get comfortable on the machine, then place your lower thighs beneath the padded lever. Place your toes and the balls of your feet onto the foot supports.\n    Prevent the weight from slipping forward by gripping the handles, and release the safety bar. Lower the weight until your calves are extended.\n    Push your heels up to lift the padded lever and hold the contracted position, then slowly lower back down to the starting position. Repeat.\n"], ["created_at", "2019-04-09 13:04:33.139267"], ["updated_at", "2019-04-09 13:04:33.139267"], ["weighted", true]]
+  ↳ db/seeds.rb:282
+  [1m[35m (17.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:282
+  [1m[36mExercise Load (16.4ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Hip adductors"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:288
+  [1m[35m (16.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:288
+  [1m[36mExercise Create (16.9ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["exercise_name", "Hip adductors"], ["muscle_type_1", "Adductors"], ["description", "\n  Using the Hip Adductors machine, put your legs on the inside of the pads.\n  Push outwards until your legs are almost perpendicular.\n  Slowly allow the machine to return to it's resting position."], ["created_at", "2019-04-09 13:04:33.212953"], ["updated_at", "2019-04-09 13:04:33.212953"], ["weighted", true]]
+  ↳ db/seeds.rb:288
+  [1m[35m (17.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:288
+  [1m[36mExercise Load (16.9ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Hip abductors"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:293
+  [1m[35m (16.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:293
+  [1m[36mExercise Create (16.8ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["exercise_name", "Hip abductors"], ["muscle_type_1", "Abductors"], ["description", "\n  Using the Hip Abductors machine, put your legs on the outside of the pads.\n  Push inwards until your legs are almost closed.\n  Slowly allow the machine to return to it's resting position."], ["created_at", "2019-04-09 13:04:33.287045"], ["updated_at", "2019-04-09 13:04:33.287045"], ["weighted", true]]
+  ↳ db/seeds.rb:293
+  [1m[35m (17.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:293
+  [1m[36mExercise Load (16.6ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Glute Bridge"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:298
+  [1m[35m (16.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:298
+  [1m[36mExercise Create (16.9ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["exercise_name", "Glute Bridge"], ["muscle_type_1", "Gluteus"], ["description", "\n    Lie down with your knees bent and your feet flat on the floor.\n    Push your hips up so that your butt is elevated and your back straight.\n    Tense your glutes and raise your hips towards the ceiling.\n    Once you are at the highest point you can manage, hold the position for a few seconds, and then slowly return to the starting position\n"], ["created_at", "2019-04-09 13:04:33.359914"], ["updated_at", "2019-04-09 13:04:33.359914"], ["weighted", true]]
+  ↳ db/seeds.rb:298
+  [1m[35m (17.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:298
+  [1m[36mExercise Load (16.6ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Barbell Hip Thrust"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:304
+  [1m[35m (15.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:304
+  [1m[36mExercise Create (17.0ms)[0m  [1m[32mINSERT INTO "exercises" ("exercise_name", "muscle_type_1", "description", "created_at", "updated_at", "weighted") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["exercise_name", "Barbell Hip Thrust"], ["muscle_type_1", "Gluteus"], ["description", "\n    Sit on the ground with a bench behind you. Have the barbell over your legs just above your hips.\n    Lean back against the bench so that your shoulders are resting upon it, stretch your arms out to either side using the bench as support.\n    Raise the weight by driving through your feet and extending your hips upwards. Support the weight with your shoulders and feet.\n    Slowly extend as far as you can, and then slowly return to the starting position.\n"], ["created_at", "2019-04-09 13:04:33.429348"], ["updated_at", "2019-04-09 13:04:33.429348"], ["weighted", true]]
+  ↳ db/seeds.rb:304
+  [1m[35m (17.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:304
+Started GET "/" for 127.0.0.1 at 2019-04-09 14:05:58 +0100
+  [1m[35m (18.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Processing by HomepageController#home as HTML
+Completed 401 Unauthorized in 10ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-04-09 14:05:59 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (184.3ms)
+Completed 200 OK in 1281ms (Views: 1193.1ms | ActiveRecord: 54.8ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 14:06:00 +0100
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 14:06:01 +0100
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-04-09 14:06:08 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6VplxJuriSu7+3PfF6mMwD1KBJkfJ/QsBl+VDXfuTOcD3LUdVlr9nENkzOVnQUzaIHSkBX5UstUuJpFdhPNY0g==", "user"=>{"email"=>"jacotcher1@sheffield.ac.uk", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (20.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "jacotcher1@sheffield.ac.uk"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+Completed 401 Unauthorized in 63ms (ActiveRecord: 20.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6VplxJuriSu7+3PfF6mMwD1KBJkfJ/QsBl+VDXfuTOcD3LUdVlr9nENkzOVnQUzaIHSkBX5UstUuJpFdhPNY0g==", "user"=>{"email"=>"jacotcher1@sheffield.ac.uk", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 170ms (Views: 35.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 14:06:09 +0100
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-04-09 14:06:15 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xx7avC1y2zyLtp+Z3gu8zakL/KHtVb99wnICDDGs3QG1mApl4IOvi3MpIKOu43zXtDVcPYwm+YTqCwZcwrHJNA==", "user"=>{"email"=>"jacotcher1@sheffield.ac.uk", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (18.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "jacotcher1@sheffield.ac.uk"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+Completed 401 Unauthorized in 21ms (ActiveRecord: 18.7ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xx7avC1y2zyLtp+Z3gu8zakL/KHtVb99wnICDDGs3QG1mApl4IOvi3MpIKOu43zXtDVcPYwm+YTqCwZcwrHJNA==", "user"=>{"email"=>"jacotcher1@sheffield.ac.uk", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 153ms (Views: 35.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 14:06:16 +0100
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-04-09 14:06:19 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (31.8ms)
+Completed 200 OK in 95ms (Views: 93.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-09 14:06:34 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G+BZUwCOwo35sy8qMPGNH35Kp4lNvJv20cXnLGONZuq3eganIlkrQLd3n5Rs3NZut6kcLnSeFxgqzJsTzTT7Og==", "user"=>{"email"=>"jamiecotcher@yahoo.co.uk", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"James", "last_name"=>"Cotcher", "gender"=>"Male", "date_of_birth(1i)"=>"2019", "date_of_birth(2i)"=>"4", "date_of_birth(3i)"=>"9"}, "commit"=>"Sign up"}
+Unpermitted parameters: :first_name, :last_name, :gender, :date_of_birth(1i), :date_of_birth(2i), :date_of_birth(3i)
+  [1m[35m (17.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mUser Exists (17.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jamiecotcher@yahoo.co.uk"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (18.0ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (28.6ms)
+Completed 200 OK in 295ms (Views: 73.8ms | ActiveRecord: 52.5ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 14:06:35 +0100
+Started POST "/users" for 127.0.0.1 at 2019-04-09 14:07:15 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RfGTdiTeH0pqg4xginHqtlmj5Q+rrpnp7gfrUSoDHAGvd0Ov6S9r/ZIcM1r6mSqsRJ1Fk8rd3xDGfu8B2R4INA==", "user"=>{"email"=>"jamiecotcher@yahoo.co.uk", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"", "last_name"=>"", "gender"=>"", "date_of_birth(1i)"=>"2019", "date_of_birth(2i)"=>"4", "date_of_birth(3i)"=>"9"}, "commit"=>"Sign up"}
+Unpermitted parameters: :first_name, :last_name, :gender, :date_of_birth(1i), :date_of_birth(2i), :date_of_birth(3i)
+  [1m[35m (17.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mUser Exists (16.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jamiecotcher@yahoo.co.uk"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (21.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 227ms (Views: 48.8ms | ActiveRecord: 55.1ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 14:07:16 +0100
+Started GET "/users" for 127.0.0.1 at 2019-04-09 14:07:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+request_store (1.4.1) lib/request_store/middleware.rb:19:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+rack (2.0.6) lib/rack/handler/thin.rb:22:in `run'
+rack (2.0.6) lib/rack/server.rb:297:in `start'
+railties (5.2.1) lib/rails/commands/server/server_command.rb:53:in `start'
+railties (5.2.1) lib/rails/commands/server/server_command.rb:147:in `block in perform'
+railties (5.2.1) lib/rails/commands/server/server_command.rb:142:in `tap'
+railties (5.2.1) lib/rails/commands/server/server_command.rb:142:in `perform'
+thor (0.20.3) lib/thor/command.rb:27:in `run'
+thor (0.20.3) lib/thor/invocation.rb:126:in `invoke_command'
+thor (0.20.3) lib/thor.rb:387:in `dispatch'
+railties (5.2.1) lib/rails/command/base.rb:65:in `perform'
+railties (5.2.1) lib/rails/command.rb:46:in `invoke'
+railties (5.2.1) lib/rails/commands.rb:18:in `<top (required)>'
+bin/rails:9:in `require'
+bin/rails:9:in `<top (required)>'
+spring (2.0.2) lib/spring/client/rails.rb:28:in `load'
+spring (2.0.2) lib/spring/client/rails.rb:28:in `call'
+spring (2.0.2) lib/spring/client/command.rb:7:in `call'
+spring (2.0.2) lib/spring/client.rb:30:in `run'
+spring (2.0.2) bin/spring:49:in `<top (required)>'
+spring (2.0.2) lib/spring/binstub.rb:31:in `load'
+spring (2.0.2) lib/spring/binstub.rb:31:in `<top (required)>'
+bin/spring:15:in `require'
+bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 14:07:18 +0100
+Started GET "/" for 127.0.0.1 at 2019-04-09 14:07:21 +0100
+Processing by HomepageController#home as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-04-09 14:07:21 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (8.7ms)
+Completed 200 OK in 43ms (Views: 42.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 14:07:22 +0100
+Started GET "/" for 127.0.0.1 at 2019-04-09 14:07:24 +0100
+Processing by HomepageController#home as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-04-09 14:07:24 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (9.2ms)
+Completed 200 OK in 47ms (Views: 46.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 14:07:25 +0100
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-04-09 14:07:27 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rvCgS6l+zAHS8nKCNqhaHNDLxGWsAYTHFKBgIZ/TEk9EdnCSZI+4tiptzbhGQJoGzfVk+c1ywj482WRxbM4Geg==", "user"=>{"email"=>"jacotcher1@sheffield.ac.uk", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (18.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "jacotcher1@sheffield.ac.uk"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+Completed 401 Unauthorized in 20ms (ActiveRecord: 18.4ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rvCgS6l+zAHS8nKCNqhaHNDLxGWsAYTHFKBgIZ/TEk9EdnCSZI+4tiptzbhGQJoGzfVk+c1ywj482WRxbM4Geg==", "user"=>{"email"=>"jacotcher1@sheffield.ac.uk", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (6.1ms)
+Completed 200 OK in 161ms (Views: 39.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 14:07:28 +0100
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-04-09 14:07:29 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 45ms (Views: 44.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-09 14:07:39 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TdYPDmjO9ks8vEMlOMT8u/u+twAa6AAK55d1s9U7dB7hTFD6ShkfhnJ485tk6afKMl0MpyPKjOQcngmMe4Lpzg==", "user"=>{"email"=>"jamiecotcher@sheffield.co.uk", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"james", "last_name"=>"jaksfdj", "gender"=>"jaksdjf", "date_of_birth(1i)"=>"2019", "date_of_birth(2i)"=>"4", "date_of_birth(3i)"=>"9"}, "commit"=>"Sign up"}
+Unpermitted parameters: :first_name, :last_name, :gender, :date_of_birth(1i), :date_of_birth(2i), :date_of_birth(3i)
+  [1m[35m (16.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mUser Exists (18.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jamiecotcher@sheffield.co.uk"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (16.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 210ms (Views: 43.5ms | ActiveRecord: 50.8ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 14:07:40 +0100
+Started GET "/" for 127.0.0.1 at 2019-04-09 14:11:06 +0100
+Processing by HomepageController#home as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-04-09 14:11:06 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (10.0ms)
+Completed 200 OK in 45ms (Views: 44.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 14:11:07 +0100
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-04-09 14:11:22 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (35.7ms)
+Completed 200 OK in 79ms (Views: 76.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-09 14:11:41 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QQhtrckma0zZAXYvH+sSay5DVC5di/KGeXAqppaCBQrtkjJZ6/GCgZfFxpFDxkka56DviWSpfmiCeVaZODuY2g==", "user"=>{"email"=>"jamiecotcher@sheffield.co.uk", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"lakjsdf", "last_name"=>"alksdjf", "gender"=>"alksdjf", "date_of_birth(1i)"=>"2014", "date_of_birth(2i)"=>"4", "date_of_birth(3i)"=>"12"}, "commit"=>"Sign up"}
+Unpermitted parameters: :first_name, :last_name, :gender, :date_of_birth(1i), :date_of_birth(2i), :date_of_birth(3i)
+  [1m[35m (18.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mUser Exists (33.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jamiecotcher@sheffield.co.uk"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (16.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 234ms (Views: 49.6ms | ActiveRecord: 68.0ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 14:11:42 +0100
+Started POST "/users" for 127.0.0.1 at 2019-04-09 14:11:57 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xg6SkjPxzYHHI3fCqocupTudF6LF+sShIa4X4mqoN0i0iEJL/gC5Nj+8yPjab+6/JqO3PqSJglgJ1xOymbUjfQ==", "user"=>{"email"=>"jamiecotcher@sheffield.co.uk", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"James", "last_name"=>"Cotcher", "gender"=>"alkdsjf", "date_of_birth(1i)"=>"2019", "date_of_birth(2i)"=>"4", "date_of_birth(3i)"=>"9"}, "commit"=>"Sign up"}
+Unpermitted parameters: :first_name, :last_name, :gender, :date_of_birth(1i), :date_of_birth(2i), :date_of_birth(3i)
+  [1m[35m (16.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mUser Exists (16.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jamiecotcher@sheffield.co.uk"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[36mUser Create (18.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "jamiecotcher@sheffield.co.uk"], ["encrypted_password", "$2a$11$yfel9Psifo0A8A1mTJ3F9.iWduCHGr2JHE83wF4iKMXlz6XZ7Oq8a"], ["created_at", "2019-04-09 13:11:57.658683"], ["updated_at", "2019-04-09 13:11:57.658683"]]
+  ↳ bin/rails:9
+  [1m[35m (17.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Redirected to http://localhost:3000/
+Completed 302 Found in 191ms (ActiveRecord: 69.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 14:11:57 +0100
+Processing by HomepageController#home as HTML
+  [1m[36mUser Load (17.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering homepage/home.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (4.9ms)
+  Rendered layouts/_footer.html.haml (6.4ms)
+  Rendered homepage/home.html.haml within layouts/application (40.6ms)
+Completed 200 OK in 138ms (Views: 81.4ms | ActiveRecord: 17.6ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 14:11:58 +0100
+Started GET "/" for 127.0.0.1 at 2019-04-09 14:12:06 +0100
+Processing by HomepageController#home as HTML
+  [1m[36mUser Load (33.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering homepage/home.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (5.7ms)
+  Rendered layouts/_footer.html.haml (3.3ms)
+  Rendered homepage/home.html.haml within layouts/application (13.2ms)
+Completed 200 OK in 84ms (Views: 47.3ms | ActiveRecord: 33.5ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 14:12:08 +0100
+Started GET "/exercises" for 127.0.0.1 at 2019-04-09 14:12:27 +0100
+Started GET "/exercises/index" for 127.0.0.1 at 2019-04-09 14:12:27 +0100
+Processing by ExercisesController#index as HTML
+  [1m[36mUser Load (17.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering exercises/index.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (6.4ms)
+  Rendered layouts/_footer.html.haml (4.6ms)
+  Rendered exercises/index.html.haml within layouts/application (17.7ms)
+Completed 200 OK in 101ms (Views: 55.3ms | ActiveRecord: 17.7ms)
+
+
