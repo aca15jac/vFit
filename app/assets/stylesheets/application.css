@@ -14,5 +14,6 @@
  *= require_self
  *= require homepage
  *= require normalize
- *= require overall.css
+ *= require overall
+ *= require bootstrap
  */

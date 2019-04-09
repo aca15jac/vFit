@@ -1,3 +1,26 @@
 = render 'layouts/header'
+.padding-top
+= @muscles.each do |x|
+  %h1.text-center
+    = x.muscle_name + "(" + x.muscle_group + ")"
+  %table.table.table-striped.table-dark.width_85
+    %thead
+      %tr
+        %th{:scope => "col"} Exercise name
+        %th{:scope => "col"} Primary muscle
+        %th{:scope => "col"} Secondary muscle
+        %th{:scope => "col"} Tertiary muscle
+    %tbody
+      = @exercises.each do |y|
+        = if y.muscle_type_1 == x.muscle_name
+          %tr
+            %td
+              = y.muscle_name
+            %td
+              = y.muscle_type_1
+            %td
+              = y.muscle_type_2
+            %td
+              = y.muscle_type_3
 
 = render 'layouts/footer'

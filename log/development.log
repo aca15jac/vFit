@@ -7569,3 +7569,1428 @@ Processing by ExercisesController#index as HTML
 Completed 200 OK in 101ms (Views: 55.3ms | ActiveRecord: 17.7ms)
 
 
+Started GET "/exercises" for 127.0.0.1 at 2019-04-09 14:22:17 +0100
+Started GET "/exercises/index" for 127.0.0.1 at 2019-04-09 14:22:17 +0100
+Processing by ExercisesController#index as HTML
+  [1m[36mUser Load (20.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering exercises/index.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (4.8ms)
+  [1m[36mExercise Load (19.1ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/james/.rvm/rubies/ruby-2.4.4/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mMuscle Load (18.3ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/james/.rvm/rubies/ruby-2.4.4/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE Exercise Load (0.1ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/james/.rvm/rubies/ruby-2.4.4/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE Muscle Load (0.0ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/james/.rvm/rubies/ruby-2.4.4/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE Exercise Load (0.0ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/james/.rvm/rubies/ruby-2.4.4/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE Muscle Load (0.0ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/james/.rvm/rubies/ruby-2.4.4/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE Exercise Load (0.0ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/james/.rvm/rubies/ruby-2.4.4/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE Muscle Load (0.0ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/james/.rvm/rubies/ruby-2.4.4/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE Exercise Load (0.0ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/james/.rvm/rubies/ruby-2.4.4/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  [1m[36mCACHE Muscle Load (0.0ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/james/.rvm/rubies/ruby-2.4.4/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  [1m[36mCACHE Exercise Load (0.0ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/james/.rvm/rubies/ruby-2.4.4/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  [1m[36mCACHE Muscle Load (0.0ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/james/.rvm/rubies/ruby-2.4.4/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  [1m[36mCACHE Exercise Load (0.0ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/james/.rvm/rubies/ruby-2.4.4/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  [1m[36mCACHE Muscle Load (0.0ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/james/.rvm/rubies/ruby-2.4.4/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  [1m[36mCACHE Exercise Load (0.0ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/james/.rvm/rubies/ruby-2.4.4/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  [1m[36mCACHE Muscle Load (0.0ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/james/.rvm/rubies/ruby-2.4.4/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  Rendered exercises/index.html.haml within layouts/application (586.5ms)
+Completed 500 Internal Server Error in 741ms (ActiveRecord: 213.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `muscles' for #<#<Class:0x0000562de6e18290>:0x0000562de6e16350>
+Did you mean?  @muscle):
+    1: = render 'layouts/header'
+    2: 
+    3: = muscles.each do |x|
+    4:   %h1 #{x.muscle_name} (#{x.muscle_group})
+    5:   %table.table.table-striped.table-dark
+    6:   %thead
+  
+app/views/exercises/index.html.haml:3:in `_app_views_exercises_index_html_haml__864253335941084561_47377573529420'
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 14:22:18 +0100
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 14:22:18 +0100
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 14:22:20 +0100
+Started GET "/exercises/index" for 127.0.0.1 at 2019-04-09 14:22:21 +0100
+Processing by ExercisesController#index as HTML
+  [1m[36mUser Load (16.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering exercises/index.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (3.4ms)
+  [1m[36mExercise Load (18.2ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/james/.rvm/rubies/ruby-2.4.4/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mMuscle Load (17.1ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/james/.rvm/rubies/ruby-2.4.4/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE Exercise Load (0.0ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/james/.rvm/rubies/ruby-2.4.4/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE Muscle Load (0.0ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/james/.rvm/rubies/ruby-2.4.4/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE Exercise Load (0.0ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/james/.rvm/rubies/ruby-2.4.4/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE Muscle Load (0.0ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/james/.rvm/rubies/ruby-2.4.4/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE Exercise Load (0.0ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/james/.rvm/rubies/ruby-2.4.4/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE Muscle Load (0.0ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/james/.rvm/rubies/ruby-2.4.4/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE Exercise Load (0.0ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/james/.rvm/rubies/ruby-2.4.4/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  [1m[36mCACHE Muscle Load (0.0ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/james/.rvm/rubies/ruby-2.4.4/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  [1m[36mCACHE Exercise Load (0.0ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/james/.rvm/rubies/ruby-2.4.4/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  [1m[36mCACHE Muscle Load (0.0ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/james/.rvm/rubies/ruby-2.4.4/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  [1m[36mCACHE Exercise Load (0.0ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/james/.rvm/rubies/ruby-2.4.4/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  [1m[36mCACHE Muscle Load (0.0ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/james/.rvm/rubies/ruby-2.4.4/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  [1m[36mCACHE Exercise Load (0.0ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/james/.rvm/rubies/ruby-2.4.4/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  [1m[36mCACHE Muscle Load (0.0ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/james/.rvm/rubies/ruby-2.4.4/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  Rendered exercises/index.html.haml within layouts/application (729.7ms)
+Completed 500 Internal Server Error in 750ms (ActiveRecord: 52.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `muscles' for #<#<Class:0x0000562de6e18290>:0x0000562de65d0718>
+Did you mean?  @muscle):
+    1: = render 'layouts/header'
+    2: 
+    3: = muscles.each do |x|
+    4:   %h1 #{x.muscle_name} (#{x.muscle_group})
+    5:   %table.table.table-striped.table-dark
+    6:   %thead
+  
+app/views/exercises/index.html.haml:3:in `_app_views_exercises_index_html_haml__864253335941084561_47377569188160'
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 14:22:22 +0100
+Started GET "/exercises/index" for 127.0.0.1 at 2019-04-09 14:22:52 +0100
+Processing by ExercisesController#index as HTML
+  [1m[36mUser Load (16.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering exercises/index.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (4.0ms)
+  [1m[36mMuscle Load (19.2ms)[0m  [1m[34mSELECT "muscles".* FROM "muscles"[0m
+  ↳ app/views/exercises/index.html.haml:3
+  Rendered layouts/_footer.html.haml (4.2ms)
+  Rendered exercises/index.html.haml within layouts/application (83.5ms)
+Completed 200 OK in 229ms (Views: 64.0ms | ActiveRecord: 125.3ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 14:22:53 +0100
+  [1m[35m (18.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (20.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "jacotcher1@sheffield.ac.uk"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (16.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Exists (16.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jacotcher1@sheffield.ac.uk"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (16.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:9
+  [1m[36mMuscle Load (17.6ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Biceps"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[35m (16.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mMuscle Create (16.7ms)[0m  [1m[32mINSERT INTO "muscles" ("muscle_name", "muscle_group", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["muscle_name", "Biceps"], ["muscle_group", "Arms"], ["created_at", "2019-04-09 13:24:47.060846"], ["updated_at", "2019-04-09 13:24:47.060846"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (18.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[36mMuscle Load (16.5ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Triceps"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[35m (16.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mMuscle Create (17.8ms)[0m  [1m[32mINSERT INTO "muscles" ("muscle_name", "muscle_group", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["muscle_name", "Triceps"], ["muscle_group", "Arms"], ["created_at", "2019-04-09 13:24:47.135738"], ["updated_at", "2019-04-09 13:24:47.135738"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (17.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[36mMuscle Load (17.2ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Forearms"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[35m (16.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mMuscle Create (18.2ms)[0m  [1m[32mINSERT INTO "muscles" ("muscle_name", "muscle_group", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["muscle_name", "Forearms"], ["muscle_group", "Arms"], ["created_at", "2019-04-09 13:24:47.210936"], ["updated_at", "2019-04-09 13:24:47.210936"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (17.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[36mMuscle Load (17.3ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Trapezius"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[35m (16.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mMuscle Create (16.8ms)[0m  [1m[32mINSERT INTO "muscles" ("muscle_name", "muscle_group", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["muscle_name", "Trapezius"], ["muscle_group", "Back"], ["created_at", "2019-04-09 13:24:47.286533"], ["updated_at", "2019-04-09 13:24:47.286533"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (17.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[36mMuscle Load (18.1ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Latissimus"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[35m (16.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mMuscle Create (17.1ms)[0m  [1m[32mINSERT INTO "muscles" ("muscle_name", "muscle_group", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["muscle_name", "Latissimus"], ["muscle_group", "Back"], ["created_at", "2019-04-09 13:24:47.361599"], ["updated_at", "2019-04-09 13:24:47.361599"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (17.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[36mMuscle Load (16.7ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Upper Back"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[35m (17.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mMuscle Create (17.1ms)[0m  [1m[32mINSERT INTO "muscles" ("muscle_name", "muscle_group", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["muscle_name", "Upper Back"], ["muscle_group", "Back"], ["created_at", "2019-04-09 13:24:47.436074"], ["updated_at", "2019-04-09 13:24:47.436074"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (17.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[36mMuscle Load (16.6ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Lower Back"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[35m (16.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mMuscle Create (17.5ms)[0m  [1m[32mINSERT INTO "muscles" ("muscle_name", "muscle_group", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["muscle_name", "Lower Back"], ["muscle_group", "Back"], ["created_at", "2019-04-09 13:24:47.518818"], ["updated_at", "2019-04-09 13:24:47.518818"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (17.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[36mMuscle Load (16.6ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Pectoralis Major"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (16.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mMuscle Create (17.6ms)[0m  [1m[32mINSERT INTO "muscles" ("muscle_name", "muscle_group", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["muscle_name", "Pectoralis Major"], ["muscle_group", "Chest"], ["created_at", "2019-04-09 13:24:47.594014"], ["updated_at", "2019-04-09 13:24:47.594014"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (17.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mMuscle Load (16.8ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Pectoralis Minor"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[35m (16.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mMuscle Create (18.3ms)[0m  [1m[32mINSERT INTO "muscles" ("muscle_name", "muscle_group", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["muscle_name", "Pectoralis Minor"], ["muscle_group", "Chest"], ["created_at", "2019-04-09 13:24:47.668949"], ["updated_at", "2019-04-09 13:24:47.668949"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (17.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[36mMuscle Load (17.5ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Anterior Deltoids"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[35m (17.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mMuscle Create (17.1ms)[0m  [1m[32mINSERT INTO "muscles" ("muscle_name", "muscle_group", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["muscle_name", "Anterior Deltoids"], ["muscle_group", "Shoulders"], ["created_at", "2019-04-09 13:24:47.746375"], ["updated_at", "2019-04-09 13:24:47.746375"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (17.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[36mMuscle Load (17.8ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Lateral Deltoids"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[35m (16.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mMuscle Create (16.5ms)[0m  [1m[32mINSERT INTO "muscles" ("muscle_name", "muscle_group", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["muscle_name", "Lateral Deltoids"], ["muscle_group", "Shoulders"], ["created_at", "2019-04-09 13:24:47.821023"], ["updated_at", "2019-04-09 13:24:47.821023"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (17.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[36mMuscle Load (16.9ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Posterior Deltoid"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[35m (16.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mMuscle Create (17.4ms)[0m  [1m[32mINSERT INTO "muscles" ("muscle_name", "muscle_group", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["muscle_name", "Posterior Deltoid"], ["muscle_group", "Shoulders"], ["created_at", "2019-04-09 13:24:47.893136"], ["updated_at", "2019-04-09 13:24:47.893136"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (18.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[36mMuscle Load (16.7ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Rectus Abdominis"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[35m (16.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mMuscle Create (16.9ms)[0m  [1m[32mINSERT INTO "muscles" ("muscle_name", "muscle_group", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["muscle_name", "Rectus Abdominis"], ["muscle_group", "Abdominals"], ["created_at", "2019-04-09 13:24:47.968043"], ["updated_at", "2019-04-09 13:24:47.968043"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (17.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[36mMuscle Load (17.9ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Transverse Abdominis"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:32
+  [1m[35m (16.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mMuscle Create (17.8ms)[0m  [1m[32mINSERT INTO "muscles" ("muscle_name", "muscle_group", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["muscle_name", "Transverse Abdominis"], ["muscle_group", "Abdominals"], ["created_at", "2019-04-09 13:24:48.042987"], ["updated_at", "2019-04-09 13:24:48.042987"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (17.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[36mMuscle Load (17.1ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Obliques"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:33
+  [1m[35m (16.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:33
+  [1m[36mMuscle Create (17.1ms)[0m  [1m[32mINSERT INTO "muscles" ("muscle_name", "muscle_group", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["muscle_name", "Obliques"], ["muscle_group", "Abdominals"], ["created_at", "2019-04-09 13:24:48.117899"], ["updated_at", "2019-04-09 13:24:48.117899"]]
+  ↳ db/seeds.rb:33
+  [1m[35m (17.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:33
+  [1m[36mMuscle Load (16.6ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Hamstrings"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[35m (16.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mMuscle Create (17.4ms)[0m  [1m[32mINSERT INTO "muscles" ("muscle_name", "muscle_group", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["muscle_name", "Hamstrings"], ["muscle_group", "Legs"], ["created_at", "2019-04-09 13:24:48.192230"], ["updated_at", "2019-04-09 13:24:48.192230"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (17.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[36mMuscle Load (16.8ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Adductors"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[35m (16.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:36
+  [1m[36mMuscle Create (17.0ms)[0m  [1m[32mINSERT INTO "muscles" ("muscle_name", "muscle_group", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["muscle_name", "Adductors"], ["muscle_group", "Legs"], ["created_at", "2019-04-09 13:24:48.266586"], ["updated_at", "2019-04-09 13:24:48.266586"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (17.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:36
+  [1m[36mMuscle Load (16.5ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Abductors"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:37
+  [1m[35m (16.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mMuscle Create (18.2ms)[0m  [1m[32mINSERT INTO "muscles" ("muscle_name", "muscle_group", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["muscle_name", "Abductors"], ["muscle_group", "Legs"], ["created_at", "2019-04-09 13:24:48.340387"], ["updated_at", "2019-04-09 13:24:48.340387"]]
+  ↳ db/seeds.rb:37
+  [1m[35m (17.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[36mMuscle Load (16.9ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Quadriceps"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:38
+  [1m[35m (16.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[36mMuscle Create (16.8ms)[0m  [1m[32mINSERT INTO "muscles" ("muscle_name", "muscle_group", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["muscle_name", "Quadriceps"], ["muscle_group", "Legs"], ["created_at", "2019-04-09 13:24:48.413554"], ["updated_at", "2019-04-09 13:24:48.413554"]]
+  ↳ db/seeds.rb:38
+  [1m[35m (17.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:38
+  [1m[36mMuscle Load (16.7ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Calves"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[35m (16.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mMuscle Create (16.9ms)[0m  [1m[32mINSERT INTO "muscles" ("muscle_name", "muscle_group", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["muscle_name", "Calves"], ["muscle_group", "Legs"], ["created_at", "2019-04-09 13:24:48.487169"], ["updated_at", "2019-04-09 13:24:48.487169"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (17.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[36mMuscle Load (17.1ms)[0m  [1m[34mSELECT  "muscles".* FROM "muscles" WHERE "muscles"."muscle_name" = $1 ORDER BY "muscles"."id" ASC LIMIT $2[0m  [["muscle_name", "Gluteus"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:41
+  [1m[35m (16.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:41
+  [1m[36mMuscle Create (16.8ms)[0m  [1m[32mINSERT INTO "muscles" ("muscle_name", "muscle_group", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["muscle_name", "Gluteus"], ["muscle_group", "Gluteus"], ["created_at", "2019-04-09 13:24:48.560989"], ["updated_at", "2019-04-09 13:24:48.560989"]]
+  ↳ db/seeds.rb:41
+  [1m[35m (17.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:41
+  [1m[36mExercise Load (19.1ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Barbell Curl"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:47
+  [1m[36mExercise Load (17.1ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Dumbbell Curl"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:52
+  [1m[36mExercise Load (16.9ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Hammer Curl"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:56
+  [1m[36mExercise Load (18.9ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Seated Tricep extensions"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mExercise Load (17.0ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Dips (Narrow elbows)"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:66
+  [1m[36mExercise Load (26.5ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Cable push downs"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:71
+  [1m[36mExercise Load (17.9ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Bench Dips"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:76
+  [1m[36mExercise Load (17.9ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Behind The Back Barbell Wrist Curl"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:82
+  [1m[36mExercise Load (17.0ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Forearm curl"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mExercise Load (16.8ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Seated Dumbell Shrugs"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:92
+  [1m[36mExercise Load (16.7ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Standing Smith Machine Shrugs"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:96
+  [1m[36mExercise Load (16.6ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Neutral Grip Pulldown"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:101
+  [1m[36mExercise Load (16.8ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Seated Cable Row"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:106
+  [1m[36mExercise Load (17.2ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Bent Over Barbell Row"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:111
+  [1m[36mExercise Load (18.2ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Dumbell Row"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:117
+  [1m[36mExercise Load (16.8ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Deadlift"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:124
+  [1m[36mExercise Load (16.8ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "45 Degree Back Extention"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:131
+  [1m[36mExercise Load (16.6ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Bench Press"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:137
+  [1m[36mExercise Load (17.0ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Dumbell Bench Press"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:144
+  [1m[36mExercise Load (16.5ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Incline Bench Press"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:149
+  [1m[36mExercise Load (16.7ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Incline Dumbell Bench Press"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:156
+  [1m[36mExercise Load (16.5ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Dips"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:162
+  [1m[36mExercise Load (16.7ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Dumbell Flys"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:167
+  [1m[36mExercise Load (17.7ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Cable Flys"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:173
+  [1m[36mExercise Load (17.4ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Military Press"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:179
+  [1m[36mExercise Load (16.7ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Seated Dumbbell Shoulder Press "], ["LIMIT", 1]]
+  ↳ db/seeds.rb:184
+  [1m[36mExercise Load (18.1ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Side Lateral Raises "], ["LIMIT", 1]]
+  ↳ db/seeds.rb:189
+  [1m[36mExercise Load (17.2ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", " Bent-Over Rear Delt Raise "], ["LIMIT", 1]]
+  ↳ db/seeds.rb:194
+  [1m[36mExercise Load (16.7ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Face pulls"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:199
+  [1m[36mExercise Load (17.2ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Weighted Crunches"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:205
+  [1m[36mExercise Load (17.0ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Weighted Forearm Plank"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:211
+  [1m[36mExercise Load (16.9ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Roll-outs"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:217
+  [1m[36mExercise Load (16.7ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Laying Leg Raises"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:222
+  [1m[36mExercise Load (16.1ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Obliques Side Bend"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:228
+  [1m[36mExercise Load (18.2ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Russian Twists"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:232
+  [1m[36mExercise Load (16.5ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Stiff Leg Deadlifts"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:241
+  [1m[36mExercise Load (16.7ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Squat"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:248
+  [1m[36mExercise Load (16.2ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Hamstring Curl"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:254
+  [1m[36mExercise Load (16.4ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Leg Press"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:260
+  [1m[36mExercise Load (16.5ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Leg Extension"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:266
+  [1m[36mExercise Load (16.5ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Goblet Squat"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:270
+  [1m[36mExercise Load (16.4ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Standing calf raises"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:276
+  [1m[36mExercise Load (17.0ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Seated calf raises"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:282
+  [1m[36mExercise Load (16.2ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Hip adductors"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:288
+  [1m[36mExercise Load (16.6ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Hip abductors"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:293
+  [1m[36mExercise Load (17.7ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Glute Bridge"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:298
+  [1m[36mExercise Load (18.0ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."exercise_name" = $1 ORDER BY "exercises"."id" ASC LIMIT $2[0m  [["exercise_name", "Barbell Hip Thrust"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:304
+Started GET "/exercises/index" for 127.0.0.1 at 2019-04-09 14:24:52 +0100
+Processing by ExercisesController#index as HTML
+  [1m[36mUser Load (18.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering exercises/index.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (5.0ms)
+  [1m[36mMuscle Load (16.8ms)[0m  [1m[34mSELECT "muscles".* FROM "muscles"[0m
+  ↳ app/views/exercises/index.html.haml:3
+  Rendered layouts/_footer.html.haml (4.9ms)
+  Rendered exercises/index.html.haml within layouts/application (39.6ms)
+Completed 200 OK in 100ms (Views: 59.6ms | ActiveRecord: 35.0ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 14:24:53 +0100
+Started GET "/exercises/index" for 127.0.0.1 at 2019-04-09 14:25:32 +0100
+Processing by ExercisesController#index as HTML
+  [1m[36mUser Load (17.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering exercises/index.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (5.7ms)
+  [1m[36mMuscle Load (19.0ms)[0m  [1m[34mSELECT "muscles".* FROM "muscles"[0m
+  ↳ app/views/exercises/index.html.haml:3
+  Rendered layouts/_footer.html.haml (3.7ms)
+  Rendered exercises/index.html.haml within layouts/application (44.2ms)
+Completed 200 OK in 105ms (Views: 63.2ms | ActiveRecord: 36.4ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 14:25:33 +0100
+Started GET "/exercises/index" for 127.0.0.1 at 2019-04-09 14:27:23 +0100
+Processing by ExercisesController#index as HTML
+  [1m[36mUser Load (19.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering exercises/index.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (5.4ms)
+  [1m[36mMuscle Load (19.0ms)[0m  [1m[34mSELECT "muscles".* FROM "muscles"[0m
+  ↳ app/views/exercises/index.html.haml:3
+  Rendered layouts/_footer.html.haml (3.5ms)
+  Rendered exercises/index.html.haml within layouts/application (43.7ms)
+Completed 200 OK in 223ms (Views: 177.2ms | ActiveRecord: 38.8ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 14:27:24 +0100
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 14:27:24 +0100
+Started GET "/exercises/index" for 127.0.0.1 at 2019-04-09 14:28:27 +0100
+Processing by ExercisesController#index as HTML
+  [1m[36mUser Load (20.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering exercises/index.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (7.6ms)
+  [1m[36mMuscle Load (17.8ms)[0m  [1m[34mSELECT "muscles".* FROM "muscles"[0m
+  ↳ app/views/exercises/index.html.haml:3
+  Rendered exercises/index.html.haml within layouts/application (35.5ms)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 38.4ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
+    2: 
+    3: = @muscles.each do |x|
+    4:   %h1
+    5:   =  x.muscle_name (x.muscle_group)
+    6:   %table.table.table-striped.table-dark
+    7:     %thead
+    8:       %tr
+  
+app/views/exercises/index.html.haml:5:in `block in _app_views_exercises_index_html_haml__864253335941084561_47377578965200'
+app/views/exercises/index.html.haml:3:in `_app_views_exercises_index_html_haml__864253335941084561_47377578965200'
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 14:28:28 +0100
+Started GET "/exercises/index" for 127.0.0.1 at 2019-04-09 14:28:51 +0100
+Processing by ExercisesController#index as HTML
+  [1m[36mUser Load (17.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering exercises/index.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (5.2ms)
+  [1m[36mMuscle Load (17.6ms)[0m  [1m[34mSELECT "muscles".* FROM "muscles"[0m
+  ↳ app/views/exercises/index.html.haml:3
+  Rendered layouts/_footer.html.haml (5.1ms)
+  Rendered exercises/index.html.haml within layouts/application (39.9ms)
+Completed 200 OK in 95ms (Views: 58.1ms | ActiveRecord: 34.9ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 14:28:52 +0100
+Started GET "/exercises/index" for 127.0.0.1 at 2019-04-09 14:29:01 +0100
+Processing by ExercisesController#index as HTML
+  [1m[36mUser Load (17.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering exercises/index.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (10.9ms)
+  [1m[36mMuscle Load (20.1ms)[0m  [1m[34mSELECT "muscles".* FROM "muscles"[0m
+  ↳ app/views/exercises/index.html.haml:3
+  Rendered layouts/_footer.html.haml (3.9ms)
+  Rendered exercises/index.html.haml within layouts/application (44.6ms)
+Completed 200 OK in 96ms (Views: 56.5ms | ActiveRecord: 37.1ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 14:29:02 +0100
+Started GET "/exercises/index" for 127.0.0.1 at 2019-04-09 14:30:21 +0100
+Processing by ExercisesController#index as HTML
+  [1m[36mUser Load (19.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering exercises/index.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (7.3ms)
+  [1m[36mMuscle Load (18.9ms)[0m  [1m[34mSELECT "muscles".* FROM "muscles"[0m
+  ↳ app/views/exercises/index.html.haml:3
+  Rendered layouts/_footer.html.haml (5.3ms)
+  Rendered exercises/index.html.haml within layouts/application (51.5ms)
+Completed 200 OK in 112ms (Views: 67.7ms | ActiveRecord: 38.8ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 14:30:22 +0100
+Started GET "/exercises/index" for 127.0.0.1 at 2019-04-09 14:30:28 +0100
+Processing by ExercisesController#index as HTML
+  [1m[36mUser Load (17.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering exercises/index.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (5.9ms)
+  [1m[36mMuscle Load (17.6ms)[0m  [1m[34mSELECT "muscles".* FROM "muscles"[0m
+  ↳ app/views/exercises/index.html.haml:3
+  Rendered layouts/_footer.html.haml (4.5ms)
+  Rendered exercises/index.html.haml within layouts/application (40.3ms)
+Completed 200 OK in 95ms (Views: 56.8ms | ActiveRecord: 35.2ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 14:30:29 +0100
+Started GET "/exercises/index" for 127.0.0.1 at 2019-04-09 14:31:37 +0100
+Processing by ExercisesController#index as HTML
+  [1m[36mUser Load (19.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering exercises/index.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (6.6ms)
+  [1m[36mMuscle Load (18.8ms)[0m  [1m[34mSELECT "muscles".* FROM "muscles"[0m
+  ↳ app/views/exercises/index.html.haml:3
+  Rendered layouts/_footer.html.haml (7.4ms)
+  Rendered exercises/index.html.haml within layouts/application (47.7ms)
+Completed 200 OK in 291ms (Views: 249.5ms | ActiveRecord: 38.0ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 14:31:38 +0100
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 14:31:39 +0100
+Started GET "/exercises/index" for 127.0.0.1 at 2019-04-09 14:32:51 +0100
+Processing by ExercisesController#index as HTML
+  [1m[36mUser Load (21.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering exercises/index.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (5.2ms)
+  [1m[36mMuscle Load (20.0ms)[0m  [1m[34mSELECT "muscles".* FROM "muscles"[0m
+  ↳ app/views/exercises/index.html.haml:3
+  Rendered layouts/_footer.html.haml (3.5ms)
+  Rendered exercises/index.html.haml within layouts/application (41.7ms)
+Completed 200 OK in 178ms (Views: 130.1ms | ActiveRecord: 41.8ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 14:32:52 +0100
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 14:32:52 +0100
+Started GET "/exercises/index" for 127.0.0.1 at 2019-04-09 14:33:24 +0100
+Processing by ExercisesController#index as HTML
+  [1m[36mUser Load (17.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering exercises/index.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (3.0ms)
+  [1m[36mMuscle Load (16.9ms)[0m  [1m[34mSELECT "muscles".* FROM "muscles"[0m
+  ↳ app/views/exercises/index.html.haml:3
+  Rendered layouts/_footer.html.haml (4.4ms)
+  Rendered exercises/index.html.haml within layouts/application (32.2ms)
+Completed 200 OK in 93ms (Views: 56.0ms | ActiveRecord: 34.4ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 14:33:25 +0100
+Started GET "/exercises/index" for 127.0.0.1 at 2019-04-09 14:33:49 +0100
+Processing by ExercisesController#index as HTML
+  [1m[36mUser Load (17.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering exercises/index.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (7.2ms)
+  [1m[36mMuscle Load (18.2ms)[0m  [1m[34mSELECT "muscles".* FROM "muscles"[0m
+  ↳ app/views/exercises/index.html.haml:3
+  Rendered layouts/_footer.html.haml (3.4ms)
+  Rendered exercises/index.html.haml within layouts/application (47.7ms)
+Completed 200 OK in 107ms (Views: 65.4ms | ActiveRecord: 35.6ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 14:33:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.css.map"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.1) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.1) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.1) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.1) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+request_store (1.4.1) lib/request_store/middleware.rb:19:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+rack (2.0.6) lib/rack/handler/thin.rb:22:in `run'
+rack (2.0.6) lib/rack/server.rb:297:in `start'
+railties (5.2.1) lib/rails/commands/server/server_command.rb:53:in `start'
+railties (5.2.1) lib/rails/commands/server/server_command.rb:147:in `block in perform'
+railties (5.2.1) lib/rails/commands/server/server_command.rb:142:in `tap'
+railties (5.2.1) lib/rails/commands/server/server_command.rb:142:in `perform'
+thor (0.20.3) lib/thor/command.rb:27:in `run'
+thor (0.20.3) lib/thor/invocation.rb:126:in `invoke_command'
+thor (0.20.3) lib/thor.rb:387:in `dispatch'
+railties (5.2.1) lib/rails/command/base.rb:65:in `perform'
+railties (5.2.1) lib/rails/command.rb:46:in `invoke'
+railties (5.2.1) lib/rails/commands.rb:18:in `<top (required)>'
+bin/rails:9:in `require'
+bin/rails:9:in `<top (required)>'
+spring (2.0.2) lib/spring/client/rails.rb:28:in `load'
+spring (2.0.2) lib/spring/client/rails.rb:28:in `call'
+spring (2.0.2) lib/spring/client/command.rb:7:in `call'
+spring (2.0.2) lib/spring/client.rb:30:in `run'
+spring (2.0.2) bin/spring:49:in `<top (required)>'
+spring (2.0.2) lib/spring/binstub.rb:31:in `load'
+spring (2.0.2) lib/spring/binstub.rb:31:in `<top (required)>'
+bin/spring:15:in `require'
+bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
+Started GET "/exercises/index" for 127.0.0.1 at 2019-04-09 14:34:23 +0100
+Processing by ExercisesController#index as HTML
+  [1m[36mUser Load (18.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering exercises/index.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (4.2ms)
+  [1m[36mMuscle Load (19.7ms)[0m  [1m[34mSELECT "muscles".* FROM "muscles"[0m
+  ↳ app/views/exercises/index.html.haml:3
+  Rendered layouts/_footer.html.haml (3.7ms)
+  Rendered exercises/index.html.haml within layouts/application (36.2ms)
+Completed 200 OK in 90ms (Views: 49.5ms | ActiveRecord: 38.4ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 14:34:25 +0100
+Started GET "/exercises/index" for 127.0.0.1 at 2019-04-09 15:23:11 +0100
+Processing by ExercisesController#index as HTML
+  [1m[36mUser Load (20.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering exercises/index.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (6.1ms)
+  [1m[36mMuscle Load (24.1ms)[0m  [1m[34mSELECT "muscles".* FROM "muscles"[0m
+  ↳ app/views/exercises/index.html.haml:3
+  Rendered layouts/_footer.html.haml (4.3ms)
+  Rendered exercises/index.html.haml within layouts/application (55.5ms)
+Completed 200 OK in 191ms (Views: 140.5ms | ActiveRecord: 44.1ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 15:23:12 +0100
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 15:23:12 +0100
+Started GET "/exercises/index" for 127.0.0.1 at 2019-04-09 15:25:21 +0100
+Processing by ExercisesController#index as HTML
+  [1m[36mUser Load (20.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering exercises/index.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (3.5ms)
+  [1m[36mMuscle Load (19.0ms)[0m  [1m[34mSELECT "muscles".* FROM "muscles"[0m
+  ↳ app/views/exercises/index.html.haml:3
+  Rendered layouts/_footer.html.haml (3.4ms)
+  Rendered exercises/index.html.haml within layouts/application (34.0ms)
+Completed 200 OK in 94ms (Views: 53.3ms | ActiveRecord: 39.0ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 15:25:22 +0100
+Started GET "/exercises/index" for 127.0.0.1 at 2019-04-09 15:26:08 +0100
+Processing by ExercisesController#index as HTML
+  [1m[36mUser Load (17.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering exercises/index.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (4.8ms)
+  [1m[36mMuscle Load (18.7ms)[0m  [1m[34mSELECT "muscles".* FROM "muscles"[0m
+  ↳ app/views/exercises/index.html.haml:3
+  Rendered layouts/_footer.html.haml (5.0ms)
+  Rendered exercises/index.html.haml within layouts/application (43.0ms)
+Completed 200 OK in 100ms (Views: 61.9ms | ActiveRecord: 35.7ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 15:26:09 +0100
+Started GET "/exercises/index" for 127.0.0.1 at 2019-04-09 15:30:37 +0100
+Processing by ExercisesController#index as HTML
+  [1m[36mUser Load (18.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering exercises/index.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (7.0ms)
+  [1m[36mMuscle Load (18.4ms)[0m  [1m[34mSELECT "muscles".* FROM "muscles"[0m
+  ↳ app/views/exercises/index.html.haml:3
+  Rendered exercises/index.html.haml within layouts/application (40.0ms)
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 37.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    11:         %th{:scope => "col"} Secondary muscle
+    12:         %th{:scope => "col"} Tertiary muscle
+    13:     %tbody
+    14:       = @exercise.each do |y|
+    15:         = if (y.muscle_type_1 == x.muscle_name || y.muscle_type_2 == x.muscle_name || y.muscle_type_3 == x.muscle_name)
+    16:           %tr
+    17:             %td Mark
+  
+app/views/exercises/index.html.haml:14:in `block in _app_views_exercises_index_html_haml__864253335941084561_47377574115820'
+app/views/exercises/index.html.haml:3:in `_app_views_exercises_index_html_haml__864253335941084561_47377574115820'
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 15:30:38 +0100
+Started GET "/exercises/index" for 127.0.0.1 at 2019-04-09 15:31:32 +0100
+Processing by ExercisesController#index as HTML
+  [1m[36mUser Load (16.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering exercises/index.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (7.0ms)
+  [1m[36mMuscle Load (19.1ms)[0m  [1m[34mSELECT "muscles".* FROM "muscles"[0m
+  ↳ app/views/exercises/index.html.haml:3
+  Rendered exercises/index.html.haml within layouts/application (46.8ms)
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 36.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    11:         %th{:scope => "col"} Secondary muscle
+    12:         %th{:scope => "col"} Tertiary muscle
+    13:     %tbody
+    14:       = @exercise.each do |y|
+    15:         = if (y.muscle_type_1 == x.muscle_name || y.muscle_type_2 == x.muscle_name || y.muscle_type_3 == x.muscle_name)
+    16:           %tr
+    17:             %td y.muscle_name
+  
+app/views/exercises/index.html.haml:14:in `block in _app_views_exercises_index_html_haml__864253335941084561_47377576486300'
+app/views/exercises/index.html.haml:3:in `_app_views_exercises_index_html_haml__864253335941084561_47377576486300'
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 15:31:33 +0100
+Started GET "/exercises/index" for 127.0.0.1 at 2019-04-09 15:31:36 +0100
+Processing by ExercisesController#index as HTML
+  [1m[36mUser Load (17.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering exercises/index.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (3.4ms)
+  [1m[36mMuscle Load (17.2ms)[0m  [1m[34mSELECT "muscles".* FROM "muscles"[0m
+  ↳ app/views/exercises/index.html.haml:3
+  Rendered exercises/index.html.haml within layouts/application (34.4ms)
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 34.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    11:         %th{:scope => "col"} Secondary muscle
+    12:         %th{:scope => "col"} Tertiary muscle
+    13:     %tbody
+    14:       = @exercise.each do |y|
+    15:         = if (y.muscle_type_1 == x.muscle_name || y.muscle_type_2 == x.muscle_name || y.muscle_type_3 == x.muscle_name)
+    16:           %tr
+    17:             %td y.muscle_name
+  
+app/views/exercises/index.html.haml:14:in `block in _app_views_exercises_index_html_haml__864253335941084561_47377560336820'
+app/views/exercises/index.html.haml:3:in `_app_views_exercises_index_html_haml__864253335941084561_47377560336820'
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 15:31:37 +0100
+Started GET "/exercises/index" for 127.0.0.1 at 2019-04-09 15:31:46 +0100
+Processing by ExercisesController#index as HTML
+  [1m[36mUser Load (20.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering exercises/index.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (3.1ms)
+  [1m[36mMuscle Load (18.3ms)[0m  [1m[34mSELECT "muscles".* FROM "muscles"[0m
+  ↳ app/views/exercises/index.html.haml:3
+  Rendered exercises/index.html.haml within layouts/application (27.5ms)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 38.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    11:         %th{:scope => "col"} Secondary muscle
+    12:         %th{:scope => "col"} Tertiary muscle
+    13:     %tbody
+    14:       = @exercises.each do |y|
+    15:         = if (y.muscle_type_1 == x.muscle_name || y.muscle_type_2 == x.muscle_name || y.muscle_type_3 == x.muscle_name)
+    16:           %tr
+    17:             %td y.muscle_name
+  
+app/views/exercises/index.html.haml:14:in `block in _app_views_exercises_index_html_haml__864253335941084561_47377570014520'
+app/views/exercises/index.html.haml:3:in `_app_views_exercises_index_html_haml__864253335941084561_47377570014520'
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 15:31:47 +0100
+Started GET "/exercises/index" for 127.0.0.1 at 2019-04-09 15:32:02 +0100
+Processing by ExercisesController#index as HTML
+  [1m[36mUser Load (17.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering exercises/index.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (4.2ms)
+  [1m[36mMuscle Load (20.2ms)[0m  [1m[34mSELECT "muscles".* FROM "muscles"[0m
+  ↳ app/views/exercises/index.html.haml:3
+  [1m[36mExercise Load (38.7ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/views/exercises/index.html.haml:14
+  Rendered exercises/index.html.haml within layouts/application (120290.3ms)
+Completed 500 Internal Server Error in 120784ms (ActiveRecord: 159.3ms)
+
+
+  
+NoMemoryError (failed to allocate memory):
+  
+app/views/exercises/index.html.haml:20:in `block (2 levels) in _app_views_exercises_index_html_haml__864253335941084561_47377574548380'
+app/views/exercises/index.html.haml:14:in `block in _app_views_exercises_index_html_haml__864253335941084561_47377574548380'
+app/views/exercises/index.html.haml:3:in `_app_views_exercises_index_html_haml__864253335941084561_47377574548380'
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 15:37:00 +0100
+Started GET "/exercises/index" for 127.0.0.1 at 2019-04-09 15:41:01 +0100
+  
+PG::ConnectionBad (could not connect to server: Connection timed out
+	Is the server running on host "epi-stu-gen-dbs1-pg.shef.ac.uk" (172.30.6.66) and accepting
+	TCP/IP connections on port 5432?
+):
+  
+pg (1.1.4) lib/pg.rb:56:in `initialize'
+pg (1.1.4) lib/pg.rb:56:in `new'
+pg (1.1.4) lib/pg.rb:56:in `connect'
+activerecord (5.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:684:in `connect'
+activerecord (5.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:215:in `initialize'
+activerecord (5.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:40:in `new'
+activerecord (5.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:40:in `postgresql_connection'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:809:in `new_connection'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:853:in `checkout_new_connection'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:832:in `try_to_checkout_new_connection'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:793:in `acquire_connection'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:521:in `checkout'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:380:in `connection'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1008:in `retrieve_connection'
+activerecord (5.2.1) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.1) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.1) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+request_store (1.4.1) lib/request_store/middleware.rb:19:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+rack (2.0.6) lib/rack/handler/thin.rb:22:in `run'
+rack (2.0.6) lib/rack/server.rb:297:in `start'
+railties (5.2.1) lib/rails/commands/server/server_command.rb:53:in `start'
+railties (5.2.1) lib/rails/commands/server/server_command.rb:147:in `block in perform'
+railties (5.2.1) lib/rails/commands/server/server_command.rb:142:in `tap'
+railties (5.2.1) lib/rails/commands/server/server_command.rb:142:in `perform'
+thor (0.20.3) lib/thor/command.rb:27:in `run'
+thor (0.20.3) lib/thor/invocation.rb:126:in `invoke_command'
+thor (0.20.3) lib/thor.rb:387:in `dispatch'
+railties (5.2.1) lib/rails/command/base.rb:65:in `perform'
+railties (5.2.1) lib/rails/command.rb:46:in `invoke'
+railties (5.2.1) lib/rails/commands.rb:18:in `<top (required)>'
+bin/rails:9:in `require'
+bin/rails:9:in `<top (required)>'
+spring (2.0.2) lib/spring/client/rails.rb:28:in `load'
+spring (2.0.2) lib/spring/client/rails.rb:28:in `call'
+spring (2.0.2) lib/spring/client/command.rb:7:in `call'
+spring (2.0.2) lib/spring/client.rb:30:in `run'
+spring (2.0.2) bin/spring:49:in `<top (required)>'
+spring (2.0.2) lib/spring/binstub.rb:31:in `load'
+spring (2.0.2) lib/spring/binstub.rb:31:in `<top (required)>'
+bin/spring:15:in `require'
+bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
+Started GET "/" for 127.0.0.1 at 2019-04-09 15:43:27 +0100
+  [1m[35m (18.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Processing by HomepageController#home as HTML
+  [1m[36mUser Load (19.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering homepage/home.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (28.7ms)
+  Rendered layouts/_footer.html.haml (9.4ms)
+  Rendered homepage/home.html.haml within layouts/application (100.7ms)
+Completed 200 OK in 1626ms (Views: 1460.3ms | ActiveRecord: 79.1ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 15:43:29 +0100
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 15:43:30 +0100
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 15:43:33 +0100
+Started GET "/exercises" for 127.0.0.1 at 2019-04-09 15:43:34 +0100
+Started GET "/exercises/index" for 127.0.0.1 at 2019-04-09 15:43:34 +0100
+Processing by ExercisesController#index as HTML
+  [1m[36mUser Load (17.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering exercises/index.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (12.3ms)
+  [1m[36mMuscle Load (20.7ms)[0m  [1m[34mSELECT "muscles".* FROM "muscles"[0m
+  ↳ app/views/exercises/index.html.haml:3
+  [1m[36mExercise Load (38.7ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/views/exercises/index.html.haml:14
+Started GET "/" for 127.0.0.1 at 2019-04-09 15:51:04 +0100
+  [1m[35m (19.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Processing by HomepageController#home as HTML
+Completed 401 Unauthorized in 29ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 15:51:05 +0100
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-04-09 15:51:05 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (149.9ms)
+Completed 200 OK in 1285ms (Views: 1051.9ms | ActiveRecord: 58.7ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 15:51:06 +0100
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 15:51:08 +0100
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 15:51:08 +0100
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-04-09 15:51:11 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vdDPv/DZGkbjSspRjqHEp3BOZBdTtV0UwoA1Fo1e8bxZ3xX2B8FSn4xjA6RGTXBB494tyPu4EdE1SUqvpejH6g==", "user"=>{"email"=>"jamiecotcher@sheffield.co.uk", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.2.1) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (5.2.1) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+devise (4.6.1) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (5.2.1) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (5.2.1) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.1) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.1) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (5.2.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+serviceworker-rails (0.5.5) lib/serviceworker/middleware.rb:32:in `call'
+devise_cas_authenticatable (1.10.3) lib/devise_cas_authenticatable/single_sign_out/rack.rb:14:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+request_store (1.4.1) lib/request_store/middleware.rb:19:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+rack (2.0.6) lib/rack/handler/thin.rb:22:in `run'
+rack (2.0.6) lib/rack/server.rb:297:in `start'
+railties (5.2.1) lib/rails/commands/server/server_command.rb:53:in `start'
+railties (5.2.1) lib/rails/commands/server/server_command.rb:147:in `block in perform'
+railties (5.2.1) lib/rails/commands/server/server_command.rb:142:in `tap'
+railties (5.2.1) lib/rails/commands/server/server_command.rb:142:in `perform'
+thor (0.20.3) lib/thor/command.rb:27:in `run'
+thor (0.20.3) lib/thor/invocation.rb:126:in `invoke_command'
+thor (0.20.3) lib/thor.rb:387:in `dispatch'
+railties (5.2.1) lib/rails/command/base.rb:65:in `perform'
+railties (5.2.1) lib/rails/command.rb:46:in `invoke'
+railties (5.2.1) lib/rails/commands.rb:18:in `<top (required)>'
+bin/rails:9:in `require'
+bin/rails:9:in `<top (required)>'
+spring (2.0.2) lib/spring/client/rails.rb:28:in `load'
+spring (2.0.2) lib/spring/client/rails.rb:28:in `call'
+spring (2.0.2) lib/spring/client/command.rb:7:in `call'
+spring (2.0.2) lib/spring/client.rb:30:in `run'
+spring (2.0.2) bin/spring:49:in `<top (required)>'
+spring (2.0.2) lib/spring/binstub.rb:31:in `load'
+spring (2.0.2) lib/spring/binstub.rb:31:in `<top (required)>'
+bin/spring:15:in `require'
+bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 15:51:12 +0100
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-04-09 15:51:19 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vdDPv/DZGkbjSspRjqHEp3BOZBdTtV0UwoA1Fo1e8bxZ3xX2B8FSn4xjA6RGTXBB494tyPu4EdE1SUqvpejH6g==", "user"=>{"email"=>"jamiecotcher@yahoo.co.uk", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.2.1) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (5.2.1) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+devise (4.6.1) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (5.2.1) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (5.2.1) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.1) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.1) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (5.2.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+serviceworker-rails (0.5.5) lib/serviceworker/middleware.rb:32:in `call'
+devise_cas_authenticatable (1.10.3) lib/devise_cas_authenticatable/single_sign_out/rack.rb:14:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+request_store (1.4.1) lib/request_store/middleware.rb:19:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+rack (2.0.6) lib/rack/handler/thin.rb:22:in `run'
+rack (2.0.6) lib/rack/server.rb:297:in `start'
+railties (5.2.1) lib/rails/commands/server/server_command.rb:53:in `start'
+railties (5.2.1) lib/rails/commands/server/server_command.rb:147:in `block in perform'
+railties (5.2.1) lib/rails/commands/server/server_command.rb:142:in `tap'
+railties (5.2.1) lib/rails/commands/server/server_command.rb:142:in `perform'
+thor (0.20.3) lib/thor/command.rb:27:in `run'
+thor (0.20.3) lib/thor/invocation.rb:126:in `invoke_command'
+thor (0.20.3) lib/thor.rb:387:in `dispatch'
+railties (5.2.1) lib/rails/command/base.rb:65:in `perform'
+railties (5.2.1) lib/rails/command.rb:46:in `invoke'
+railties (5.2.1) lib/rails/commands.rb:18:in `<top (required)>'
+bin/rails:9:in `require'
+bin/rails:9:in `<top (required)>'
+spring (2.0.2) lib/spring/client/rails.rb:28:in `load'
+spring (2.0.2) lib/spring/client/rails.rb:28:in `call'
+spring (2.0.2) lib/spring/client/command.rb:7:in `call'
+spring (2.0.2) lib/spring/client.rb:30:in `run'
+spring (2.0.2) bin/spring:49:in `<top (required)>'
+spring (2.0.2) lib/spring/binstub.rb:31:in `load'
+spring (2.0.2) lib/spring/binstub.rb:31:in `<top (required)>'
+bin/spring:15:in `require'
+bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 15:51:20 +0100
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-04-09 15:51:29 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (63.9ms)
+Completed 200 OK in 139ms (Views: 137.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-09 15:51:45 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dsvu7bGHHwYi7/RJdkKmjg5L4X8w91/YMA5hCijPqzrcE8ASpjmJHZlYtdXcNOKNO0902K8lYuMECOO02KWF3A==", "user"=>{"email"=>"asdf@asdf.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"James", "last_name"=>"Ctcher", "gender"=>"alksdjfasdf", "date_of_birth(1i)"=>"2019", "date_of_birth(2i)"=>"4", "date_of_birth(3i)"=>"9"}, "commit"=>"Sign up"}
+Unpermitted parameters: :first_name, :last_name, :gender, :date_of_birth(1i), :date_of_birth(2i), :date_of_birth(3i)
+  [1m[35m (17.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mUser Exists (20.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "asdf@asdf.com"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[36mUser Create (21.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "asdf@asdf.com"], ["encrypted_password", "$2a$11$1dig0NXxmw2J3icYtX87VuO6bD2mAne3vtt2SuyNVmkMDmyujPVNm"], ["created_at", "2019-04-09 14:51:46.250807"], ["updated_at", "2019-04-09 14:51:46.250807"]]
+  ↳ bin/rails:9
+  [1m[35m (19.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Redirected to http://localhost:3000/
+Completed 302 Found in 472ms (ActiveRecord: 79.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 15:51:46 +0100
+Processing by HomepageController#home as HTML
+  [1m[36mUser Load (18.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering homepage/home.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (13.1ms)
+  Rendered layouts/_footer.html.haml (11.7ms)
+  Rendered homepage/home.html.haml within layouts/application (64.1ms)
+Completed 200 OK in 176ms (Views: 111.8ms | ActiveRecord: 18.3ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 15:51:46 +0100
+Started GET "/exercises" for 127.0.0.1 at 2019-04-09 15:51:51 +0100
+Started GET "/exercises/index" for 127.0.0.1 at 2019-04-09 15:51:51 +0100
+Processing by ExercisesController#index as HTML
+  [1m[36mUser Load (18.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering exercises/index.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (13.1ms)
+  Rendered layouts/_footer.html.haml (7.5ms)
+  Rendered exercises/index.html.haml within layouts/application (29.4ms)
+Completed 200 OK in 339ms (Views: 72.8ms | ActiveRecord: 18.3ms)
+
+
+Started GET "/exercises" for 127.0.0.1 at 2019-04-09 15:52:12 +0100
+Started GET "/exercises/index" for 127.0.0.1 at 2019-04-09 15:52:13 +0100
+Processing by ExercisesController#index as HTML
+  [1m[36mUser Load (18.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering exercises/index.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (7.3ms)
+  [1m[36mMuscle Load (21.5ms)[0m  [1m[34mSELECT "muscles".* FROM "muscles"[0m
+  ↳ app/views/exercises/index.html.haml:3
+  [1m[36mExercise Load (38.6ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/views/exercises/index.html.haml:14
+Started GET "/" for 127.0.0.1 at 2019-04-09 16:01:34 +0100
+  [1m[35m (18.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Processing by HomepageController#home as HTML
+Completed 401 Unauthorized in 75ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-04-09 16:01:35 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (128.0ms)
+Completed 200 OK in 1563ms (Views: 1462.8ms | ActiveRecord: 61.3ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 16:01:38 +0100
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-04-09 16:01:40 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (30.8ms)
+Completed 200 OK in 102ms (Views: 99.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-09 16:01:54 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l1IJnyd/t0S9xSKgBaiccfW6KwOk70xa42X8DQkDLgnZdYVRBgHiYLgOIaCNyH0PjMl7g3NRPdgYbKmozeEdJw==", "user"=>{"email"=>"lkajsdf@asdf.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"james", "last_name"=>"clkasjdf", "gender"=>"skldjf", "date_of_birth(1i)"=>"2019", "date_of_birth(2i)"=>"4", "date_of_birth(3i)"=>"9"}, "commit"=>"Sign up"}
+Unpermitted parameters: :first_name, :last_name, :gender, :date_of_birth(1i), :date_of_birth(2i), :date_of_birth(3i)
+  [1m[35m (17.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mUser Exists (19.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lkajsdf@asdf.com"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[36mUser Create (17.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "lkajsdf@asdf.com"], ["encrypted_password", "$2a$11$VFzSP6SY0q2cUXOt7LnUe.da9yFW.d5.gdGIZWoCcurB/PqOi/XZ2"], ["created_at", "2019-04-09 15:01:55.098662"], ["updated_at", "2019-04-09 15:01:55.098662"]]
+  ↳ bin/rails:9
+  [1m[35m (18.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Redirected to http://localhost:3000/
+Completed 302 Found in 550ms (ActiveRecord: 72.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 16:01:55 +0100
+Processing by HomepageController#home as HTML
+  [1m[36mUser Load (17.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering homepage/home.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (3.6ms)
+  Rendered layouts/_footer.html.haml (3.4ms)
+  Rendered homepage/home.html.haml within layouts/application (48.6ms)
+Completed 200 OK in 110ms (Views: 83.6ms | ActiveRecord: 17.2ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 16:01:55 +0100
+Started GET "/workouts" for 127.0.0.1 at 2019-04-09 16:02:13 +0100
+Started GET "/workouts/index" for 127.0.0.1 at 2019-04-09 16:02:13 +0100
+Processing by WorkoutsController#index as HTML
+  [1m[36mUser Load (19.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering workouts/index.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (11.3ms)
+  Rendered layouts/_footer.html.haml (7.2ms)
+  Rendered workouts/index.html.haml within layouts/application (25.7ms)
+Completed 200 OK in 108ms (Views: 64.2ms | ActiveRecord: 19.7ms)
+
+
+Started GET "/logs" for 127.0.0.1 at 2019-04-09 16:02:15 +0100
+Started GET "/logs/index" for 127.0.0.1 at 2019-04-09 16:02:15 +0100
+Processing by LogsController#index as HTML
+  [1m[36mUser Load (17.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering logs/index.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (11.5ms)
+  Rendered layouts/_footer.html.haml (5.5ms)
+  Rendered logs/index.html.haml within layouts/application (24.2ms)
+Completed 200 OK in 90ms (Views: 66.5ms | ActiveRecord: 17.6ms)
+
+
+Started GET "/progress" for 127.0.0.1 at 2019-04-09 16:02:16 +0100
+Started GET "/progress/index" for 127.0.0.1 at 2019-04-09 16:02:16 +0100
+Processing by ProgressController#index as HTML
+  [1m[36mUser Load (17.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering progress/index.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (11.4ms)
+  Rendered layouts/_footer.html.haml (6.2ms)
+  Rendered progress/index.html.haml within layouts/application (24.6ms)
+Completed 200 OK in 87ms (Views: 63.7ms | ActiveRecord: 17.6ms)
+
+
+Started GET "/exercises" for 127.0.0.1 at 2019-04-09 16:02:17 +0100
+Started GET "/exercises/index" for 127.0.0.1 at 2019-04-09 16:02:17 +0100
+Processing by ExercisesController#index as HTML
+  [1m[36mUser Load (17.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering exercises/index.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (10.6ms)
+  [1m[36mMuscle Load (19.8ms)[0m  [1m[34mSELECT "muscles".* FROM "muscles"[0m
+  ↳ app/views/exercises/index.html.haml:3
+  Rendered layouts/_footer.html.haml (8.7ms)
+  Rendered exercises/index.html.haml within layouts/application (114.2ms)
+Completed 200 OK in 215ms (Views: 96.2ms | ActiveRecord: 74.7ms)
+
+
+Started GET "/exercises" for 127.0.0.1 at 2019-04-09 16:02:32 +0100
+Started GET "/exercises/index" for 127.0.0.1 at 2019-04-09 16:02:32 +0100
+Processing by ExercisesController#index as HTML
+  [1m[36mUser Load (18.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering exercises/index.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (10.5ms)
+  [1m[36mMuscle Load (33.4ms)[0m  [1m[34mSELECT "muscles".* FROM "muscles"[0m
+  ↳ app/views/exercises/index.html.haml:3
+  [1m[36mExercise Load (38.8ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  ↳ app/views/exercises/index.html.haml:14
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-04-09 16:14:54 +0100
+  [1m[35m (17.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (1160.4ms)
+Completed 200 OK in 8263ms (Views: 8170.0ms | ActiveRecord: 57.1ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 16:15:04 +0100
+Started GET "/" for 127.0.0.1 at 2019-04-09 16:15:07 +0100
+Processing by HomepageController#home as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 16:15:07 +0100
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-04-09 16:15:07 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (19.2ms)
+Completed 200 OK in 66ms (Views: 63.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 16:15:11 +0100
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-04-09 16:15:13 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (65.1ms)
+Completed 200 OK in 315ms (Views: 314.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-09 16:15:29 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0ns2LlrnNOEgHdEaB//3S9djYQbPgyRZ4Cn7NLvqWQ4BhqnQ/q9AEfj3Ra4fvpyyi8nYlXfcW/PcnO7UE8UuXg==", "user"=>{"email"=>"SADas@A.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"lksjdf", "last_name"=>"slkdjf", "gender"=>"slkdfj", "date_of_birth(1i)"=>"2019", "date_of_birth(2i)"=>"4", "date_of_birth(3i)"=>"9"}, "commit"=>"Sign up"}
+Unpermitted parameters: :first_name, :last_name, :gender, :date_of_birth(1i), :date_of_birth(2i), :date_of_birth(3i)
+  [1m[35m (16.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mUser Exists (18.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sadas@a.com"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[36mUser Create (16.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "sadas@a.com"], ["encrypted_password", "$2a$11$WLE9EigiulZPWO3UCyk8QOvxyqQc.dXUnQ16Qj1tNm3GG1t.i7f9."], ["created_at", "2019-04-09 15:15:29.694486"], ["updated_at", "2019-04-09 15:15:29.694486"]]
+  ↳ bin/rails:9
+  [1m[35m (17.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Redirected to http://localhost:3000/
+Completed 302 Found in 287ms (ActiveRecord: 68.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 16:15:29 +0100
+Processing by HomepageController#home as HTML
+  [1m[36mUser Load (16.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering homepage/home.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (14.3ms)
+  Rendered layouts/_footer.html.haml (12.3ms)
+  Rendered homepage/home.html.haml within layouts/application (64.8ms)
+Completed 200 OK in 178ms (Views: 114.2ms | ActiveRecord: 16.5ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-09 16:15:30 +0100
