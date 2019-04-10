@@ -13,7 +13,7 @@
     %tbody
     - exercise_list = Exercise.where(muscle_type_1: x.muscle_name).or(Exercise.where(muscle_type_2: x.muscle_name)).or(Exercise.where(muscle_type_3: x.muscle_name))
     - exercise_list.each do |y|
-      %tr
+      %tr{:onclick => "location.href = this.getElementsByTagName('a').item(0).getAttribute('href');"}
         %td
           %a{href: "#{y.id}"}
             = y.exercise_name

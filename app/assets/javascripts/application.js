@@ -15,5 +15,9 @@
 //= require turbolinks
 //= require_tree .
 //= require serviceworker-companion
+//= require jquery
+//= require jquery_ujs
+//= jquery-3.3.1
 //= navbar
 //= bootstrap
+//= click_row
