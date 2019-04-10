@@ -1,9 +1,41 @@
 = render 'layouts/header'
 .padding-top
+.padding-top
 
-%h1.text-center
-  = @exercise.exercise_name
+.card{:class => "width_85 text-center"}
+  .card-img-top.image_grid
+    .image_grid_item
+      = image_tag("#{@exercise_image_name}1.png", :alt => "exercise_image_name")
+    .image_grid_item
+      = image_tag("#{@exercise_image_name}2.png", :alt => "")
+  .card-body
+    %h5.card-title
+      = @exercise.exercise_name
+    %p.card-text
+      =@exercise.description
+  %ul.list-group.list-group-flush
+    %li.muscle_definition_grid
+      .muscle_definition_grid_item
+        - muscle2 = ""
+        - muscle3 = ""
+        - if @exercise.muscle_type_2
+          - muscle2 = @exercise.muscle_type_2
+        - if @exercise.muscle_type_3
+          - muscle3 = @exercise.muscle_type_3
+        %p
+          = "Primary muscle: " + @exercise.muscle_type_1
+      .muscle_definition_grid_item
+        %p
+          = "Secondary muscle: " + muscle2
+      .muscle_definition_grid_item
+        %p
+          = "Tertiary muscle: " + muscle3
 
+  .card-body
+    %a.card-link
+      = link_to 'Go back', :back
+    %a.card-link{:href => "#"} Create log
 
+.padding-bottom
 
 = render 'layouts/footer'

@@ -80,19 +80,18 @@ Exercise.where(exercise_name:"Bench Dips").first_or_create(muscle_type_1:"Tricep
   TIP: Make this harder by raising your feet off the floor and adding weight.")
 #Forearms
 # Have not found image for next exercise
+
+# Exercise.where(exercise_name:"Behind The Back Barbell Wrist Curl").first_or_create(muscle_type_1:"Forearms", weighted:"true", description:"
+#   Stand straight and hold the barbell behind you using a pronated grip with your hands and feet shoulder-width apart.
+#   Slowly curl your wrists in a semi-circular motion upwards.
+#   Hold the barbell at the apex of the motion and then slowly lower the barbell back down to starting position.")
+
 # Have not found image for next exercise
-# Have not found image for next exercise
-Exercise.where(exercise_name:"Behind The Back Barbell Wrist Curl").first_or_create(muscle_type_1:"Forearms", weighted:"true", description:"
-  Stand straight and hold the barbell behind you using a pronated grip with your hands and feet shoulder-width apart.
-  Slowly curl your wrists in a semi-circular motion upwards.
-  Hold the barbell at the apex of the motion and then slowly lower the barbell back down to starting position.")
-# Have not found image for next exercise
-# Have not found image for next exercise
-# Have not found image for next exercise
-Exercise.where(exercise_name:"Forearm curl").first_or_create(muscle_type_1:"Forearms", weighted:"true", description:"
-  Grip the dumbell withyour palm facing upwards with your forearm rested against the bench.
-  Slowly curl your wrist upwards in a semi-circular motion.
-  Return to starting position and repeat.")
+# Exercise.where(exercise_name:"Forearm curl").first_or_create(muscle_type_1:"Forearms", weighted:"true", description:"
+#   Grip the dumbell withyour palm facing upwards with your forearm rested against the bench.
+#   Slowly curl your wrist upwards in a semi-circular motion.
+#   Return to starting position and repeat.")
+
 #Back
 #Trapezius
 Exercise.where(exercise_name:"Dumbell Shrugs").first_or_create(muscle_type_1:"Trapezius", weighted:"true", description:"
