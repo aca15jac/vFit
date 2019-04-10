@@ -14,9 +14,8 @@
     - exercise_list = Exercise.where(muscle_type_1: x.muscle_name).or(Exercise.where(muscle_type_2: x.muscle_name)).or(Exercise.where(muscle_type_3: x.muscle_name))
     - exercise_list.each do |y|
       %tr{:onclick => "location.href = this.getElementsByTagName('a').item(0).getAttribute('href');"}
-        %td
-          %a{:href => "#{y.id}", :style => "color: white; text-decoration: none;"}
-            = y.exercise_name
+        %td.not_like_link
+          = link_to "#{y.exercise_name}", exercise_path(y)
         %td
           = y.muscle_type_1
         %td
