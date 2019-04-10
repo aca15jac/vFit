@@ -49,7 +49,7 @@ Exercise.where(exercise_name:"Barbell Curl").first_or_create(muscle_type_1:"Bice
   Continue the movement until your biceps are fully contracted and the bar is at shoulder level.
   Hold the contracted position for a second and squeeze the biceps hard.
   Slowly bring the weight back down to the starting position.")
-Exercise.where(exercise_name:"Dumbbell Curl").first_or_create(muscle_type_1:"Biceps", muscle_type_2:"Forearms", weighted:"true", description:"
+Exercise.where(exercise_name:"Dumbell Curl").first_or_create(muscle_type_1:"Biceps", muscle_type_2:"Forearms", weighted:"true", description:"
   Stand up or sit down with a straight back and a dumbbell in each hand at arm's length.
   Raise one dumbbell and twist your forearm until it is vertical and your palm faces the shoulder.
   Lower to original position and repeat with opposite arm.")
@@ -79,18 +79,24 @@ Exercise.where(exercise_name:"Bench Dips").first_or_create(muscle_type_1:"Tricep
   Slowly press back up to the starting point.
   TIP: Make this harder by raising your feet off the floor and adding weight.")
 #Forearms
+# Have not found image for next exercise
+# Have not found image for next exercise
+# Have not found image for next exercise
 Exercise.where(exercise_name:"Behind The Back Barbell Wrist Curl").first_or_create(muscle_type_1:"Forearms", weighted:"true", description:"
   Stand straight and hold the barbell behind you using a pronated grip with your hands and feet shoulder-width apart.
   Slowly curl your wrists in a semi-circular motion upwards.
   Hold the barbell at the apex of the motion and then slowly lower the barbell back down to starting position.")
+# Have not found image for next exercise
+# Have not found image for next exercise
+# Have not found image for next exercise
 Exercise.where(exercise_name:"Forearm curl").first_or_create(muscle_type_1:"Forearms", weighted:"true", description:"
   Grip the dumbell withyour palm facing upwards with your forearm rested against the bench.
   Slowly curl your wrist upwards in a semi-circular motion.
   Return to starting position and repeat.")
 #Back
 #Trapezius
-Exercise.where(exercise_name:"Seated Dumbell Shrugs").first_or_create(muscle_type_1:"Trapezius", weighted:"true", description:"
-  Sit on a bench with dumbells in both hands, palms facing your body, back straight.
+Exercise.where(exercise_name:"Dumbell Shrugs").first_or_create(muscle_type_1:"Trapezius", weighted:"true", description:"
+  Stand with dumbells in both hands, palms facing your body, back straight.
   Elevate your shoulders and hold the contracted position at the apex of the motion.
   Slowly lower your shoulder back to starting position.")
 Exercise.where(exercise_name:"Standing Smith Machine Shrugs").first_or_create(muscle_type_1:"Trapezius", weighted:"true", description:"
@@ -128,8 +134,8 @@ Exercise.where(exercise_name:"Deadlift").first_or_create(muscle_type_1:"Upper Ba
     Lower the bar to the floor by bending your knees and keeping your back straight.
 ")
 #Lower Back
-Exercise.where(exercise_name:"45 Degree Back Extention").first_or_create(muscle_type_1:"Lower Back", weighted:"true", description:"
-    Position your thighs on the padding and hook your feet on the platform supports.
+Exercise.where(exercise_name:"Back Extention with exercise ball").first_or_create(muscle_type_1:"Lower Back", weighted:"false", description:"
+    Position your thighs on the padding and hook your feet on the exercise ball.
     Keeping your back straight, slowly bend at your waist until your legs and back are at a 45° angle.
     Slowly raise your body to the starting position.
 ")
@@ -191,32 +197,33 @@ Exercise.where(exercise_name:"Side Lateral Raises ").first_or_create(muscle_type
     Raise your arms on either side with a slight bend in your elbow until they are parallel with the floor. Pause at the top of the motion.
     Slowly return your arms down to starting position.
 ")
-Exercise.where(exercise_name:" Bent-Over Rear Delt Raise ").first_or_create(muscle_type_1:"Posterior Deltoids", muscle_type_2:"Lateral Deltoids", weighted:"true", description:"
+Exercise.where(exercise_name:" Bent Over Rear Delt Raise ").first_or_create(muscle_type_1:"Posterior Deltoids", muscle_type_2:"Lateral Deltoids", weighted:"true", description:"
     With dumbbells in either hand, bend your knees with your feet slightly bowed out. Arch your back above your knees, and start with the weights touching in front of your chest.
     With bent elbows, raise your arms up to shoulder level, pausing at the at the end of the motion.
     Slowly lower your arms back to starting position.
 ")
-Exercise.where(exercise_name:"Face pulls").first_or_create(muscle_type_1:"Posterior Deltoids", muscle_type_2:"Lateral Deltoids", weighted:"true", description:"
-    Facing the pulley, pull the weight towards you while keeping your arms parallel to the ground.
-    Pull your hands back to both sides of your head and hold the position.
-    Slowly return weight to starting position. Repeat.
+Exercise.where(exercise_name:"Rear deltoid Row").first_or_create(muscle_type_1:"Posterior Deltoids", muscle_type_2:"Lateral Deltoids", weighted:"true", description:"
+    With hands shoulder width apart, pull the bar towards you while keeping your forearms perpendicular to the ground.
+    Stop when the bar is at your belly button.
+    Slowly return weight to starting position.
+    Repeat.
 ")
 #Abdominis
-Exercise.where(exercise_name:"Weighted Crunches").first_or_create(muscle_type_1:"Rectus Abdominis", weighted:"true", description:"
+Exercise.where(exercise_name:"Crunches").first_or_create(muscle_type_1:"Rectus Abdominis", weighted:"false", description:"
     Lay flat on your back with your knees bent and your feet flat on the ground, about a foot from your lower back.
     Place your fingertips on your temples with your palms facing out.
     Draw your belly into the base of your spine to engage the muscles, then raise your head and shoulders off the floor.
     Return to starting position and repeat.
 ")
-Exercise.where(exercise_name:"Weighted Forearm Plank").first_or_create(muscle_type_1:"Rectus Abdominis", muscle_type_2:"Transverse Abdominis", weighted:"true", description:"
-    Place forearms on the ground with your elbows bent at a 90° angle aligned beneath your shoulders, with your arms parallel at shoulder-width.
-    Your feet should be together, with only your toes touching the floor.
-    Place your weight on your back, just above the bottom.
-    Lift your belly off the floor and form a straight line from your heels to the crown of your head and hold for 1 minute.
+Exercise.where(exercise_name:"Side Plank").first_or_create(muscle_type_1:"Rectus Abdominis", muscle_type_2:"Transverse Abdominis", weighted:"false", description:"
+    Place one forearm on the ground with your elbows bent at a 90° angle and pointing out front.
+    Your feet should be together, with only 1 foot touching the floor.
+    Lift your side off the floor, and move it upright until you are stiff.
+    Lower your side back to the floor.
 ")
-Exercise.where(exercise_name:"Roll-outs").first_or_create(muscle_type_1:"Transverse Abdominis", muscle_type_2:"Rectus Abdominis", muscle_type_3:"Obliques", weighted:"false", description:"
+Exercise.where(exercise_name:"Roll outs").first_or_create(muscle_type_1:"Transverse Abdominis", muscle_type_2:"Rectus Abdominis", muscle_type_3:"Obliques", weighted:"false", description:"
     Hold the Ab Roller with both hands and kneel on the floor with your feet up and crossed.
-    Slowly roll the ab roller straight forward, stretching your body into a straight position.
+    Slowly roll the barbell straight forward, stretching your body into a straight position.
     After a pause at the stretched position, start pulling yourself back to the starting position. This should be a slow and controlled movement.
 ")
 Exercise.where(exercise_name:"Laying Leg Raises").first_or_create(muscle_type_1:"Rectus Abdominis", muscle_type_2:"Transverse Abdominis", weighted:"false", description:"
@@ -225,17 +232,10 @@ Exercise.where(exercise_name:"Laying Leg Raises").first_or_create(muscle_type_1:
     Slowly raise your legs to a 90° angle, pause at this position, or as high as you can reach your legs, and then slowly lower your legs back down.
     Duration of these movements should be slow so that you do not utilize momentum, enabling you to get the most out of the exercise.
 ")
-Exercise.where(exercise_name:"Obliques Side Bend").first_or_create(muscle_type_1:"Obliques", weighted:"true", description:"
+Exercise.where(exercise_name:"Side Bend").first_or_create(muscle_type_1:"Obliques", weighted:"true", description:"
   Stand up straight with the kettlebell in one hand.
   Without bending forward or backward, and keeping your arm straight down by your side, bend to one side so the kettlebell is lowered to your knee
   Straighten yourself so the kettlebell returns to it's original position.")
-Exercise.where(exercise_name:"Russian Twists").first_or_create(muscle_type_1:"Obliques", weighted:"true", description:"
-  Sit on the floor with your legs outstretched.
-  Lean slightly backwards so that your legs are off the floor and your are being held up by your core.
-  Lift the kettlebell from the floor to your side and rotate so that it is held on the other side of your body.
-  Repeat this movement going side to side.
-  Tip: Don't let the kettlebell touch the floor at each side to increase the efficiency of this exercise.
-  ")
 #Legs
 #Hamstrings
 Exercise.where(exercise_name:"Stiff Leg Deadlifts").first_or_create(muscle_type_1:"Hamstrings", weighted:"true", description:"
@@ -245,7 +245,7 @@ Exercise.where(exercise_name:"Stiff Leg Deadlifts").first_or_create(muscle_type_
     From the standing position, lower the weight in a controlled manner.
     You can either lower the weight to the floor or before you touch the floor, depending on your mobility.
 ")
-Exercise.where(exercise_name:"Squat").first_or_create(muscle_type_1:"Hamstrings", muscle_type_2:"Quadriceps", weighted:"true", description:"
+Exercise.where(exercise_name:"Squats").first_or_create(muscle_type_1:"Hamstrings", muscle_type_2:"Quadriceps", weighted:"true", description:"
     Stand with your feet shoulder-width apart. Maintain the natural arch in your back, squeezing your shoulder blades and raising your chest.
     Grip the bar across your shoulders and support it on your upper back. Unwrack the bar by straightening your legs, and take a step back.
     Bend your knees as you lower the weight without altering the form of your back until your hips are below your knees.
@@ -266,11 +266,6 @@ Exercise.where(exercise_name:"Leg Press").first_or_create(muscle_type_1:"Quadric
 Exercise.where(exercise_name:"Leg Extension").first_or_create(muscle_type_1:"Quadriceps", weighted:"true", description:"
     Sit on the machine with your back against the cushion and adjust the machine you are using so that your knees are at a 90° angle at the starting position.
     Raise the weight by extending your knees outward, then lower your leg to the starting position. Both movements should be done in a slow, controlled motion.
-")
-Exercise.where(exercise_name:"Goblet Squat").first_or_create(muscle_type_1:"Quadriceps", weighted:"true", description:"
-    Hold the weight tucked into your upper chest area, keeping your elbows in. Your feet should be slightly wider than shoulder width.
-    Sink down into the squat, keeping your elbows inside the track of your knees.
-    Push through your heels while keeping your chest up and return to starting position.
 ")
 #Calves
 Exercise.where(exercise_name:"Standing calf raises").first_or_create(muscle_type_1:"Calves", weighted:"true", description:"
@@ -300,10 +295,4 @@ Exercise.where(exercise_name:"Glute Bridge").first_or_create(muscle_type_1:"Glut
     Push your hips up so that your butt is elevated and your back straight.
     Tense your glutes and raise your hips towards the ceiling.
     Once you are at the highest point you can manage, hold the position for a few seconds, and then slowly return to the starting position
-")
-Exercise.where(exercise_name:"Barbell Hip Thrust").first_or_create(muscle_type_1:"Gluteus", weighted:"true", description:"
-    Sit on the ground with a bench behind you. Have the barbell over your legs just above your hips.
-    Lean back against the bench so that your shoulders are resting upon it, stretch your arms out to either side using the bench as support.
-    Raise the weight by driving through your feet and extending your hips upwards. Support the weight with your shoulders and feet.
-    Slowly extend as far as you can, and then slowly return to the starting position.
 ")

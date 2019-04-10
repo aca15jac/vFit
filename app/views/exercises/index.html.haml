@@ -15,7 +15,8 @@
     - exercise_list.each do |y|
       %tr
         %td
-          = y.exercise_name
+          %a{href: "#{y.id}"}
+            = y.exercise_name
         %td
           = y.muscle_type_1
         %td

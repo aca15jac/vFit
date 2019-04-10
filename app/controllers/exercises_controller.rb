@@ -6,4 +6,9 @@ class ExercisesController < ApplicationController
     @muscles = Muscle.all
   end
 
+  def show
+    @exercise = Exercise.find(params[:id])
+    render "show"
+  end
+
 end
