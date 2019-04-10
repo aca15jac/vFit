@@ -186,17 +186,17 @@ Exercise.where(exercise_name:"Military Press").first_or_create(muscle_type_1:"An
   Put your arms shoulder width apart and derack the bar.
   Raise the bar above your head until your arms are outstretched.
   Slowly lower the bar infront of your face back to the original position.")
-Exercise.where(exercise_name:"Seated Dumbbell Shoulder Press ").first_or_create(muscle_type_1:"Anterior Deltoids", muscle_type_2:"Lateral Deltoids", weighted:"true", description:"
+Exercise.where(exercise_name:"Seated Dumbbell Shoulder Press").first_or_create(muscle_type_1:"Anterior Deltoids", muscle_type_2:"Lateral Deltoids", weighted:"true", description:"
     Sit on a bench with back support. Raise the dumbbells to shoulder height with your palms forward.
     Raise the dumbbells upwards and pause at the contracted position.
     Lower the weights back to starting position.
 ")
-Exercise.where(exercise_name:"Side Lateral Raises ").first_or_create(muscle_type_1:"Anterior Deltoids", muscle_type_2:"Lateral Deltoids", weighted:"true", description:"
+Exercise.where(exercise_name:"Side Lateral Raises").first_or_create(muscle_type_1:"Anterior Deltoids", muscle_type_2:"Lateral Deltoids", weighted:"true", description:"
     Stand up straight with dumbbells at either side, palms facing your hips.
     Raise your arms on either side with a slight bend in your elbow until they are parallel with the floor. Pause at the top of the motion.
     Slowly return your arms down to starting position.
 ")
-Exercise.where(exercise_name:" Bent Over Rear Delt Raise ").first_or_create(muscle_type_1:"Posterior Deltoids", muscle_type_2:"Lateral Deltoids", weighted:"true", description:"
+Exercise.where(exercise_name:"Bent Over Rear Delt Raise").first_or_create(muscle_type_1:"Posterior Deltoids", muscle_type_2:"Lateral Deltoids", weighted:"true", description:"
     With dumbbells in either hand, bend your knees with your feet slightly bowed out. Arch your back above your knees, and start with the weights touching in front of your chest.
     With bent elbows, raise your arms up to shoulder level, pausing at the at the end of the motion.
     Slowly lower your arms back to starting position.

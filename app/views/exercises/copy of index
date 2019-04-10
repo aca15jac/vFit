@@ -1,21 +1,27 @@
 = render 'layouts/header'
 .padding-top
 - @muscles.each do |x|
-  %h3.color-grey
+  %h3.text-center
     = x.muscle_name + "(" + x.muscle_group + ")"
-  %table.table.width_100
+  %table.table.table-striped.table-dark.width_100
+    %thead
+      %tr
+        %th{:scope => "col"} Exercise name
+        %th{:scope => "col"} Primary muscle
+        %th{:scope => "col"} Secondary muscle
+        %th{:scope => "col"} Tertiary muscle
+    %tbody
     - exercise_list = Exercise.where(muscle_type_1: x.muscle_name).or(Exercise.where(muscle_type_2: x.muscle_name)).or(Exercise.where(muscle_type_3: x.muscle_name))
     - exercise_list.each do |y|
       %tr{:onclick => "location.href = this.getElementsByTagName('a').item(0).getAttribute('href');"}
-        %td#image-sizing
-          #imagine-sizing-2
-            - tag = y.exercise_name.downcase.tr(" ", "_")+"1"
-            = image_tag(tag, :alt => "#{y.exercise_name} image")
         %td.not_like_link
-          %br
-          %br
           = link_to "#{y.exercise_name}", exercise_path(y)
-
+        %td
+          = y.muscle_type_1
+        %td
+          = y.muscle_type_2
+        %td
+          = y.muscle_type_3
 .padding-bottom
 
 = render 'layouts/footer'
