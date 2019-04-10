@@ -14,6 +14,7 @@ module Dissertation
     config.action_mailer.raise_delivery_errors = true
     config.action_mailer.delivery_method = :sendmail
     config.action_mailer.perform_deliveries = true
+    config.serve_static_assets = true
     ActionMailer::Base.delivery_method = :smtp
 
     # Settings in config/environments/* take precedence over those specified here.

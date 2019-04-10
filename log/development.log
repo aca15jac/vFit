@@ -37043,3 +37043,159 @@ Completed 200 OK in 79ms (Views: 73.0ms | ActiveRecord: 4.4ms)
 
 
 Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-10 16:40:22 +0100
+Started GET "/exercises/107" for 127.0.0.1 at 2019-04-10 16:44:21 +0100
+Processing by ExercisesController#show as HTML
+  Parameters: {"id"=>"107"}
+  [1m[36mUser Load (6.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[36mExercise Load (3.0ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 107], ["LIMIT", 1]]
+  ↳ app/controllers/exercises_controller.rb:10
+  Rendering exercises/show.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (6.5ms)
+  Rendered layouts/_footer.html.haml (5.3ms)
+  Rendered exercises/show.html.haml within layouts/application (32.8ms)
+Completed 200 OK in 103ms (Views: 87.2ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-10 16:44:22 +0100
+Started GET "/" for 127.0.0.1 at 2019-04-10 16:49:01 +0100
+Processing by HomepageController#home as HTML
+  [1m[36mUser Load (5.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering homepage/home.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (11.8ms)
+  Rendered layouts/_footer.html.haml (6.5ms)
+  Rendered homepage/home.html.haml within layouts/application (26.6ms)
+Completed 200 OK in 105ms (Views: 93.7ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-10 16:49:02 +0100
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-10 16:49:02 +0100
+Started GET "/exercises" for 127.0.0.1 at 2019-04-10 16:49:05 +0100
+Started GET "/exercises/index" for 127.0.0.1 at 2019-04-10 16:49:05 +0100
+Processing by ExercisesController#index as HTML
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering exercises/index.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (4.8ms)
+  [1m[36mMuscle Load (12.5ms)[0m  [1m[34mSELECT "muscles".* FROM "muscles"[0m
+  ↳ app/views/exercises/index.html.haml:3
+  [1m[36mExercise Load (25.1ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE (("exercises"."muscle_type_1" = $1 OR "exercises"."muscle_type_2" = $2) OR "exercises"."muscle_type_3" = $3)[0m  [["muscle_type_1", "Biceps"], ["muscle_type_2", "Biceps"], ["muscle_type_3", "Biceps"]]
+  ↳ app/views/exercises/index.html.haml:8
+  [1m[36mExercise Load (10.2ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE (("exercises"."muscle_type_1" = $1 OR "exercises"."muscle_type_2" = $2) OR "exercises"."muscle_type_3" = $3)[0m  [["muscle_type_1", "Triceps"], ["muscle_type_2", "Triceps"], ["muscle_type_3", "Triceps"]]
+  ↳ app/views/exercises/index.html.haml:8
+  [1m[36mExercise Load (3.0ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE (("exercises"."muscle_type_1" = $1 OR "exercises"."muscle_type_2" = $2) OR "exercises"."muscle_type_3" = $3)[0m  [["muscle_type_1", "Forearms"], ["muscle_type_2", "Forearms"], ["muscle_type_3", "Forearms"]]
+  ↳ app/views/exercises/index.html.haml:8
+  [1m[36mExercise Load (2.4ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE (("exercises"."muscle_type_1" = $1 OR "exercises"."muscle_type_2" = $2) OR "exercises"."muscle_type_3" = $3)[0m  [["muscle_type_1", "Trapezius"], ["muscle_type_2", "Trapezius"], ["muscle_type_3", "Trapezius"]]
+  ↳ app/views/exercises/index.html.haml:8
+  [1m[36mExercise Load (2.8ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE (("exercises"."muscle_type_1" = $1 OR "exercises"."muscle_type_2" = $2) OR "exercises"."muscle_type_3" = $3)[0m  [["muscle_type_1", "Latissimus"], ["muscle_type_2", "Latissimus"], ["muscle_type_3", "Latissimus"]]
+  ↳ app/views/exercises/index.html.haml:8
+  [1m[36mExercise Load (2.4ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE (("exercises"."muscle_type_1" = $1 OR "exercises"."muscle_type_2" = $2) OR "exercises"."muscle_type_3" = $3)[0m  [["muscle_type_1", "Upper Back"], ["muscle_type_2", "Upper Back"], ["muscle_type_3", "Upper Back"]]
+  ↳ app/views/exercises/index.html.haml:8
+  [1m[36mExercise Load (4.0ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE (("exercises"."muscle_type_1" = $1 OR "exercises"."muscle_type_2" = $2) OR "exercises"."muscle_type_3" = $3)[0m  [["muscle_type_1", "Lower Back"], ["muscle_type_2", "Lower Back"], ["muscle_type_3", "Lower Back"]]
+  ↳ app/views/exercises/index.html.haml:8
+  [1m[36mExercise Load (2.2ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE (("exercises"."muscle_type_1" = $1 OR "exercises"."muscle_type_2" = $2) OR "exercises"."muscle_type_3" = $3)[0m  [["muscle_type_1", "Pectoralis Major"], ["muscle_type_2", "Pectoralis Major"], ["muscle_type_3", "Pectoralis Major"]]
+  ↳ app/views/exercises/index.html.haml:8
+  [1m[36mExercise Load (2.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE (("exercises"."muscle_type_1" = $1 OR "exercises"."muscle_type_2" = $2) OR "exercises"."muscle_type_3" = $3)[0m  [["muscle_type_1", "Pectoralis Minor"], ["muscle_type_2", "Pectoralis Minor"], ["muscle_type_3", "Pectoralis Minor"]]
+  ↳ app/views/exercises/index.html.haml:8
+  [1m[36mExercise Load (4.0ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE (("exercises"."muscle_type_1" = $1 OR "exercises"."muscle_type_2" = $2) OR "exercises"."muscle_type_3" = $3)[0m  [["muscle_type_1", "Anterior Deltoids"], ["muscle_type_2", "Anterior Deltoids"], ["muscle_type_3", "Anterior Deltoids"]]
+  ↳ app/views/exercises/index.html.haml:8
+  [1m[36mExercise Load (18.6ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE (("exercises"."muscle_type_1" = $1 OR "exercises"."muscle_type_2" = $2) OR "exercises"."muscle_type_3" = $3)[0m  [["muscle_type_1", "Lateral Deltoids"], ["muscle_type_2", "Lateral Deltoids"], ["muscle_type_3", "Lateral Deltoids"]]
+  ↳ app/views/exercises/index.html.haml:8
+  [1m[36mExercise Load (2.2ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE (("exercises"."muscle_type_1" = $1 OR "exercises"."muscle_type_2" = $2) OR "exercises"."muscle_type_3" = $3)[0m  [["muscle_type_1", "Rectus Abdominis"], ["muscle_type_2", "Rectus Abdominis"], ["muscle_type_3", "Rectus Abdominis"]]
+  ↳ app/views/exercises/index.html.haml:8
+  [1m[36mExercise Load (2.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE (("exercises"."muscle_type_1" = $1 OR "exercises"."muscle_type_2" = $2) OR "exercises"."muscle_type_3" = $3)[0m  [["muscle_type_1", "Transverse Abdominis"], ["muscle_type_2", "Transverse Abdominis"], ["muscle_type_3", "Transverse Abdominis"]]
+  ↳ app/views/exercises/index.html.haml:8
+  [1m[36mExercise Load (2.2ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE (("exercises"."muscle_type_1" = $1 OR "exercises"."muscle_type_2" = $2) OR "exercises"."muscle_type_3" = $3)[0m  [["muscle_type_1", "Obliques"], ["muscle_type_2", "Obliques"], ["muscle_type_3", "Obliques"]]
+  ↳ app/views/exercises/index.html.haml:8
+  [1m[36mExercise Load (2.6ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE (("exercises"."muscle_type_1" = $1 OR "exercises"."muscle_type_2" = $2) OR "exercises"."muscle_type_3" = $3)[0m  [["muscle_type_1", "Hamstrings"], ["muscle_type_2", "Hamstrings"], ["muscle_type_3", "Hamstrings"]]
+  ↳ app/views/exercises/index.html.haml:8
+  [1m[36mExercise Load (2.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE (("exercises"."muscle_type_1" = $1 OR "exercises"."muscle_type_2" = $2) OR "exercises"."muscle_type_3" = $3)[0m  [["muscle_type_1", "Adductors"], ["muscle_type_2", "Adductors"], ["muscle_type_3", "Adductors"]]
+  ↳ app/views/exercises/index.html.haml:8
+  [1m[36mExercise Load (2.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE (("exercises"."muscle_type_1" = $1 OR "exercises"."muscle_type_2" = $2) OR "exercises"."muscle_type_3" = $3)[0m  [["muscle_type_1", "Abductors"], ["muscle_type_2", "Abductors"], ["muscle_type_3", "Abductors"]]
+  ↳ app/views/exercises/index.html.haml:8
+  [1m[36mExercise Load (2.1ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE (("exercises"."muscle_type_1" = $1 OR "exercises"."muscle_type_2" = $2) OR "exercises"."muscle_type_3" = $3)[0m  [["muscle_type_1", "Quadriceps"], ["muscle_type_2", "Quadriceps"], ["muscle_type_3", "Quadriceps"]]
+  ↳ app/views/exercises/index.html.haml:8
+  [1m[36mExercise Load (2.8ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE (("exercises"."muscle_type_1" = $1 OR "exercises"."muscle_type_2" = $2) OR "exercises"."muscle_type_3" = $3)[0m  [["muscle_type_1", "Calves"], ["muscle_type_2", "Calves"], ["muscle_type_3", "Calves"]]
+  ↳ app/views/exercises/index.html.haml:8
+  [1m[36mExercise Load (7.5ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE (("exercises"."muscle_type_1" = $1 OR "exercises"."muscle_type_2" = $2) OR "exercises"."muscle_type_3" = $3)[0m  [["muscle_type_1", "Gluteus"], ["muscle_type_2", "Gluteus"], ["muscle_type_3", "Gluteus"]]
+  ↳ app/views/exercises/index.html.haml:8
+  [1m[36mExercise Load (2.2ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE (("exercises"."muscle_type_1" = $1 OR "exercises"."muscle_type_2" = $2) OR "exercises"."muscle_type_3" = $3)[0m  [["muscle_type_1", "Posterior Deltoids"], ["muscle_type_2", "Posterior Deltoids"], ["muscle_type_3", "Posterior Deltoids"]]
+  ↳ app/views/exercises/index.html.haml:8
+  Rendered layouts/_footer.html.haml (4.7ms)
+  Rendered exercises/index.html.haml within layouts/application (206.7ms)
+Completed 200 OK in 259ms (Views: 135.1ms | ActiveRecord: 121.1ms)
+
+
+Started GET "/exercises" for 127.0.0.1 at 2019-04-10 16:49:49 +0100
+Started GET "/exercises/index" for 127.0.0.1 at 2019-04-10 16:49:49 +0100
+Processing by ExercisesController#index as HTML
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  Rendering exercises/index.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (7.9ms)
+  [1m[36mMuscle Load (2.3ms)[0m  [1m[34mSELECT "muscles".* FROM "muscles"[0m
+  ↳ app/views/exercises/index.html.haml:3
+  [1m[36mExercise Load (2.2ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE (("exercises"."muscle_type_1" = $1 OR "exercises"."muscle_type_2" = $2) OR "exercises"."muscle_type_3" = $3)[0m  [["muscle_type_1", "Biceps"], ["muscle_type_2", "Biceps"], ["muscle_type_3", "Biceps"]]
+  ↳ app/views/exercises/index.html.haml:8
+  [1m[36mExercise Load (3.2ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE (("exercises"."muscle_type_1" = $1 OR "exercises"."muscle_type_2" = $2) OR "exercises"."muscle_type_3" = $3)[0m  [["muscle_type_1", "Triceps"], ["muscle_type_2", "Triceps"], ["muscle_type_3", "Triceps"]]
+  ↳ app/views/exercises/index.html.haml:8
+  [1m[36mExercise Load (2.5ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE (("exercises"."muscle_type_1" = $1 OR "exercises"."muscle_type_2" = $2) OR "exercises"."muscle_type_3" = $3)[0m  [["muscle_type_1", "Forearms"], ["muscle_type_2", "Forearms"], ["muscle_type_3", "Forearms"]]
+  ↳ app/views/exercises/index.html.haml:8
+  [1m[36mExercise Load (7.0ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE (("exercises"."muscle_type_1" = $1 OR "exercises"."muscle_type_2" = $2) OR "exercises"."muscle_type_3" = $3)[0m  [["muscle_type_1", "Trapezius"], ["muscle_type_2", "Trapezius"], ["muscle_type_3", "Trapezius"]]
+  ↳ app/views/exercises/index.html.haml:8
+  [1m[36mExercise Load (2.1ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE (("exercises"."muscle_type_1" = $1 OR "exercises"."muscle_type_2" = $2) OR "exercises"."muscle_type_3" = $3)[0m  [["muscle_type_1", "Latissimus"], ["muscle_type_2", "Latissimus"], ["muscle_type_3", "Latissimus"]]
+  ↳ app/views/exercises/index.html.haml:8
+  [1m[36mExercise Load (2.1ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE (("exercises"."muscle_type_1" = $1 OR "exercises"."muscle_type_2" = $2) OR "exercises"."muscle_type_3" = $3)[0m  [["muscle_type_1", "Upper Back"], ["muscle_type_2", "Upper Back"], ["muscle_type_3", "Upper Back"]]
+  ↳ app/views/exercises/index.html.haml:8
+  [1m[36mExercise Load (2.0ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE (("exercises"."muscle_type_1" = $1 OR "exercises"."muscle_type_2" = $2) OR "exercises"."muscle_type_3" = $3)[0m  [["muscle_type_1", "Lower Back"], ["muscle_type_2", "Lower Back"], ["muscle_type_3", "Lower Back"]]
+  ↳ app/views/exercises/index.html.haml:8
+  [1m[36mExercise Load (2.1ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE (("exercises"."muscle_type_1" = $1 OR "exercises"."muscle_type_2" = $2) OR "exercises"."muscle_type_3" = $3)[0m  [["muscle_type_1", "Pectoralis Major"], ["muscle_type_2", "Pectoralis Major"], ["muscle_type_3", "Pectoralis Major"]]
+  ↳ app/views/exercises/index.html.haml:8
+  [1m[36mExercise Load (2.2ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE (("exercises"."muscle_type_1" = $1 OR "exercises"."muscle_type_2" = $2) OR "exercises"."muscle_type_3" = $3)[0m  [["muscle_type_1", "Pectoralis Minor"], ["muscle_type_2", "Pectoralis Minor"], ["muscle_type_3", "Pectoralis Minor"]]
+  ↳ app/views/exercises/index.html.haml:8
+  [1m[36mExercise Load (2.0ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE (("exercises"."muscle_type_1" = $1 OR "exercises"."muscle_type_2" = $2) OR "exercises"."muscle_type_3" = $3)[0m  [["muscle_type_1", "Anterior Deltoids"], ["muscle_type_2", "Anterior Deltoids"], ["muscle_type_3", "Anterior Deltoids"]]
+  ↳ app/views/exercises/index.html.haml:8
+  [1m[36mExercise Load (2.1ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE (("exercises"."muscle_type_1" = $1 OR "exercises"."muscle_type_2" = $2) OR "exercises"."muscle_type_3" = $3)[0m  [["muscle_type_1", "Lateral Deltoids"], ["muscle_type_2", "Lateral Deltoids"], ["muscle_type_3", "Lateral Deltoids"]]
+  ↳ app/views/exercises/index.html.haml:8
+  [1m[36mExercise Load (2.4ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE (("exercises"."muscle_type_1" = $1 OR "exercises"."muscle_type_2" = $2) OR "exercises"."muscle_type_3" = $3)[0m  [["muscle_type_1", "Rectus Abdominis"], ["muscle_type_2", "Rectus Abdominis"], ["muscle_type_3", "Rectus Abdominis"]]
+  ↳ app/views/exercises/index.html.haml:8
+  [1m[36mExercise Load (2.4ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE (("exercises"."muscle_type_1" = $1 OR "exercises"."muscle_type_2" = $2) OR "exercises"."muscle_type_3" = $3)[0m  [["muscle_type_1", "Transverse Abdominis"], ["muscle_type_2", "Transverse Abdominis"], ["muscle_type_3", "Transverse Abdominis"]]
+  ↳ app/views/exercises/index.html.haml:8
+  [1m[36mExercise Load (4.8ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE (("exercises"."muscle_type_1" = $1 OR "exercises"."muscle_type_2" = $2) OR "exercises"."muscle_type_3" = $3)[0m  [["muscle_type_1", "Obliques"], ["muscle_type_2", "Obliques"], ["muscle_type_3", "Obliques"]]
+  ↳ app/views/exercises/index.html.haml:8
+  [1m[36mExercise Load (2.2ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE (("exercises"."muscle_type_1" = $1 OR "exercises"."muscle_type_2" = $2) OR "exercises"."muscle_type_3" = $3)[0m  [["muscle_type_1", "Hamstrings"], ["muscle_type_2", "Hamstrings"], ["muscle_type_3", "Hamstrings"]]
+  ↳ app/views/exercises/index.html.haml:8
+  [1m[36mExercise Load (2.1ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE (("exercises"."muscle_type_1" = $1 OR "exercises"."muscle_type_2" = $2) OR "exercises"."muscle_type_3" = $3)[0m  [["muscle_type_1", "Adductors"], ["muscle_type_2", "Adductors"], ["muscle_type_3", "Adductors"]]
+  ↳ app/views/exercises/index.html.haml:8
+  [1m[36mExercise Load (1.9ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE (("exercises"."muscle_type_1" = $1 OR "exercises"."muscle_type_2" = $2) OR "exercises"."muscle_type_3" = $3)[0m  [["muscle_type_1", "Abductors"], ["muscle_type_2", "Abductors"], ["muscle_type_3", "Abductors"]]
+  ↳ app/views/exercises/index.html.haml:8
+  [1m[36mExercise Load (2.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE (("exercises"."muscle_type_1" = $1 OR "exercises"."muscle_type_2" = $2) OR "exercises"."muscle_type_3" = $3)[0m  [["muscle_type_1", "Quadriceps"], ["muscle_type_2", "Quadriceps"], ["muscle_type_3", "Quadriceps"]]
+  ↳ app/views/exercises/index.html.haml:8
+  [1m[36mExercise Load (2.0ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE (("exercises"."muscle_type_1" = $1 OR "exercises"."muscle_type_2" = $2) OR "exercises"."muscle_type_3" = $3)[0m  [["muscle_type_1", "Calves"], ["muscle_type_2", "Calves"], ["muscle_type_3", "Calves"]]
+  ↳ app/views/exercises/index.html.haml:8
+  [1m[36mExercise Load (2.1ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE (("exercises"."muscle_type_1" = $1 OR "exercises"."muscle_type_2" = $2) OR "exercises"."muscle_type_3" = $3)[0m  [["muscle_type_1", "Gluteus"], ["muscle_type_2", "Gluteus"], ["muscle_type_3", "Gluteus"]]
+  ↳ app/views/exercises/index.html.haml:8
+  [1m[36mExercise Load (2.0ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE (("exercises"."muscle_type_1" = $1 OR "exercises"."muscle_type_2" = $2) OR "exercises"."muscle_type_3" = $3)[0m  [["muscle_type_1", "Posterior Deltoids"], ["muscle_type_2", "Posterior Deltoids"], ["muscle_type_3", "Posterior Deltoids"]]
+  ↳ app/views/exercises/index.html.haml:8
+  Rendered layouts/_footer.html.haml (6.1ms)
+  Rendered exercises/index.html.haml within layouts/application (195.2ms)
+Completed 200 OK in 268ms (Views: 206.3ms | ActiveRecord: 58.1ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-10 16:49:50 +0100
+Started GET "/exercises/71" for 127.0.0.1 at 2019-04-10 16:49:51 +0100
+Processing by ExercisesController#show as HTML
+  Parameters: {"id"=>"71"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[36mExercise Load (1.7ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  ↳ app/controllers/exercises_controller.rb:10
+  Rendering exercises/show.html.haml within layouts/application
+  Rendered layouts/_header.html.haml (5.1ms)
+  Rendered layouts/_footer.html.haml (4.5ms)
+  Rendered exercises/show.html.haml within layouts/application (19.9ms)
+Completed 200 OK in 80ms (Views: 74.4ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2019-04-10 16:49:52 +0100
