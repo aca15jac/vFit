@@ -3,14 +3,15 @@
 .padding-top
 
 .card{:class => "width_85 text-center"}
+  .card-header
+    %h5.card-title
+      = @exercise.exercise_name
   .card-img-top.image_grid
     .image_grid_item
       = image_tag("#{@exercise_image_name}1.png", :alt => "#{@exercise.exercise_name} 1")
     .image_grid_item
       = image_tag("#{@exercise_image_name}2.png", :alt => "#{@exercise.exercise_name} 2")
   .card-body
-    %h5.card-title
-      = @exercise.exercise_name
     %p.card-text
       =@exercise.description
   %ul.list-group.list-group-flush

@@ -1,0 +1,22 @@
+.background-image
+  .padding-top
+  .padding-top
+  %h2.text-center.sign_up_title Sign up
+  .padding-top
+  .sign_up_form
+    = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      = f.error_notification
+      .form-inputs
+        = f.input :email, required: true, autofocus: true, placeholder: "Email", label: false, input_html: { autocomplete: "email" }
+
+        = f.input :password, required: true, placeholder: "Password", label: false, input_html: { autocomplete: "new-password" }
+
+        = f.input :password_confirmation, required: true, placeholder: "Password confirmation", label: false, input_html: { autocomplete: "new-password" }
+
+        = f.input :first_name, required: true, placeholder: "First name", label: false, input_html: { autocomplete: "first-name" }
+
+        = f.input :last_name, required: true, placeholder: "Last name", label: false, input_html: { autocomplete: "last-name" }
+      .form-actions
+        .login-form-submit
+          = f.button :submit, "Sign up"
+    = render "devise/shared/links"

@@ -1,37 +1,59 @@
 .background-image
-  position: fixed
-  top: 0
-  width: 100%
-  height: 100%
-  background-image: url(homeimage2.jpg)
+  width: 100vw
+  height: 100vh
+  background-image: url(login-background.png)
   background-size: cover
-.background-color
-  background-color: #ff8351
-
   position: fixed
   top: 0
-  width: 100%
-  height: 100%
-.loginform
+.sign_up_title
+  color: white
+  font-weight: bold
+.loginform, .sign_up_form
   text-align: center
-  margin-top: 27vh
   input
     background-color: rgba(255,131,81,0)
-    border-radius: 2em
-    width: 40vw
+    width: 60vw
     height: 3em
     border: none
     margin-top: 1em
     padding: 0 1em
-    border: solid
+    border-bottom: solid
     border-width: thin
-    border-color: rgba(200,200,200,0.85)
-    box-shadow: 0px 3px 1px 0px rgba(255,255,255,0.3)
+    color: white
+    font-weight: bolder
+    border-color: rgba(255,255,255,0.85)
+
+    &::-webkit-input-placeholder
+      color: white
+    &:-moz-placeholder
+      /* FF 4-18
+      color: white
+      opacity: 1
+    &::-moz-placeholder
+      /* FF 19+
+      color: white
+      opacity: 1
+    &:-ms-input-placeholder
+      /* IE 10+
+      color: white
+    &::-ms-input-placeholder
+      /* Microsoft Edge
+      color: white
+    &::placeholder
+      /* modern browser
+      color: white
+.loginform form a
+  color: white
+  text-decoration: none
+  position: relative
+  top: 20px
+
+
 
 .login-form-submit input
-  background-color: rgb(255,131,81)
-  margin-top: 5vh
+  background-color: #ff7c48
+  color: white
   border: none
-  margin-top: 1em
+  margin-top: 2em
   padding: 0 1em
-  box-shadow: 0px 3px 1px 0px rgba(0,0,0,0.3)
+  border-radius: 20px
