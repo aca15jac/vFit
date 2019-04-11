@@ -29,6 +29,10 @@
             "src": "images/ic_launcher5.png",
             "sizes": "72x72",
             "type": "image/png"
+        }, {
+            "src": "images/ic_launcher6.png",
+            "sizes": "512x512",
+            "type": "image/png"
         }
     ]
 }
