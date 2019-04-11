@@ -21,3 +21,4 @@
 //= navbar
 //= bootstrap
 //= click_row
+//= manifest
