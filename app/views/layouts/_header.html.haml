@@ -1,10 +1,12 @@
 %header.header-grid
   #mySidenav.sidenav
     %a.closebtn{:href => "javascript:void(0)", :onclick => "closeNav()"} ×
-    %a{:href => "#"} About
-    %a{:href => "#"} Services
-    %a{:href => "#"} Clients
-    %a{:href => "#"} Contact
+    %a{href: "/"} Home
+    %a{href: "/exercises"} Exercises
+    %a{href: "/workouts"} Workouts
+    %a{href: "/logs"} Logs
+    %a{href: "/progress"} Progress
+    = link_to('Logout', destroy_user_session_path, method: :delete)
   %span{:class => "burgermenu", :onclick => "openNav()", :style => "font-size:30px;cursor:pointer"} ☰
 
   %h1.title #{@title}
