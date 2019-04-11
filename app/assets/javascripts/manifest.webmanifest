@@ -1,0 +1,34 @@
+{
+    "name": "vFit",
+    "short_name": "vFit",
+    "theme_color": "#000000",
+    "background_color": "#FFFFFF",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "https://immense-depths-75091.herokuapp.com/",
+    "description": "A Progressive Web App for fitness data collection and analysis",
+    "orientation": "any",
+    "icons": [
+        {
+            "src": "images/ic_launcher.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }, {
+            "src": "images/ic_launcher2.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        }, {
+            "src": "images/ic_launcher3.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        }, {
+            "src": "images/ic_launcher4.png",
+            "sizes": "48x48",
+            "type": "image/png"
+        }, {
+            "src": "images/ic_launcher5.png",
+            "sizes": "72x72",
+            "type": "image/png"
+        }
+    ]
+}
