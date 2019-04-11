@@ -14,19 +14,19 @@
             "sizes": "192x192",
             "type": "image/png"
         }, {
-            "src": "images/ic_launcher2.png",
+            "src": "images/ic_launcher_2.png",
             "sizes": "144x144",
             "type": "image/png"
         }, {
-            "src": "images/ic_launcher3.png",
+            "src": "images/ic_launcher_3.png",
             "sizes": "96x96",
             "type": "image/png"
         }, {
-            "src": "images/ic_launcher4.png",
+            "src": "images/ic_launcher_4.png",
             "sizes": "48x48",
             "type": "image/png"
         }, {
-            "src": "images/ic_launcher5.png",
+            "src": "images/ic_launcher_5.png",
             "sizes": "72x72",
             "type": "image/png"
         }, {
