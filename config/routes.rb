@@ -1,7 +1,6 @@
-match "*path" => redirect("https://immense-depths-75091.herokuapp.com/%{path}"), :constraints => { :protocol => "http://" }
-match "*path" => redirect("https://immense-depths-75091.herokuapp.com/%{path}"), :constraints => { :subdomain => "" }
-
 Rails.application.routes.draw do
+  match "*path" => redirect("https://immense-depths-75091.herokuapp.com/%{path}"), :constraints => { :protocol => "http://" }
+  match "*path" => redirect("https://immense-depths-75091.herokuapp.com/%{path}"), :constraints => { :subdomain => "" }
   get 'more/index'
   devise_for :users
   get 'progress/index'
