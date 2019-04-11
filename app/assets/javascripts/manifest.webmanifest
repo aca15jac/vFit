@@ -5,7 +5,7 @@
     "background_color": "#FFFFFF",
     "display": "standalone",
     "scope": "/",
-    "start_url": "https://immense-depths-75091.herokuapp.com/",
+    "start_url": "/",
     "description": "A Progressive Web App for fitness data collection and analysis",
     "orientation": "any",
     "icons": [

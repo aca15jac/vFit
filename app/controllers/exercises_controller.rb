@@ -1,5 +1,5 @@
 class ExercisesController < ApplicationController
-  before_action :authenticate_user!
+
   def index
     @title = "Exercises"
     @exercises = Exercise.all

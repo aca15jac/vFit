@@ -1,5 +1,5 @@
 class MusclesController < ApplicationController
-  before_action :authenticate_user!
+
   def index
     @title = "Muscles"
     @muscles = Muscle.all
