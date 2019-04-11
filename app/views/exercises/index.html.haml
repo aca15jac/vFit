@@ -1,20 +1,51 @@
 = render 'layouts/header'
 .padding-top
-- @muscles.each do |x|
-  %h3.color-grey
-    = x.muscle_name + "(" + x.muscle_group + ")"
-  %table.table.width_100
-    - exercise_list = Exercise.where(muscle_type_1: x.muscle_name).or(Exercise.where(muscle_type_2: x.muscle_name)).or(Exercise.where(muscle_type_3: x.muscle_name))
-    - exercise_list.each do |y|
-      %tr{:onclick => "location.href = this.getElementsByTagName('a').item(0).getAttribute('href');"}
-        %td#image-sizing
-          #imagine-sizing-2
-            - tag = y.exercise_name.downcase.tr(" ", "_")+"1"
-            = image_tag(tag, :alt => "#{y.exercise_name} image")
-        %td.not_like_link
-          %br
-          %br
-          = link_to "#{y.exercise_name}", exercise_path(y)
+.padding-top-half
+.card.width_90.no-padding
+  .card-header
+    %h5.color-grey.text-center
+      Click on a muscle to view related exercises
+  .card-body.no-padding
+    #body-map
+      = image_tag("background.png", id: "background")
+      = link_to image_tag("traps-left.png", id:"traps-left"), ("/muscles/#{Muscle.where(muscle_name:"Trapezius").take.id}")
+      = link_to image_tag("traps-right.png", id:"traps-right"), ("/muscles/#{Muscle.where(muscle_name:"Trapezius").take.id}")
+      = link_to image_tag("deltoids-left.png", id:"deltoids-left"), ("/muscles/#{Muscle.where(muscle_name:"Anterior Deltoids").take.id}")
+      = link_to image_tag("deltoids-right.png", id:"deltoids-right"), ("/muscles/#{Muscle.where(muscle_name:"Anterior Deltoids").take.id}")
+      = link_to image_tag("pecs.png", id:"pecs"), ("/muscles/#{Muscle.where(muscle_name:"Pectoralis Major").take.id}")
+      = link_to image_tag("biceps-left.png", id:"biceps-left"), ("/muscles/#{Muscle.where(muscle_name:"Biceps").take.id}")
+      = link_to image_tag("biceps-right.png", id:"biceps-right"), ("/muscles/#{Muscle.where(muscle_name:"Biceps").take.id}")
+      = link_to image_tag("forearm-left.png", id:"forearm-left"), ("/muscles/#{Muscle.where(muscle_name:"Forearms").take.id}")
+      = link_to image_tag("forearm-right.png", id:"forearm-right"), ("/muscles/#{Muscle.where(muscle_name:"Forearms").take.id}")
+      = link_to image_tag("abs.png", id:"abs"), ("/muscles/#{Muscle.where(muscle_name:"Rectus Abdominis").take.id}")
+      = link_to image_tag("quads-left.png", id:"quads-left"), ("/muscles/#{Muscle.where(muscle_name:"Quadriceps").take.id}")
+      = link_to image_tag("quads-right.png", id:"quads-right"), ("/muscles/#{Muscle.where(muscle_name:"Quadriceps").take.id}")
+      = link_to image_tag("calves-left.png", id:"calves-left"), ("/muscles/#{Muscle.where(muscle_name:"Calves").take.id}")
+      = link_to image_tag("calves-right.png", id:"calves-right"), ("/muscles/#{Muscle.where(muscle_name:"Calves").take.id}")
+      = link_to image_tag("back-traps.png", id:"back-traps"), ("/muscles/#{Muscle.where(muscle_name:"Trapezius").take.id}")
+      = link_to image_tag("back-upper.png", id:"back-upper"), ("/muscles/#{Muscle.where(muscle_name:"Trapezius").take.id}")
+      = link_to image_tag("back-deltoids-left.png", id:"back-deltoids-left"), ("/muscles/#{Muscle.where(muscle_name:"Lateral Deltoids").take.id}")
+      = link_to image_tag("back-deltoids-right.png", id:"back-deltoids-right"), ("/muscles/#{Muscle.where(muscle_name:"Lateral Deltoids").take.id}")
+      = link_to image_tag("triceps-left.png", id:"triceps-left"), ("/muscles/#{Muscle.where(muscle_name:"Triceps").take.id}")
+      = link_to image_tag("triceps-right.png", id:"triceps-right"), ("/muscles/#{Muscle.where(muscle_name:"Triceps").take.id}")
+      = link_to image_tag("lats-left.png", id:"lats-left"), ("/muscles/#{Muscle.where(muscle_name:"Latissimus").take.id}")
+      = link_to image_tag("lats-right.png", id:"lats-right"), ("/muscles/#{Muscle.where(muscle_name:"Latissimus").take.id}")
+      = link_to image_tag("back-lower.png", id:"back-lower"), ("/muscles/#{Muscle.where(muscle_name:"Lower Back").take.id}")
+      = link_to image_tag("back-forearm-left.png", id:"back-forearm-left"), ("/muscles/#{Muscle.where(muscle_name:"Forearms").take.id}")
+      = link_to image_tag("back-forearm-right.png", id:"back-forearm-right"), ("/muscles/#{Muscle.where(muscle_name:"Forearms").take.id}")
+      = link_to image_tag("glutes.png", id:"glutes"), ("/muscles/#{Muscle.where(muscle_name:"Gluteus").take.id}")
+      = link_to image_tag("hamstrings-left.png", id:"hamstrings-left"), ("/muscles/#{Muscle.where(muscle_name:"Hamstrings").take.id}")
+      = link_to image_tag("hamstrings-right.png", id:"hamstrings-right"), ("/muscles/#{Muscle.where(muscle_name:"Hamstrings").take.id}")
+      = link_to image_tag("back-calves-left.png", id:"back-calves-left"), ("/muscles/#{Muscle.where(muscle_name:"Calves").take.id}")
+      = link_to image_tag("back-calves-right.png", id:"back-calves-right"), ("/muscles/#{Muscle.where(muscle_name:"Calves").take.id}")
+      -# NEED TO ADD: TRANSVERSE ABDOMINIS, OBLIQUES, ADDUCTORS, ABDUCTORS AND POSTERIOR DELTOIDS
+    .card-body
+      = button_to("Or click here to view all exercises", '/muscles/index', :class => "btn btn-primary btn-lg btn-block", :method => "get")
+
+
+
+
+
 
 .padding-bottom
 

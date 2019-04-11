@@ -1,0 +1,34 @@
+= render 'layouts/header'
+.padding-top
+.padding-top
+
+.card{:class => "width_85 text-center"}
+  .card-body
+    %h3.color-grey.text-center
+      = @muscle.muscle_name + "(" + @muscle.muscle_group + ")"
+    %p.card-text
+      = @muscle.muscle_group
+
+  %table.table.width_100
+    - exercise_list = Exercise.where(muscle_type_1: @muscle.muscle_name).or(Exercise.where(muscle_type_2: @muscle.muscle_name)).or(Exercise.where(muscle_type_3: @muscle.muscle_name))
+    - exercise_list.each do |y|
+      %tr{:onclick => "location.href = this.getElementsByTagName('a').item(0).getAttribute('href');"}
+        %td#image-sizing
+          #imagine-sizing-2
+            - tag = y.exercise_name.downcase.tr(" ", "_")+"1"
+            = image_tag(tag, :alt => "#{y.exercise_name} image")
+        %td.not_like_link
+          %br
+          %br
+          = link_to "#{y.exercise_name}", exercise_path(y)
+
+  .card-body
+    %a.card-link
+      = link_to 'Go back', '/exercises'
+
+
+
+
+
+.padding-bottom
+=render 'layouts/footer'

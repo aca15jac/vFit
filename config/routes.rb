@@ -5,14 +5,17 @@ Rails.application.routes.draw do
   get 'workouts/index'
   get 'logs/index'
   get 'exercises/index'
+  get 'muscles/index'
 
   get 'exercises', to: redirect('/exercises/index')
   get 'workouts', to: redirect('/workouts/index')
   get 'progress', to: redirect('/progress/index')
   get 'logs', to: redirect('/logs/index')
   get 'more', to: redirect('/more/index')
+  get 'muscles', to: redirect('/muscles/index')
 
   resources :exercises
+  resources :muscles
 
 
 
