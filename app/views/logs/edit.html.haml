@@ -17,17 +17,21 @@
           = f.input :exercise_id, required: true, label: false, :input_html => { :value => @exercise.id}, as: "hidden"
           = f.input :user_id, required: true, label: false, :input_html => { :value => @user.id}, as: "hidden"
           = f.input :weighted, required: true, label: false, :input_html => { :value => @exercise.weighted}, as: "hidden"
-          = f.input :reps, required: true, placeholder: "Number of reps", label: false, :input_html => { :class => 'logs_input reps' }
 
           - if @exercise.weighted
-            = f.input :weight, required: true, placeholder: "Weight in kg", label: false, :input_html => { :class => 'logs_input weight' }
+            .log_viewed_inputs
+              = f.input :reps, required: true, placeholder: "Number of reps", label: false, :input_html => { :class => 'logs_input reps1'}
+              = f.input :weight, required: true, placeholder: "Weight in kg", label: false, :input_html => { :class => 'logs_input weight'}
           - if !@exercise.weighted
+            .log_viewed_inputs2
+              = f.input :reps, required: true, placeholder: "Number of reps", label: false, :input_html => { :class => 'logs_input reps2' }
             = f.input :weight, required: true, label: false, as: "hidden", :input_html => {:value => 0}
           = f.input :active, required: true, label: false, :input_html => { :value => true}, as: "hidden"
         .text-center.padding-top-half.logs_submit
-          = f.button :submit, "Update log"
-          = button_to "Delete", exercise_log_path(@exercise, 5), :method => :delete
-    .padding-top-half
-    .text-center
-      %a.btn.btn-primary{:href => "#"} Go somewhere
-      %a.btn.btn-primary{:href => "#"} Go somewhere
+          = f.button :submit, "Update log", :method => :patch, :class => "btn btn-secondary"
+      .text-center.padding-top-half.logs_submit
+        = button_to "Delete log", exercise_log_path(@exercise, @log.id), :method => :delete, :class => "btn btn-secondary"
+
+  .card-footer.text-center
+    .btn.btn-primary#color-white.not_like_link
+      = link_to 'Go back', :back

@@ -19,20 +19,30 @@ class LogsController < ApplicationController
   def create
     @exercise = Exercise.find(params[:exercise_id])
     @user = current_user
-    log = Log.new
-    log.exercise_id = params[:exercise_id]
-    log.user_id = params[:log][:user_id]
-    log.weighted = params[:log][:weighted]
-    log.weight = params[:log][:weight]
-    log.reps = params[:log][:reps]
-    log.active = params[:log][:active]
-    if log.save
-      render 'create'
+
+    if params[:log][:weight].present? && params[:log][:reps].present?
+      log = Log.new
+      log.exercise_id = params[:exercise_id]
+      log.user_id = params[:log][:user_id]
+      log.weighted = params[:log][:weighted]
+      log.weight = params[:log][:weight]
+      log.reps = params[:log][:reps]
+      log.active = params[:log][:active]
+      if log.save
+        render 'create'
+      end
     end
+    if !params[:log][:weight].present? || !params[:log][:reps].present?
+      redirect_to new_exercise_log_path(@exercise)
+    end
+
+
   end
+
   def show
 
   end
+
   def update
     @exercise = Exercise.find(params[:exercise_id])
     @user = current_user

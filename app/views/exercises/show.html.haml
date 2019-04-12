@@ -24,17 +24,25 @@
         - if @exercise.muscle_type_3
           - muscle3 = @exercise.muscle_type_3
         %p
-          = "Primary muscle: " + @exercise.muscle_type_1
+          %b Primary muscle:
+        %p
+          = @exercise.muscle_type_1
       .muscle_definition_grid_item
         %p
-          = "Secondary muscle: " + muscle2
+          %b Secondary muscle:
+        %p
+          = @exercise.muscle_type_2
       .muscle_definition_grid_item
         %p
-          = "Tertiary muscle: " + muscle3
+          %b Tertiary muscle:
+        %p
+          = @exercise.muscle_type_3
 
-  .card-body
-    %a.card-link
-      = link_to 'Go back', :back
-    %a.card-link{:href => "#{@exercise.id}/logs/new"} Create log
+
+
+  .card-footer.text-center
+    .btn.btn-primary#color-white.not_like_link
+      = link_to 'Exercises', "/exercises"
+    %a.btn.btn-primary{:href => "#{@exercise.id}/logs/new"} Create log
 
 .padding-bottom
