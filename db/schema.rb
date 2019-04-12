@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_11_180907) do
+ActiveRecord::Schema.define(version: 2019_04_12_135415) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,17 @@ ActiveRecord::Schema.define(version: 2019_04_11_180907) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "weighted"
+  end
+
+  create_table "logs", force: :cascade do |t|
+    t.integer "exercise_id", null: false
+    t.integer "user_id", null: false
+    t.boolean "weighted", null: false
+    t.decimal "weight", null: false
+    t.integer "reps", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "active", default: false
   end
 
   create_table "muscles", force: :cascade do |t|

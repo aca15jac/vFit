@@ -4,10 +4,11 @@
   .padding-top
   .padding-top
   .loginform
-    = simple_form_for(resource, autocomplete: "off", as: resource_name, url: session_path(resource_name)) do |f|
+    = simple_form_for(resource, autocomplete: "off", :full_error => "true",as: resource_name, url: session_path(resource_name)) do |f|
+      = f.error_notification
       .form-inputs.login
-        = f.input :email, required: true, placeholder: "Email", label: false, autofocus: true, input_html: { autocomplete: "email"}
-        = f.input :password, required: true, placeholder: "Password", label: false, input_html: { autocomplete: "current-password" }
+        = f.input :email, required: true, placeholder: "Email", label: false, autofocus: true
+        = f.input :password, required: true, placeholder: "Password", label: false
       .form-actions
         .login-form-submit
           = f.button :submit, "Log in"

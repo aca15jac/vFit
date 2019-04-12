@@ -1,0 +1,51 @@
+= render 'layouts/header'
+.padding-top
+.padding-top
+.card.width_85
+  .card-header.text-center
+    #{@exercise.exercise_name}
+  .card-body
+    -  if @exercise.weighted
+      %p.card-text.color-grey.text-center Enter the weight and number of reps that you have completed for this exercise.
+    - if !@exercise.weighted
+      %p.card-text.color-grey.text-center Enter number of reps that you have completed for this exercise.
+    .logs_form
+      = simple_form_for @log, url: exercise_logs_path, :method => :post do |f|
+        = f.error_notification
+        .log-inputs
+          = f.input :exercise_id, required: true, label: false, :input_html => { :value => @exercise.id}, as: "hidden"
+          = f.input :user_id, required: true, label: false, :input_html => { :value => @user.id}, as: "hidden"
+          = f.input :weighted, required: true, label: false, :input_html => { :value => @exercise.weighted}, as: "hidden"
+          = f.input :reps, required: true, placeholder: "Number of reps", label: false, :input_html => { :class => 'logs_input reps' }
+
+          - if @exercise.weighted
+            = f.input :weight, required: true, placeholder: "Weight in kg", label: false, :input_html => { :class => 'logs_input weight' }
+          - if !@exercise.weighted
+            = f.input :weight, required: true, label: false, as: "hidden", :input_html => {:value => 0}
+          = f.input :active, required: true, label: false, :input_html => { :value => true}, as: "hidden"
+        .text-center.padding-top-half.logs_submit
+          = f.button :submit, "Add log"
+    .padding-top-half
+    .text-center
+      %a.btn.btn-primary{:href => "#"} Go somewhere
+      %a.btn.btn-primary{:href => "#"} Go somewhere
+    - if @current_user_logs.present?
+      .padding-top-half
+      .card-body
+      %h3.text-center.color-grey
+        Current logs for #{@exercise.exercise_name}
+      %table.table.table-striped.width_90
+        %thead
+          %tr
+            %th{:scope => "col"}
+            %th{:scope => "col"} Reps
+            %th{:scope => "col"} Weight
+        %tbody
+          - @current_user_logs.each do |x|
+            %tr{:onclick => "location.href = this.getElementsByTagName('a').item(0).getAttribute('href');"}
+              %td.not_like_link
+                = link_to "", edit_exercise_log_path(@exercise, x.id)
+              %td
+                = x.reps
+              %td
+                = x.weight

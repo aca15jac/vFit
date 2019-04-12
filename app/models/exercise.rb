@@ -10,6 +10,7 @@
 #  description   :string
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
+#  weighted      :boolean
 #
 
 class Exercise < ApplicationRecord

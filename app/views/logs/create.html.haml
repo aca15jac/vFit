@@ -1,0 +1,12 @@
+= render 'layouts/header'
+.padding-top
+.padding-top
+.card.width_85
+  .card-header.text-center
+    #{@exercise.exercise_name}
+  .card-body.text-center
+    %h3.text-center.success-text Successfully created log
+
+
+    %a.btn.btn-primary{:href => new_exercise_log_path} Add another for this exercise
+    %a.btn.btn-primary{:href => "/exercises"} Return to exercises

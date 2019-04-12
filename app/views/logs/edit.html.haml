@@ -1,0 +1,33 @@
+= render 'layouts/header'
+.padding-top
+.padding-top
+.card.width_85
+  .card-header.text-center
+    #{@exercise.exercise_name}
+  .card-body
+    -  if @exercise.weighted
+      %p.card-text.color-grey.text-center Enter the weight and number of reps that you have completed for this exercise.
+    - if !@exercise.weighted
+      %p.card-text.color-grey.text-center Enter number of reps that you have completed for this exercise.
+    .logs_form
+      = simple_form_for @log, url: exercise_log_path, :method => :patch do |f|
+        = f.error_notification
+        .log-inputs_edit
+          = f.input :id, required: true, label: false, :input_html => { :value => @log.id}, as: "hidden"
+          = f.input :exercise_id, required: true, label: false, :input_html => { :value => @exercise.id}, as: "hidden"
+          = f.input :user_id, required: true, label: false, :input_html => { :value => @user.id}, as: "hidden"
+          = f.input :weighted, required: true, label: false, :input_html => { :value => @exercise.weighted}, as: "hidden"
+          = f.input :reps, required: true, placeholder: "Number of reps", label: false, :input_html => { :class => 'logs_input reps' }
+
+          - if @exercise.weighted
+            = f.input :weight, required: true, placeholder: "Weight in kg", label: false, :input_html => { :class => 'logs_input weight' }
+          - if !@exercise.weighted
+            = f.input :weight, required: true, label: false, as: "hidden", :input_html => {:value => 0}
+          = f.input :active, required: true, label: false, :input_html => { :value => true}, as: "hidden"
+        .text-center.padding-top-half.logs_submit
+          = f.button :submit, "Update log"
+          = button_to "Delete", exercise_log_path(@exercise, 5), :method => :delete
+    .padding-top-half
+    .text-center
+      %a.btn.btn-primary{:href => "#"} Go somewhere
+      %a.btn.btn-primary{:href => "#"} Go somewhere
