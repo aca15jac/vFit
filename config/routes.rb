@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'more/index'
   devise_for :users
-  get 'progress/index'
+  get 'progresses/index'
   get 'workouts/index'
   get 'logs/index'
   get 'exercises/index'
@@ -9,15 +9,21 @@ Rails.application.routes.draw do
 
   get 'exercises', to: redirect('/exercises/index')
   get 'workouts', to: redirect('/workouts/index')
-  get 'progress', to: redirect('/progress/index')
+  get 'progresses', to: redirect('/progresses/index')
   get 'logs', to: redirect('/logs/index')
   get 'more', to: redirect('/more/index')
   get 'muscles', to: redirect('/muscles/index')
 
-  resources :muscles 
+  resources :muscles
   resources :exercises do
     resources :logs
   end
+  resources :progresses, :path => "progress" do 
+    resources :exercises
+  end
+  resources :posts, :path => 'blogs'
+
+
 
 
 

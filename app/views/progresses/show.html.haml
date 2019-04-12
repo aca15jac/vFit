@@ -1,0 +1,27 @@
+= render 'layouts/header'
+.padding-top
+.padding-top
+.card.width_85
+  .card-header.text-center
+    = "Choose your muscle for #{@progress.name}"
+  .card-body.text-center
+    - @muscles.each do |x|
+      %h3.color-grey
+        = x.muscle_name + " (" + x.muscle_group + ")"
+      %table.table.width_100
+        - exercise_list = Exercise.where(muscle_type_1: x.muscle_name).or(Exercise.where(muscle_type_2: x.muscle_name)).or(Exercise.where(muscle_type_3: x.muscle_name))
+        - exercise_list.each do |y|
+          %tr{:onclick => "location.href = this.getElementsByTagName('a').item(0).getAttribute('href');"}
+            %td#image-sizing
+              #imagine-sizing-2
+                - tag = y.exercise_name.downcase.tr(" ", "_")+"1"
+                = image_tag(tag, :alt => "#{y.exercise_name} image")
+            %td.not_like_link
+              %br
+              %br
+              = link_to "#{y.exercise_name}", progress_exercise_path(@progress.id, y.id)
+
+
+
+    %a.btn.btn-primary{:href => "/home", :class => "margin-top-half"} Add another for this exercise
+    %a.btn.btn-primary{:href => "/exercises", :class => "margin-top-half"} Return to exercises

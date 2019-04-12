@@ -89,6 +89,7 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (~> 1.2)
       xpath (~> 3.2)
+    chartkick (3.0.2)
     chronic (0.10.2)
     cliver (0.3.2)
     coffee-rails (4.2.2)
@@ -361,6 +362,7 @@ DEPENDENCIES
   capistrano-rails
   capistrano-rvm
   capybara
+  chartkick
   coffee-rails
   daemons
   database_cleaner

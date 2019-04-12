@@ -32,25 +32,32 @@
     - if @current_user_logs.present?
       %h3.text-center.color-grey
         Current logs for #{@exercise.exercise_name}
-      %table.table.table-striped.width_90
+      %table.table.table-striped.width_100
         %thead
           %tr.text-center
             %th{:scope => "col", :class => "width_0"}
               - if @exercise.weighted
-                %th{:scope => "col", :class=>"width_50"} Reps
-                %th{:scope => "col", :class=>"width_50"} Weight
+                %th{:scope => "col", :class=>"width_33"} Set
+                %th{:scope => "col", :class=>"width_33"} Reps
+                %th{:scope => "col", :class=>"width_33"} Weight
               - if !@exercise.weighted
-                %th{:scope => "col", :class=>"width_100"} Reps
+                %th{:scope => "col", :class=>"width_50"} Set
+                %th{:scope => "col", :class=>"width_50"} Reps
         %tbody
+          -number = 0
           - @current_user_logs.each do |x|
+            - number +=1
             %tr{:onclick => "location.href = this.getElementsByTagName('a').item(0).getAttribute('href');", :class => "text-center"}
               %td.not_like_link
                 = link_to "", edit_exercise_log_path(@exercise, x.id)
               %td
+                = number
+
+              %td
                 = x.reps
-              - if @exercise.weighted
-                %td
-                  = x.weight
+            - if @exercise.weighted
+              %td
+                = x.weight
   .card-footer
     .text-center
       .btn.btn-primary#color-white.not_like_link

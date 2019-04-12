@@ -293,3 +293,5 @@ Exercise.where(exercise_name:"Glute Bridge").first_or_create(muscle_type_1:"Glut
     Tense your glutes and raise your hips towards the ceiling.
     Once you are at the highest point you can manage, hold the position for a few seconds, and then slowly return to the starting position
 ")
+
+Progress.where(name:"Weight over Time").first_or_create(description:"The weight gained over time of an exercise")

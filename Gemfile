@@ -14,6 +14,7 @@ gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
 
+gem 'chartkick'
 
 gem 'serviceworker-rails'
 
