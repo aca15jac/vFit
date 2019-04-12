@@ -2,6 +2,15 @@ class LogsController < ApplicationController
   before_action :authenticate_user!
   def index
     @title = "Logs"
+    @user = current_user
+    @current_user_logs = Log.where('(user_id = ? AND active = ?)', current_user.id, true)
+    @log_types = Array.new
+    @current_user_logs.each do |z|
+      if !@log_types.include?(z.exercise_id)
+        @log_types.append(z.exercise_id)
+        puts z.exercise_id
+      end
+    end
   end
 
   def show

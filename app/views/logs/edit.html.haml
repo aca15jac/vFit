@@ -32,6 +32,9 @@
       .text-center.padding-top-half.logs_submit
         = button_to "Delete log", exercise_log_path(@exercise, @log.id), :method => :delete, :class => "btn btn-secondary"
 
-  .card-footer.text-center
-    .btn.btn-primary#color-white.not_like_link
-      = link_to 'Go back', :back
+  .card-footer
+    .text-center
+      .btn.btn-primary#color-white.not_like_link
+        = link_to 'All logs', '/logs'
+      .btn.btn-primary#color-white.not_like_link
+        = link_to 'Exercises', '/exercises'

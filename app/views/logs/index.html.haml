@@ -1,1 +1,33 @@
 = render 'layouts/header'
+.padding-top
+.card.width_85
+  .card-header.text-center
+    All active logs
+  .card-body
+    - @log_types.each do |x|
+      %h3.text-center.color-grey.padding-top-half
+        - exercise = Exercise.find(x)
+        = exercise.exercise_name
+      %table.table.table-striped.width_90
+        %thead
+          %tr.text-center
+            %th{:scope => "col", :class => "width_0"}
+              - if exercise.weighted
+                %th{:scope => "col", :class=>"width_50"} Reps
+                %th{:scope => "col", :class=>"width_50"} Weight
+              - if !exercise.weighted
+                %th{:scope => "col", :class=>"width_100"} Reps
+        %tbody
+          - @current_user_logs.each do |y|
+            %tr{:onclick => "location.href = this.getElementsByTagName('a').item(0).getAttribute('href');", :class => "text-center"}
+              %td.not_like_link
+                = link_to "", edit_exercise_log_path(exercise, y.id)
+              %td
+                = y.reps
+              - if exercise.weighted
+                %td
+                  = y.weight
+  .card-footer.text-center
+    .btn.btn-primary#color-white.not_like_link
+      = link_to 'Add exercise', '/exercises'
+.padding-bottom
