@@ -14,10 +14,12 @@ class LogsController < ApplicationController
   end
 
   def show
+    @title = "Logs"
     render 'show'
   end
 
   def new
+    @title = "Logs"
     @log = Log.new
     @exercise = Exercise.find(params[:exercise_id])
     @user = current_user
@@ -26,6 +28,7 @@ class LogsController < ApplicationController
   end
 
   def create
+    @title = "Logs"
     @exercise = Exercise.find(params[:exercise_id])
     @user = current_user
 
@@ -48,11 +51,8 @@ class LogsController < ApplicationController
 
   end
 
-  def show
-
-  end
-
   def update
+    @title = "Logs"
     @exercise = Exercise.find(params[:exercise_id])
     @user = current_user
     @log = Log.find(params[:id])
@@ -68,6 +68,7 @@ class LogsController < ApplicationController
   end
 
   def edit
+    @title = "Logs"
     @exercise = Exercise.find(params[:exercise_id])
     @log = Log.find(params[:id])
     @user = current_user
@@ -75,6 +76,7 @@ class LogsController < ApplicationController
   end
 
   def destroy
+    @title = "Logs"
     @log = Log.find(params[:id])
     @exercise = Exercise.find(params[:exercise_id])
     @user = current_user

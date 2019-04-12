@@ -23,17 +23,17 @@
           - muscle2 = @exercise.muscle_type_2
         - if @exercise.muscle_type_3
           - muscle3 = @exercise.muscle_type_3
-        %p
-          %b Primary muscle:
+        %p.height-2em
+          %b.height- Primary muscle:
         %p
           = @exercise.muscle_type_1
       .muscle_definition_grid_item
-        %p
+        %p.height-2em
           %b Secondary muscle:
         %p
           = @exercise.muscle_type_2
       .muscle_definition_grid_item
-        %p
+        %p.height-2em
           %b Tertiary muscle:
         %p
           = @exercise.muscle_type_3
@@ -44,5 +44,8 @@
     .btn.btn-primary#color-white.not_like_link
       = link_to 'Exercises', "/exercises"
     %a.btn.btn-primary{:href => "#{@exercise.id}/logs/new"} Add to workout
+    - if @muscle_id_present
+      .btn.btn-primary#color-white.not_like_link
+        = link_to 'Back to muscle', muscle_path(@muscle)
 
 .padding-bottom

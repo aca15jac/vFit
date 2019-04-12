@@ -8,6 +8,7 @@ class MusclesController < ApplicationController
   end
 
   def show
+    @title = "Muscles"
     @muscle = Muscle.find(params[:id])
     render "show"
   end
