@@ -20,8 +20,6 @@
       %table.table.table-striped.width_100
         %thead
           %tr.text-center
-            %th{:scope => "col", :class => "width_0"}
-
             - if exercise.weighted
               %th{:scope => "col", :class=>"width_33"} Set
               %th{:scope => "col", :class=>"width_33"} Reps
@@ -35,9 +33,7 @@
             - number += 1
             %tr{:onclick => "location.href = this.getElementsByTagName('a').item(0).getAttribute('href');", :class => "text-center"}
               %td.not_like_link
-                = link_to "", edit_exercise_log_path(exercise, y.id)
-              %td
-                = number
+                = link_to number, edit_exercise_log_path(exercise, y.id)
               %td
                 = y.reps
               - if exercise.weighted
