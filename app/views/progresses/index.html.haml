@@ -7,17 +7,17 @@
   .card-body.text-center
     %table.table.width_100
       - progress_list = Progress.all
+      %tr
+        %td Metric
+        %td Description
       - progress_list.each do |y|
+
         %tr{:onclick => "location.href = this.getElementsByTagName('a').item(0).getAttribute('href');"}
           %td.not_like_link
-            %br
-            %br
             = link_to "#{y.name}", progress_path(y)
-            %td.not_like_link
-              %br
-              %br
+            %td.not_like_link#description-text
               = link_to "#{y.description}", progress_path(y)
 
 
-    %a.btn.btn-primary{:href => "/home", :class => "margin-top-half"} Add another for this exercise
-    %a.btn.btn-primary{:href => "/exercises", :class => "margin-top-half"} Return to exercises
+    %a.btn.btn-primary{:href => "/logs", :class => "margin-top-half"} Logs
+    %a.btn.btn-primary{:href => "/exercises", :class => "margin-top-half"} Exercises

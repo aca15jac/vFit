@@ -13,7 +13,7 @@
       .card-body
     %li.list-group-item
       - logs = @logs.where(exercise_id: @exercise.id)
-      
+
 
 
 
@@ -30,7 +30,7 @@
 
   .card-footer.text-center
     .btn.btn-primary#color-white.not_like_link
-      = link_to 'Exercises', "/exercises"
+      = link_to 'Back to exercises', "/exercises"
     %a.btn.btn-primary{:href => "#{@exercise.id}/logs/new"} Add to workout
     - if @muscle_id_present
       .btn.btn-primary#color-white.not_like_link
