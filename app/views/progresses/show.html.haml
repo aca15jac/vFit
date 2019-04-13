@@ -46,7 +46,7 @@
           - if !@exercises.find(z.exercise_id).weighted
             - exercise_list2.append(@exercises.find(z.exercise_id))
       %h3.color-grey.text-center.padding-bottom-quarter.width_85
-        Weight related exercises you have completed:
+        Repetition-bases exercises you have completed:
       %table.table.width_100
         - exercise_list2.each do |y|
           %tr{:onclick => "location.href = this.getElementsByTagName('a').item(0).getAttribute('href');"}
