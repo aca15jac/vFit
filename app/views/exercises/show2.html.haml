@@ -21,6 +21,9 @@
         - if !logs.present?
           %h3.color-grey.text-center
             You don't have any saved logs for this exercise.
+
+
+
   - if @progress.name == "Most reps"
     .card-header
       %h5.card-title
@@ -38,6 +41,53 @@
         - if !logs.present?
           %h3.color-grey.text-center
             You don't have any saved logs for this exercise.
+
+
+  - if @progress.name == "Suggested weights"
+    .card-header
+      %h5.card-title
+        = @progress.name + " for: " + @exercise.exercise_name
+    %ul.list-group.list-group-flush
+      %li.list-group-item
+        .card-img-top
+          = image_tag("#{@exercise_image_name}2.png", :alt => "#{@exercise.exercise_name} 2", :class => "width_50")
+        .card-body
+      %li.list-group-item
+        - logs = @logs.where(exercise_id: @exercise.id)
+
+        - if logs.present?
+          - useable_logs1 = logs.where("weight >= ?", 12)
+          - useable_logs = useable_logs1.where('created_at >= ?', 6.weeks.ago)
+          - if useable_logs.present?
+            - highest_weight = useable_logs.order(:weight).last
+            %p
+              = "Highest weight in the last 6 weeks is: " + "#{highest_weight.weight}"
+            %p
+              = "Repetitions acheived at this weight: " + "#{highest_weight.reps}"
+            %p
+              - percentages = [1, 0.95, 0.93, 0.90, 0.87, 0.85, 0.83, 0.80, 0.77, 0.75, 0.73, 0.70]
+              - one_rep_max_decimal = (1/percentages[highest_weight.reps-1])*highest_weight.weight
+              - one_rep_max = (one_rep_max_decimal*2.0).round / 2.0
+              = "Your one rep max for this exercise is: " + "#{(one_rep_max)}"
+              %table.table.table-striped.width_100
+                %thead
+                  %tr.text-center
+                    %th{:scope => "col", :class=>"width_50"} Reps
+                    %th{:scope => "col", :class=>"width_50"} Weight
+                %tbody
+                  - (1..12).each do |x|
+                    %tr{:class => "text-center"}
+                      %td
+                        = x
+                      %td
+                        = ((percentages[x-1]*one_rep_max)*2.0).round / 2.0
+          - if !useable_logs.present?
+            %h3.color-grey.text-center
+              Although you have saved logs, they are either too old to use (older than 6 weeks), or you have completed more than 12 reps, so our calculations will be inaccurate.
+
+        - if !logs.present?
+          %h3.color-grey.text-center
+            You don't have any saved logs for this exercise. We can't calculate your weights until you have completed the exercise.
 
 
 
