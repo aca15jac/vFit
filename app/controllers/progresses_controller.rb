@@ -3,7 +3,7 @@ class ProgressesController < ApplicationController
   def index
     @title = "Progress"
     @user = current_user
-    @logs = Log.all
+    @logs = Log.where(user_id: current_user.id)
     @exercises = Exercise.all
     @muscles = Muscle.all
     render 'index'
@@ -12,7 +12,8 @@ class ProgressesController < ApplicationController
   def show
     @title = "Progress"
     @muscles = Muscle.all
-    @logs = Log.all
+    @user = current_user
+    @logs = Log.where(user_id: current_user.id)
     @exercises = Exercise.all
     @progress = Progress.find(1)
   end

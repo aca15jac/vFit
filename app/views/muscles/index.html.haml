@@ -10,11 +10,9 @@
       %tr{:onclick => "location.href = this.getElementsByTagName('a').item(0).getAttribute('href');"}
         %td#image-sizing
           #imagine-sizing-2
-            - tag = y.exercise_name.downcase.tr(" ", "_")+"1"
+            - tag = y.exercise_name.downcase.tr(" ", "_")+"2"
             = image_tag(tag, :alt => "#{y.exercise_name} image")
-        %td.not_like_link
-          %br
-          %br
+        %td.not_like_link.line-height_55
           = link_to "#{y.exercise_name}", exercise_path(y)
 
 

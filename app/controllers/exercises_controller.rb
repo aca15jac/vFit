@@ -11,7 +11,7 @@ class ExercisesController < ApplicationController
     @title = "Exercises"
     @exercise = Exercise.find(params[:id])
     @user = current_user
-    @logs = Log.all
+    @logs = Log.where(user_id: current_user.id)
     @exercise_image_name = @exercise.exercise_name.downcase.tr(" ", "_")
     if params[:muscle_id].present?
       @muscle_id_present = true

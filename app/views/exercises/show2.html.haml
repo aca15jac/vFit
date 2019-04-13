@@ -12,7 +12,10 @@
         = image_tag("#{@exercise_image_name}2.png", :alt => "#{@exercise.exercise_name} 2", :class => "width_50")
       .card-body
     %li.list-group-item
-      - logs = Log.where(user_id: @user.id, exercise_id: @exercise.id)
+      - logs = @logs.where(exercise_id: @exercise.id)
+      
+
+
 
       - if logs.present?
         = line_chart logs.group_by_day(:created_at).maximum(:weight)
