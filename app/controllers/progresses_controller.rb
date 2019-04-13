@@ -15,7 +15,7 @@ class ProgressesController < ApplicationController
     @user = current_user
     @logs = Log.where(user_id: current_user.id)
     @exercises = Exercise.all
-    @progress = Progress.find(1)
+    @progress = Progress.find(params[:id])
   end
 
 

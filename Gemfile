@@ -16,6 +16,7 @@ gem 'coffee-rails'
 
 gem 'chartkick'
 gem 'groupdate'
+gem 'chart-js-rails'
 
 gem 'serviceworker-rails'
 

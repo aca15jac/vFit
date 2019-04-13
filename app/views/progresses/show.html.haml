@@ -3,9 +3,9 @@
 .padding-top
 .card.width_85
   .card-header.text-center
-    = "Choose your muscle for #{@progress.name}"
+    = @progress.name
   .card-body.no-padding
-    - if @progress.id = 1
+    - if @progress.name == "Weight over time"
       -  exercise_list2 = Array.new
       -  @logs.each do |z|
         - if !exercise_list2.include?(@exercises.find(z.exercise_id))
@@ -14,7 +14,6 @@
       %h3.color-grey.text-center.padding-bottom-quarter.width_85
         Weight related exercises you have completed:
       %table.table.width_100
-
         - exercise_list2.each do |y|
           %tr{:onclick => "location.href = this.getElementsByTagName('a').item(0).getAttribute('href');"}
             %td#image-sizing
@@ -23,6 +22,26 @@
                 = image_tag(tag, :alt => "#{y.exercise_name} image")
             %td.not_like_link.line-height_55
               = link_to "#{y.exercise_name}", progress_exercise_path(@progress.id, y.id)
+
+
+    - if @progress.name == "Favourite exercises"
+      %h3.color-grey.text-center.padding-bottom-quarter.width_85
+        Your most completed exercises:
+      - hash = Hash.new
+      - @logs.each do|h|
+        - name = Exercise.find(h.exercise_id).exercise_name
+        - if !hash.has_key?(name)
+          - hash[name] = 1
+        - if hash.has_key?(name)
+          - hash[name] += 1
+
+      = pie_chart hash
+
+
+
+    - if @progress.name == "Most reps"
+      %p hi
+
     .card-footer.text-center
       %a.btn.btn-primary{:href => "/home", :class => "margin-top-half"} Add another for this exercise
       %a.btn.btn-primary{:href => "/exercises", :class => "margin-top-half"} Return to exercises

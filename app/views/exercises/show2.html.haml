@@ -2,26 +2,29 @@
 .padding-top
 .padding-top
 
+
 .card{:class => "width_85 text-center"}
-  .card-header
-    %h5.card-title
-      = @progress.name + " for: " + @exercise.exercise_name
-  %ul.list-group.list-group-flush
-    %li.list-group-item
-      .card-img-top
-        = image_tag("#{@exercise_image_name}2.png", :alt => "#{@exercise.exercise_name} 2", :class => "width_50")
-      .card-body
-    %li.list-group-item
-      - logs = @logs.where(exercise_id: @exercise.id)
+  - if @progress.name == "Weight over time"
+    .card-header
+      %h5.card-title
+        = @progress.name + " for: " + @exercise.exercise_name
+    %ul.list-group.list-group-flush
+      %li.list-group-item
+        .card-img-top
+          = image_tag("#{@exercise_image_name}2.png", :alt => "#{@exercise.exercise_name} 2", :class => "width_50")
+        .card-body
+      %li.list-group-item
+        - logs = @logs.where(exercise_id: @exercise.id)
+
+        - if logs.present?
+          = line_chart logs.group_by_day(:created_at).maximum(:weight), curve: true
+        - if !logs.present?
+          %h3.color-grey.text-center
+            You don't have any saved logs for this exercise.
 
 
 
 
-      - if logs.present?
-        = line_chart logs.group_by_day(:created_at).maximum(:weight)
-      - if !logs.present?
-        %h3.color-grey.text-center
-          You don't have any saved logs for this exercise.
 
 
 

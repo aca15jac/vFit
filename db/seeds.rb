@@ -294,4 +294,6 @@ Exercise.where(exercise_name:"Glute Bridge").first_or_create(muscle_type_1:"Glut
     Once you are at the highest point you can manage, hold the position for a few seconds, and then slowly return to the starting position
 ")
 
-Progress.where(name:"Weight over Time").first_or_create(description:"The weight gained over time of an exercise")
+Progress.where(name:"Weight over time").first_or_create(description:"A scatter chart to visualise progress in an exercise")
+Progress.where(name:"Favourite exercises").first_or_create(description:"A pie chart of your favourite exercises")
+Progress.where(name:"Most reps").first_or_create(description:"For non-weighted exercises, visualise how many more reps you have done")
