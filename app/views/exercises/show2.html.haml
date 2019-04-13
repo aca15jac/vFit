@@ -56,6 +56,7 @@
         - logs = @logs.where(exercise_id: @exercise.id)
 
         - if logs.present?
+          - puts "Weight : #{logs.take.weight}"
           - useable_logs1 = logs.where("weight >= ?", 12)
           - useable_logs = useable_logs1.where('created_at >= ?', 6.weeks.ago)
           - if useable_logs.present?

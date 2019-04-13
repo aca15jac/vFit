@@ -8,7 +8,6 @@ class LogsController < ApplicationController
     @current_user_logs.each do |z|
       if !@log_types.include?(z.exercise_id)
         @log_types.append(z.exercise_id)
-        puts z.exercise_id
       end
     end
   end
@@ -24,6 +23,11 @@ class LogsController < ApplicationController
     @exercise = Exercise.find(params[:exercise_id])
     @user = current_user
     @current_user_logs = Log.where('(user_id = ? AND active = ? AND exercise_id =?)', current_user.id, true, @exercise.id)
+    if params[:failure].present?
+      @failure = true
+    else
+      @failure = false
+    end
     render 'new'
   end
 
@@ -31,6 +35,7 @@ class LogsController < ApplicationController
     @title = "Logs"
     @exercise = Exercise.find(params[:exercise_id])
     @user = current_user
+    @logsave = false
 
     if params[:log][:weight].present? && params[:log][:reps].present?
       log = Log.new
@@ -40,16 +45,33 @@ class LogsController < ApplicationController
       log.weight = params[:log][:weight]
       log.reps = params[:log][:reps]
       log.active = params[:log][:active]
-      if log.save
-        render 'create'
+      if (log.weight.is_a? Numeric) && (log.reps.is_a? Numeric)
+        if log.weighted
+          if log.weight > 0 && log.reps > 0 && log.weight <= 300 && log.reps <= 50
+            if log.save
+              @logsave = true
+              render 'create'
+            end
+          end
+        end
+        if !log.weighted
+
+          if log.reps > 0 && log.reps <= 50
+            if log.save
+              @logsave = true
+              render 'create'
+            end
+          end
+        end
       end
     end
-    if !params[:log][:weight].present? || !params[:log][:reps].present?
-      redirect_to new_exercise_log_path(@exercise)
+    if !@logsave
+      redirect_to new_exercise_log_path(@exercise.id, failure:true)
     end
-
-
   end
+
+
+
 
   def update
     @title = "Logs"
