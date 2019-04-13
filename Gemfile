@@ -15,6 +15,7 @@ gem 'uglifier'
 gem 'coffee-rails'
 
 gem 'chartkick'
+gem 'groupdate'
 
 gem 'serviceworker-rails'
 
@@ -44,6 +45,7 @@ gem 'delayed_job_active_record'
 gem 'daemons'
 
 gem 'turbolinks'
+
 
 group :development, :test do
   gem 'rspec-rails'

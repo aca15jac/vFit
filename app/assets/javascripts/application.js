@@ -17,6 +17,8 @@
 //= require serviceworker-companion
 //= require jquery
 //= require jquery_ujs
+//= require Chart.bundle
+//= require chartkick
 //= jquery-3.3.1
 //= navbar
 //= bootstrap

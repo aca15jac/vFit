@@ -1,52 +1,51 @@
 = render 'layouts/header'
 .padding-top
 .padding-top
-- if !@progress_id_present
-  .card{:class => "width_85 text-center"}
-    .card-header
-      %h5.card-title
-        = @exercise.exercise_name
-    .card-img-top.image_grid
-      .image_grid_item
-        = image_tag("#{@exercise_image_name}1.png", :alt => "#{@exercise.exercise_name} 1")
-      .image_grid_item
-        = image_tag("#{@exercise_image_name}2.png", :alt => "#{@exercise.exercise_name} 2")
-    .card-body
-      %p.card-text
-        =@exercise.description
-    %ul.list-group.list-group-flush
-      %li.muscle_definition_grid
-        .muscle_definition_grid_item
-          - muscle2 = ""
-          - muscle3 = ""
-          - if @exercise.muscle_type_2
-            - muscle2 = @exercise.muscle_type_2
-          - if @exercise.muscle_type_3
-            - muscle3 = @exercise.muscle_type_3
-          %p.height-2em
-            %b.height- Primary muscle:
-          %p
-            = @exercise.muscle_type_1
-        .muscle_definition_grid_item
-          %p.height-2em
-            %b Secondary muscle:
-          %p
-            = @exercise.muscle_type_2
-        .muscle_definition_grid_item
-          %p.height-2em
-            %b Tertiary muscle:
-          %p
-            = @exercise.muscle_type_3
+.card{:class => "width_85 text-center"}
+  .card-header
+    %h5.card-title
+      = @exercise.exercise_name
+  .card-img-top.image_grid
+    .image_grid_item
+      = image_tag("#{@exercise_image_name}1.png", :alt => "#{@exercise.exercise_name} 1")
+    .image_grid_item
+      = image_tag("#{@exercise_image_name}2.png", :alt => "#{@exercise.exercise_name} 2")
+  .card-body
+    %p.card-text
+      =@exercise.description
+  %ul.list-group.list-group-flush
+    %li.muscle_definition_grid
+      .muscle_definition_grid_item
+        - muscle2 = ""
+        - muscle3 = ""
+        - if @exercise.muscle_type_2
+          - muscle2 = @exercise.muscle_type_2
+        - if @exercise.muscle_type_3
+          - muscle3 = @exercise.muscle_type_3
+        %p.height-2em
+          %b.height- Primary muscle:
+        %p
+          = @exercise.muscle_type_1
+      .muscle_definition_grid_item
+        %p.height-2em
+          %b Secondary muscle:
+        %p
+          = @exercise.muscle_type_2
+      .muscle_definition_grid_item
+        %p.height-2em
+          %b Tertiary muscle:
+        %p
+          = @exercise.muscle_type_3
 
 
 
-    .card-footer.text-center
+  .card-footer.text-center
+    .btn.btn-primary#color-white.not_like_link
+      = link_to 'Exercises', "/exercises"
+    %a.btn.btn-primary{:href => "#{@exercise.id}/logs/new"} Add to workout
+    - if @muscle_id_present
       .btn.btn-primary#color-white.not_like_link
-        = link_to 'Exercises', "/exercises"
-      %a.btn.btn-primary{:href => "#{@exercise.id}/logs/new"} Add to workout
-      - if @muscle_id_present
-        .btn.btn-primary#color-white.not_like_link
-          = link_to 'Back to muscle', muscle_path(@muscle)
+        = link_to 'Back to muscle', muscle_path(@muscle)
 
   .padding-bottom
   -# progress_id_present so rendering different view
