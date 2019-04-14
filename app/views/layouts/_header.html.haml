@@ -7,6 +7,6 @@
     %a{href: "/logs"} Logs
     %a{href: "/progresses"} Progress
     = link_to('Logout', destroy_user_session_path, method: :delete)
-  %span{:class => "burgermenu", :onclick => "openNav()", :style => "font-size:30px;cursor:pointer"} ☰
+  %span{:class => "burgermenu", :onclick => "openNav()", :style => "font-size:30px;cursor:pointer", :id => "burgermenu"} ☰
 
   %h1.title #{@title}

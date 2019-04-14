@@ -1,19 +1,37 @@
 = render 'layouts/header'
 .padding-top
+.padding-top-half
+- counter = 0
+.card.width_90
+  .card_header
+    %h3.color-grey.text-center
+      Click a muscle below to see relevant exercises
+    %h5.color-grey.text-center.padding-bottom-half
+      Click the exercise to view it and create logs
+  #accordionExample.accordion
+  - @muscles.each do |x|
+    - counter += 1
+    .card
+      .card_header{:id => "heading#{counter}", :onclick => "tog = this.parentElement.getElementsByClassName('collapse').item(0).getAttribute('class'); if (tog === 'collapse') {this.parentElement.getElementsByClassName('collapse').item(0).className = 'collapse show'} else {this.parentElement.getElementsByClassName('collapse').item(0).className = 'collapse'}", :class => "text-center"}
+        %h5.mb-0
+          %button.btn.btn-link{"aria-controls" => "collapse#{counter}", "aria-expanded" => "true", "data-target" => "#collapse#{counter}", "data-toggle" => "collapse", :type => "button"}
+            %h5.color-grey.text-center
+              = x.muscle_name + "(" + x.muscle_group + ")"
+      .collapse{:id => "#collapse#{counter}", "aria-labelledby" => "heading#{counter}", "data-parent" => "#accordionExample"}
+        .card-body
+          %table.table.width_100
+            - exercise_list = Exercise.where(muscle_type_1: x.muscle_name).or(Exercise.where(muscle_type_2: x.muscle_name)).or(Exercise.where(muscle_type_3: x.muscle_name))
+            - exercise_list.each do |y|
+              %tr{:onclick => "location.href = this.getElementsByTagName('a').item(0).getAttribute('href');"}
+                %td#image-sizing
+                  #imagine-sizing-2
+                    - tag = y.exercise_name.downcase.tr(" ", "_")+"2"
+                    = image_tag(tag, :alt => "#{y.exercise_name} image")
+                %td.not_like_link.line-height_55
+                  = link_to "#{y.exercise_name}", exercise_path(y)
 
-- @muscles.each do |x|
-  %h3.color-grey.text-center
-    = x.muscle_name + "(" + x.muscle_group + ")"
-  %table.table.width_100
-    - exercise_list = Exercise.where(muscle_type_1: x.muscle_name).or(Exercise.where(muscle_type_2: x.muscle_name)).or(Exercise.where(muscle_type_3: x.muscle_name))
-    - exercise_list.each do |y|
-      %tr{:onclick => "location.href = this.getElementsByTagName('a').item(0).getAttribute('href');"}
-        %td#image-sizing
-          #imagine-sizing-2
-            - tag = y.exercise_name.downcase.tr(" ", "_")+"2"
-            = image_tag(tag, :alt => "#{y.exercise_name} image")
-        %td.not_like_link.line-height_55
-          = link_to "#{y.exercise_name}", exercise_path(y)
+
+
 
 
 

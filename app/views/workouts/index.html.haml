@@ -3,19 +3,21 @@
 .padding-top
 .card.width_90
   .card-header.text-center
-    View past workouts
-  .card-body.no-padding
+    - if @workouts.present?
+      %h3.text-center.color-grey
+        Click a workout below to see your exercises
     - if !@workouts.present?
       %h3.text-center.color-grey
         You havn't completed any workouts
       %h5.text-center.color-grey
-        Complete exercises, by making logs, then click "create workout fom the logs page"
+        Complete exercises, by making logs, then click "Finish workout" from the logs page
+  .card-body.no-padding
+
     - workout_types = Array.new
     - @workouts.each do |x|
       - if !workout_types.include? x.workout_number
         - workout_types.append(x.workout_number)
-    %h3.text-center.color-grey
-      Click a workout below to see your exercises
+
     %ul.list-group.list-group-flush
     - workout_types.each do |y|
 
