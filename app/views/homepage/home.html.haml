@@ -1,6 +1,29 @@
 = render 'layouts/header'
+.padding-top
+.padding-top
 
+.card.width_85
+  .card-header
+    %h3.color-grey.text-center
+      Home
+  .card-body
+    %h3.color-grey.text-center
+      Welcome to vFit
+    %h5.color-grey.text-center
+      Use the menu to navigate. To add logs, go to exercises and choose one, then add logs.
+    %h5.color-grey.text-center
+      Once you've added logs', go to the logs page to review them.
+    %h5.color-grey.text-center
+      Once you have finished your workout, click "Finish workout" at the bottom of logs to create a workout.
+  .card-body
+    = simple_form_for :weightreps, url: '/homepage', :method => :post do |f|
+      = f.error_notification
+      %h5.color-grey.text-center
+        Enter your weight and reps to calculate suggested 1RM and other maxes
+      .log-inputs.home_grid
 
-%p 1RM, 3RM and 5RM calculator
+        = f.input :reps, required: true, placeholder: "Number of reps", label: false, :input_html => { :class => 'logs_input reps1'}
+        = f.input :weight, required: true, placeholder: "Weight in kg", label: false, :input_html => { :class => 'logs_input weight'}
 
-%p plate calculator
+      .text-center.padding-top-half.logs_submit
+        = f.button :submit, "Calculate weights"

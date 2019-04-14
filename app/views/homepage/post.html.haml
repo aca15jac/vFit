@@ -1,0 +1,38 @@
+= render 'layouts/header'
+.padding-top
+.padding-top
+
+.card.width_85
+  .card-header
+  .card-body
+
+    = simple_form_for :weightreps, url: '/homepage', :method => :post do |f|
+      = f.error_notification
+      %h5.color-grey.text-center
+        Enter your weight and reps to calculate suggested 1RM and other maxes
+      .log-inputs.home_grid
+        = f.input :reps, required: true, placeholder: "Number of reps", label: false, :input_html => { :class => 'logs_input reps1'}
+        = f.input :weight, required: true, placeholder: "Weight in kg", label: false, :input_html => { :class => 'logs_input weight'}
+
+
+      .text-center.padding-top-half.logs_submit.padding-bottom-half
+        = f.button :submit, "Calculate weights"
+      - if @false_values
+        .error Make sure your entances are both above 0 and numerical
+
+      -else
+        - percentages = [1, 0.95, 0.93, 0.90, 0.87, 0.85, 0.83, 0.80, 0.77, 0.75, 0.73, 0.70]
+        - one_rep_max_decimal = (1/percentages[@reps-1])*@weight
+        - one_rep_max = (one_rep_max_decimal*2.0).round / 2.0
+        %table.table.table-striped.width_100
+          %thead
+            %tr.text-center
+              %th{:scope => "col", :class=>"width_50"} Reps
+              %th{:scope => "col", :class=>"width_50"} Weight
+          %tbody
+            - (1..12).each do |x|
+              %tr{:class => "text-center"}
+                %td
+                  = x
+                %td
+                  = ((percentages[x-1]*one_rep_max)*2.0).round / 2.0

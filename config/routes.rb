@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   get 'logs', to: redirect('/logs/index')
   get 'more', to: redirect('/more/index')
   get 'muscles', to: redirect('/muscles/index')
+  get '/homepage', to: redirect('/')
+  post '/homepage' => 'homepage#post', as: :post_home
 
 
   resources :muscles
