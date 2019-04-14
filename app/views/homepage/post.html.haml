@@ -18,7 +18,7 @@
       .text-center.padding-top-half.logs_submit.padding-bottom-half
         = f.button :submit, "Calculate weights"
       - if @false_values
-        .error Make sure your entances are both above 0 and numerical
+        .error Make sure your values are both above 0 and numerical
 
       -else
         - percentages = [1, 0.95, 0.93, 0.90, 0.87, 0.85, 0.83, 0.80, 0.77, 0.75, 0.73, 0.70]
