@@ -14,14 +14,19 @@ Rails.application.routes.draw do
   get 'more', to: redirect('/more/index')
   get 'muscles', to: redirect('/muscles/index')
 
+
   resources :muscles
+
   resources :exercises do
     resources :logs
   end
-  resources :progresses, :path => "progress" do 
+
+  resources :progresses, :path => "progress" do
     resources :exercises
   end
-  resources :posts, :path => 'blogs'
+
+  resources :workouts
+
 
 
 

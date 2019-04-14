@@ -1,0 +1,35 @@
+= render 'layouts/header'
+.padding-top
+.padding-top
+.card.width_85
+  .card-header.text-center
+    All active logs
+  .card-body
+    - if !@log_types.present?
+      %h3.text-center.color-grey
+        You havn't got any active logs
+      %h5.text-center.color-grey
+        Use the button below to add some
+    .padding-top-half-reverse
+    %h3.text-center.color-grey.padding-top-half
+      Please review the below exercises you have completed in this workout. If this is incorrect, visit logs and delete/update them.
+    - @log_types.each do |x|
+      %h3.text-center.color-grey.padding-top-half
+        - exercise = Exercise.find(x)
+        = exercise.exercise_name
+      - sets_number = @current_user_logs.where(exercise_id: exercise.id)
+      %h5.text-center.color-grey
+        - if sets_number.length == 1
+          = "(" + sets_number.length.to_s + " set)"
+        - if sets_number.length > 1
+          = "(" + sets_number.length.to_s + " sets)"
+
+
+
+  .card-footer.text-center
+    .btn.btn-primary#color-white.not_like_link
+      = link_to 'View logs', '/logs'
+    .btn.btn-primary#color-white.not_like_link
+      = link_to 'Confirm workout', {:controller => 'workouts', :action => 'create'}, {:method => :post }
+
+.padding-bottom

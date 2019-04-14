@@ -1,1 +1,54 @@
 = render 'layouts/header'
+.padding-top
+.padding-top
+.card.width_85
+  .card-header.text-center
+    View past workouts
+  .card-body
+    - if !@workouts.present?
+      %h3.text-center.color-grey
+        You havn't completed any workouts
+      %h5.text-center.color-grey
+        Complete exercises, by making logs, then click "create workout fom the logs page"
+    - workout_types = Array.new
+    - @workouts.each do |x|
+      - if !workout_types.include? x.workout_number
+        - workout_types.append(x.workout_number)
+    %h3.text-center.color-grey
+      Click a workout below to see your exercises
+    %ul.list-group.list-group-flush
+    - workout_types.each do |y|
+
+      %li.list-group-item
+        #accordionExample.accordion
+          .card
+            .card_header{:id => "heading#{y}", :onclick => "tog = this.parentElement.getElementsByClassName('collapse').item(0).getAttribute('class'); if (tog === 'collapse') {this.parentElement.getElementsByClassName('collapse').item(0).className = 'collapse show'} else {this.parentElement.getElementsByClassName('collapse').item(0).className = 'collapse'}", :class => "text-center"}
+              %h5.mb-0
+                %h3.color-grey.text-center
+                  = "Workout " + y.to_s
+            .collapse{"aria-labelledby" => "heading#{y}", "data-parent" => "#accordionExample", :id => "collapse#{y}"}
+              .card-body.text-center
+                - exercise_list = Array.new
+                - @workouts.where(workout_number: y).each do |z|
+                  - exercise = Exercise.find(Log.find(z.log_id).exercise_id)
+                  - if !exercise_list.include? exercise
+                    - exercise_list.append(exercise)
+                    #image-sizing.workouts_exercises.centralise
+                      #imagine-sizing-2.centralise
+                        - tag = exercise.exercise_name.downcase.tr(" ", "_")+"2"
+                        = image_tag(tag, :alt => "#{exercise.exercise_name} image")
+                      .workout_text_style
+                        = exercise.exercise_name
+
+
+
+
+
+  .card-footer.text-center
+    .btn.btn-primary#color-white.not_like_link
+      = link_to 'Add exercise', '/exercises'
+    - if @log_types.present?
+      .btn.btn-primary#color-white.not_like_link
+        = link_to 'Finish workout', new_workout_path
+
+.padding-bottom
