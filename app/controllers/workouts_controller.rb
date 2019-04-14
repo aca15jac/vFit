@@ -49,4 +49,24 @@ class WorkoutsController < ApplicationController
     render 'create'
   end
 
+  def show
+    @user = current_user
+    @current_user_logs = Log.where('(user_id = ?)', current_user.id)
+    @log_types = Array.new
+    @workouts = Workout.where(workout_number: params[:id])
+
+
+    render 'show'
+  end
+
+  def destroy
+    @workouts = Workout.where(workout_number: params[:id])
+    @workouts.each do |h|
+      Log.find(h.log_id).destroy
+      h.destroy
+    end
+    redirect_to '/workouts'
+
+  end
+
 end

@@ -16,12 +16,11 @@
             - tag = y.exercise_name.downcase.tr(" ", "_")+"1"
             = image_tag(tag, :alt => "#{y.exercise_name} image")
         %td.not_like_link.line-height_55
-        
+
           = link_to "#{y.exercise_name}", exercise_path(y, :muscle_id => @muscle.id)
 
   .card-footer
-    .btn.btn-primary#color-white.not_like_link
-      = link_to 'Exercises', "/exercises"
+    %a.btn.btn-primary{:href => "/exercises"} Exercises
 
 
 

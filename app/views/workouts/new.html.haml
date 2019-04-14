@@ -27,8 +27,7 @@
 
 
   .card-footer.text-center
-    .btn.btn-primary#color-white.not_like_link
-      = link_to 'View logs', '/logs'
+    %a.btn.btn-primary{:href => "/logs"} View logs
     .btn.btn-primary#color-white.not_like_link
       = link_to 'Confirm workout', {:controller => 'workouts', :action => 'create'}, {:method => :post }
 

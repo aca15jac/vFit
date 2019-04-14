@@ -34,7 +34,5 @@
 
   .card-footer
     .text-center
-      .btn.btn-primary#color-white.not_like_link
-        = link_to 'All logs', '/logs'
-      .btn.btn-primary#color-white.not_like_link
-        = link_to 'Exercises', '/exercises'
+      %a.btn.btn-primary{:href => "/logs"} All logs
+      %a.btn.btn-primary{:href => "/exercises"} Exercises

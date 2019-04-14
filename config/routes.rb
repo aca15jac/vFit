@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   end
 
   resources :workouts
+  post '/workouts' => 'workouts#create', as: :create_workout
 
 
 

@@ -26,29 +26,30 @@
             %h5.mb-0
               %h3.color-grey.text-center
                 = "Workout " + y.to_s
+              %i.far.fa-eye-slash
           .collapse{"aria-labelledby" => "heading#{y}", "data-parent" => "#accordionExample", :id => "collapse#{y}"}
             .card-body.text-center
               - exercise_list = Array.new
-              - @workouts.where(workout_number: y).each do |z|
-                - exercise = Exercise.find(Log.find(z.log_id).exercise_id)
-                - if !exercise_list.include? exercise
-                  - exercise_list.append(exercise)
-                  #image-sizing.workouts_exercises.centralise
-                    #imagine-sizing-2.centralise
-                      - tag = exercise.exercise_name.downcase.tr(" ", "_")+"2"
-                      = image_tag(tag, :alt => "#{exercise.exercise_name} image")
-                    .workout_text_style
-                      = exercise.exercise_name
+              .workouts_grid
+                - @workouts.where(workout_number: y).each do |z|
+                  - exercise = Exercise.find(Log.find(z.log_id).exercise_id)
+                  - if !exercise_list.include? exercise
+                    - exercise_list.append(exercise)
+                    .gridding.centralise
+                      #image-sizing.workouts_exercises
+                        #imagine-sizing-2.centralise
+                          - tag = exercise.exercise_name.downcase.tr(" ", "_")+"2"
+                          = image_tag(tag, :alt => "#{exercise.exercise_name} image")
+                      .workout_text_style
+                        = exercise.exercise_name
+            .card_footer.text-center
+              %a.btn.btn-primary{:href => workout_path(y)} View
 
 
 
 
 
   .card-footer.text-center
-    .btn.btn-primary#color-white.not_like_link
-      = link_to 'Add exercise', '/exercises'
-    - if @log_types.present?
-      .btn.btn-primary#color-white.not_like_link
-        = link_to 'Finish workout', new_workout_path
+    %a.btn.btn-primary{:href => "/exercises"} Exercises
 
 .padding-bottom

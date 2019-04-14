@@ -59,7 +59,5 @@
                   = x.weight
   .card-footer
     .text-center
-      .btn.btn-primary#color-white.not_like_link
-        = link_to 'All logs', '/logs'
-      .btn.btn-primary#color-white.not_like_link
-        = link_to 'Back to exercise', exercise_path(@exercise.id)
+      %a.btn.btn-primary{:href => "/logs"} All logs
+      %a.btn.btn-primary{:href => exercise_path(@exercise.id)} Back to exercise

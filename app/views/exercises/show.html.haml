@@ -40,12 +40,11 @@
 
 
   .card-footer.text-center
-    .btn.btn-primary#color-white.not_like_link
-      = link_to 'Exercises', "/exercises"
-    %a.btn.btn-primary{:href => "#{@exercise.id}/logs/new"} Add to workout
+    %a.btn.btn-primary{:href => "#{@exercise.id}/logs/new"} Add log
     - if @muscle_id_present
-      .btn.btn-primary#color-white.not_like_link
-        = link_to 'Back to muscle', muscle_path(@muscle)
+      %a.btn.btn-primary{:href => muscle_path(@muscle)} Back to muscle
+    - if !@muscle_id_present
+      %a.btn.btn-primary{:href => "/exercises"} Exercises
 
 
   -# progress_id_present so rendering different view

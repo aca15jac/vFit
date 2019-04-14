@@ -106,5 +106,4 @@
   .card-footer.text-center
 
     - if @progress_id_present
-      .btn.btn-primary#color-white.not_like_link
-        = link_to 'Back to exercises', progress_path(@progress.id)
+      %a.btn.btn-primary{:href => progress_path(@progress.id)} Back to exercises

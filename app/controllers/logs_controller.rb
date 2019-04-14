@@ -102,8 +102,17 @@ class LogsController < ApplicationController
     @log = Log.find(params[:id])
     @exercise = Exercise.find(params[:exercise_id])
     @user = current_user
-    @log.destroy
-    redirect_to new_exercise_log_path(@exercise)
+    if @log.active
+      @log.destroy
+      redirect_to new_exercise_log_path(@exercise)
+    else
+
+      workout_id= Workout.where(log_id: @log.id).first.id
+      Workout.where(log_id: @log.id).first.destroy
+      @log.destroy
+      redirect_to workout_path(workout.id)
+    end
+
   end
 
 end
