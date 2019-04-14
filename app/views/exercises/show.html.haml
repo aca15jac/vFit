@@ -12,7 +12,24 @@
       = image_tag("#{@exercise_image_name}2.png", :alt => "#{@exercise.exercise_name} 2")
   .card-body
     %p.card-text
-      =@exercise.description
+      - array = Array.new
+      - x = false
+      - index = 0
+      - description = @exercise.description
+      - while x == false
+        - if description.include? "."
+          - next_stop = description.index('.')
+          - array.append(description[index..next_stop+1])
+          - description = description[next_stop+1..description.length-1]
+        - if !description.include? "."
+          - x = true
+      - number = 0
+      - array.each do |a|
+        - number += 1
+        %p
+          %b
+            = "Step #{number}:"
+          = a
   %ul.list-group.list-group-flush
     %li.muscle_definition_grid
       .muscle_definition_grid_item
