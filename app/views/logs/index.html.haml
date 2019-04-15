@@ -3,13 +3,17 @@
 .padding-top
 .card.width_85
   .card-header.text-center
-    All active logs
-  .card-body
+    - if @log_types.present?
+      %h3.text-center.color-grey
+        Below is a list of logs for your current workout
+
     - if !@log_types.present?
       %h3.text-center.color-grey
         You havn't got any active logs
       %h5.text-center.color-grey
         Use the button below to add some
+  .card-body
+
 
     - @log_types.each do |x|
       %h3.text-center.color-grey.padding-top-half
