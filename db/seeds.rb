@@ -298,3 +298,9 @@ Progress.where(name:"Weight over time").first_or_create(description:"A scatter c
 Progress.where(name:"Favourite exercises").first_or_create(description:"A pie chart of your favourite exercises")
 Progress.where(name:"Most reps").first_or_create(description:"For non-weighted exercises, visualise how many more reps you have done")
 Progress.where(name:"Suggested weights").first_or_create(description:"Choose an exercise, and view your suggested weights")
+Progress.where(name:"Suggested exercises").first_or_create(description:"Based on your current logs, select a workout and see suggested exercises")
+
+Routine.where(name:"Back and Biceps").first_or_create(muscle_1: "Latissimus", muscle_2: "Upper Back", muscle_3: "Lower Back", muscle_4: "Biceps", muscle_5: "", muscle_6: "", muscle_7: "", muscle_8: "", muscle_9: "")
+Routine.where(name:"Shoulders and Traps").first_or_create(muscle_1: "Anterior Deltoids", muscle_2: "Lateral Deltoids", muscle_3: "Posterior Deltoids", muscle_4: "Trapezius", muscle_5: "", muscle_6: "", muscle_7: "", muscle_8: "", muscle_9: "")
+Routine.where(name:"Chest and Triceps").first_or_create(muscle_1: "Pectoralis Major", muscle_2: "Pectoralis Minor", muscle_3: "Triceps", muscle_4: "", muscle_5: "", muscle_6: "", muscle_7: "", muscle_8: "", muscle_9: "")
+Routine.where(name:"Legs and Abs").first_or_create(muscle_1: "Hamstrings", muscle_2: "Quadriceps", muscle_3: "Calves", muscle_4: "Gluteus", muscle_5: "Rectus Abdominis", muscle_6: "Transverse Abdominis", muscle_7: "Obliques", muscle_8: "Adductors", muscle_9: "Abductors")

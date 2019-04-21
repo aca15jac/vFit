@@ -21,6 +21,10 @@
 
   .card-footer.text-center
     %a.btn.btn-primary{:href => "/exercises"} Exercises
+    -if @progress_ID != 0
+      %a.btn.btn-primary{:href => progress_path(@progress_ID)} Back to tool
+    -if @routine_ID != 0
+      %a.btn.btn-primary{:href => routine_path(@routine_ID)} Back to routine
 
 
 

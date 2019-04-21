@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'logs/index'
   get 'exercises/index'
   get 'muscles/index'
+  get 'routines/index'
 
   get 'exercises', to: redirect('/exercises/index')
   get 'workouts', to: redirect('/workouts/index')
@@ -13,11 +14,14 @@ Rails.application.routes.draw do
   get 'logs', to: redirect('/logs/index')
   get 'more', to: redirect('/more/index')
   get 'muscles', to: redirect('/muscles/index')
+  get '/routines', to: redirect('/routines/index')
   get '/homepage', to: redirect('/')
   post '/homepage' => 'homepage#post', as: :post_home
 
 
   resources :muscles
+
+  resources :routines
 
   resources :exercises do
     resources :logs

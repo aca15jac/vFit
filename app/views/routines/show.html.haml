@@ -1,0 +1,131 @@
+= render 'layouts/header'
+.padding-top
+.padding-top
+
+.card{:class => "width_85"}
+  .card-header
+    %h3.color-grey.text-center
+      = @routine.name
+  .card-body
+
+  -# Create an array of all the muscles targeted during this workout
+  - muscle_array = Array.new
+  - @muscles.each do |h|
+    - if h.muscle_name == @routine.muscle_1 || h.muscle_name == @routine.muscle_2 || h.muscle_name == @routine.muscle_3 || h.muscle_name == @routine.muscle_4 || h.muscle_name == @routine.muscle_5 || h.muscle_name == @routine.muscle_6 || h.muscle_name == @routine.muscle_7 || h.muscle_name == @routine.muscle_8 || h.muscle_name == @routine.muscle_9
+      - muscle_array.append(h)
+
+  -# Create a hash for the exercises that target the above muscles, and sign them a weighting on how many things they target
+  -@exercise_hash = Hash.new()
+  -@exercises.each do |u|
+    - if u.muscle_type_1 == @routine.muscle_1 || u.muscle_type_1 == @routine.muscle_2 || u.muscle_type_1 == @routine.muscle_3 || u.muscle_type_1 == @routine.muscle_4 || u.muscle_type_1 == @routine.muscle_5 || u.muscle_type_1 == @routine.muscle_6 || u.muscle_type_1 == @routine.muscle_7 || u.muscle_type_1 == @routine.muscle_8 || u.muscle_type_1 == @routine.muscle_9
+      - if @exercise_hash[u.id].nil?
+        - @exercise_hash[u.id] = 3
+  -@exercises.each do |u|
+    - if u.muscle_type_2 == @routine.muscle_1 || u.muscle_type_2 == @routine.muscle_2 || u.muscle_type_2 == @routine.muscle_3 || u.muscle_type_2 == @routine.muscle_4 || u.muscle_type_2 == @routine.muscle_5 || u.muscle_type_2 == @routine.muscle_6 || u.muscle_type_2 == @routine.muscle_7 || u.muscle_type_2 == @routine.muscle_8 || u.muscle_type_2 == @routine.muscle_9
+      - if @exercise_hash[u.id].nil?
+        - @exercise_hash[u.id] = 2
+      - if !@exercise_hash[u.id].nil?
+        - @exercise_hash[u.id] = @exercise_hash[u.id] + 2
+  -@exercises.each do |u|
+    - if u.muscle_type_3 == @routine.muscle_1 || u.muscle_type_3 == @routine.muscle_2 || u.muscle_type_3 == @routine.muscle_3 || u.muscle_type_3 == @routine.muscle_4 || u.muscle_type_3 == @routine.muscle_5 || u.muscle_type_3 == @routine.muscle_6 || u.muscle_type_3 == @routine.muscle_7 || u.muscle_type_3 == @routine.muscle_8 || u.muscle_type_3 == @routine.muscle_9
+      - if @exercise_hash[u.id].nil?
+        - @exercise_hash[u.id] = 1
+      - if !@exercise_hash[u.id].nil?
+        - @exercise_hash[u.id] = @exercise_hash[u.id] + 1
+  -# Sort the hash out so the most weighted are shown at the top
+  - @exercise_hash = @exercise_hash.sort_by{|id, weighting| -weighting}.to_h
+
+  %p Weightings for exercises:
+  = @exercise_hash
+  - @exercise_hash.default(key = nil)
+
+  -# Make hash to store the users completed exercises weightings
+  - @weighted_exercises = Hash.new(0)
+  - @exercise_hash.each do |v, n|
+    - @weighted_exercises[v] = 0
+
+  -# Work out how many times each exercise has been completed
+  - @current_user_logs.each do |i|
+    - if !@exercise_hash[i.exercise_id].nil?
+      - @weighted_exercises[i.exercise_id] +=  1
+  %p
+  %br
+  %p Weighted exercises:
+  = @weighted_exercises.sort_by{|id, weighting| weighting}.to_h
+
+  -# Put all relevant muscles in a hash and set the weighting of each to be 0 initially
+  - weighted_muscles = Hash.new(0)
+  - muscle_array.each do |m|
+    - weighted_muscles[m.id] = 0
+
+  -# Work out the weighting of each muscles used and store in the hash
+  - muscle_array.each do |a|
+    - @current_user_logs.each do |s|
+      - if @weighted_exercises.include? s.exercise_id
+        - if Exercise.find(s.exercise_id).muscle_type_1 == Muscle.find(a.id).muscle_name
+          - weighted_muscles[a.id] += 3
+        - if Exercise.find(s.exercise_id).muscle_type_2 == Muscle.find(a.id).muscle_name
+          - weighted_muscles[a.id] += 2
+        - if Exercise.find(s.exercise_id).muscle_type_3 == Muscle.find(a.id).muscle_name
+          - weighted_muscles[a.id] += 1
+  - weighted_muscles = weighted_muscles.sort_by{|i, o| o}.to_h
+  - weighted_muscles2 = weighted_muscles.sort_by{|i, o| o}
+
+  %p
+  %br
+  %p Weighted muscles
+  = weighted_muscles.to_h
+
+  %p suggestions
+  - suggestions = Hash.new(0)
+  - first_max = max = weighted_muscles2.last[1]
+  - 20.times do
+    - weighted_muscles.each do |j, k|
+      - max = weighted_muscles2.last
+      - if k < (max[1] - 2)
+        - @exercise_hash.each do |g, h|
+          - if Exercise.find(g).muscle_type_1 != Muscle.find(max[0].to_i).muscle_name && Exercise.find(g).muscle_type_2 != Muscle.find(max[0].to_i).muscle_name && Exercise.find(g).muscle_type_3 != Muscle.find(max[0].to_i).muscle_name
+            - if Exercise.find(g).muscle_type_1 == Muscle.find(j).muscle_name || Exercise.find(g).muscle_type_2 == Muscle.find(j).muscle_name || Exercise.find(g).muscle_type_3 == Muscle.find(j).muscle_name
+
+              - suggestions[g] = suggestions[g] + 1
+              - if !weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id].nil?
+                - weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id] += 3
+
+              - if weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id].nil?
+                - weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id] = 3
+
+              -# - if !Muscle.where(muscle_name: Exercise.find(g).muscle_type_2).nil?
+              -#   - if !weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_2).first.id].nil?
+              -#     - weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_2).first.id] += 2
+              -#   - if weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_2).first.id].nil?
+              -#     - weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_2).first.id] = 2
+              -# - if !Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).nil?
+              -#   - if !weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id].nil?
+              -#     - weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id] += 1
+              -#   - if weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id].nil?
+              -#     - weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id] = 1
+
+
+  = suggestions
+  %p Weighted muscles
+  = weighted_muscles
+
+
+
+
+
+  %p ______________________________________________________
+  - @exercise_hash.each do |p, q|
+    %p
+      = "#{Exercise.find(p).exercise_name}"+"(#{Exercise.find(p).id})" + " weighting: " + "#{q}"
+
+  .card-footer.text-center
+    %a.btn.btn-primary{:href => "/exercises"} Exercises
+    -if @progress_ID != 0
+      %a.btn.btn-primary{:href => routine_path(@progress_ID)} Back to tool
+
+
+
+
+
+.padding-bottom

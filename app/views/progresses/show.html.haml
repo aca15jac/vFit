@@ -74,6 +74,40 @@
                 = image_tag(tag, :alt => "#{y.exercise_name} image")
             %td.not_like_link.line-height_55
               = link_to "#{y.exercise_name}", progress_exercise_path(@progress.id, y.id)
+    - if @progress.name == "Suggested exercises"
+      %h3.color-grey.text-center.padding-bottom-quarter.width_85
+        Select a your daily routine
+      %h5.color-grey.text-center.padding-bottom-quarter.width_85
+        If you have any logs in your current workout, then additional exercises will be suggested
+      #accordionExample.accordion
+      - counter = 0
+      - @routines.each do |x|
+        - counter += 1
+        .card
+          .card_header{:id => "heading#{counter}", :onclick => "tog = this.parentElement.getElementsByClassName('collapse').item(0).getAttribute('class'); if (tog === 'collapse') {this.parentElement.getElementsByClassName('collapse').item(0).className = 'collapse show'} else {this.parentElement.getElementsByClassName('collapse').item(0).className = 'collapse'}", :class => "text-center"}
+            %h5.mb-0.background-light-grey
+              %button.btn.btn-link{"aria-controls" => "collapse#{counter}", "aria-expanded" => "true", "data-target" => "#collapse#{counter}", "data-toggle" => "collapse", :type => "button"}
+                %h5.color-grey.text-center
+                  = x.name
+          .collapse{:id => "#collapse#{counter}", "aria-labelledby" => "heading#{counter}", "data-parent" => "#accordionExample"}
+            .card-body.text-center
+              %table.table.width_100.text-center
+                %tr
+                - @muscles.each do |h|
+                  - if h.muscle_name == x.muscle_1 || h.muscle_name == x.muscle_2 || h.muscle_name == x.muscle_3 || h.muscle_name == x.muscle_4 || h.muscle_name == x.muscle_5 || h.muscle_name == x.muscle_6 || h.muscle_name == x.muscle_7 || h.muscle_name == x.muscle_8 || h.muscle_name == x.muscle_9
+                    %tr{:onclick => "location.href = this.getElementsByTagName('a').item(0).getAttribute('href');"}
+                      %td.not_like_link2
+                        = link_to "#{h.muscle_name}", muscle_path(h, progress_ID: @progress.id), :class => "color-grey"
+
+              %a.btn.btn-primary{:href => routine_path(x.id, progress_ID: @progress.id), :class => "width_50"} Select routine
+
+          -# This finds all relevant exercises
+          -# -@exercises.each do |u|
+          -#   - if u.muscle_type_1 == x.muscle_1 || u.muscle_type_1 == x.muscle_2 || u.muscle_type_1 == x.muscle_3 || u.muscle_type_1 == x.muscle_4 || u.muscle_type_1 == x.muscle_5 || u.muscle_type_1 == x.muscle_6 || u.muscle_type_1 == x.muscle_7 || u.muscle_type_1 == x.muscle_8 || u.muscle_type_1 == x.muscle_9 || u.muscle_type_2 == x.muscle_1 || 2 == x.muscle_2 || u.muscle_type_2 == x.muscle_2 || u.muscle_type_2 == x.muscle_3 || u.muscle_type_2 == x.muscle_4 || u.muscle_type_2 == -x.muscle_5 || u.muscle_type_2 == x.muscle_6 || u.muscle_type_2 == x.muscle_7 || u.muscle_type_2 == x.muscle_8 || u.muscle_type_2 == x.muscle_9 || u.muscle_type_3 == x.muscle_1 || u.muscle_type_3 == x.muscle_2 || u.muscle_type_3 == x.muscle_3 || u.muscle_type_3 == x.muscle_4 || u.muscle_type_3 == x.muscle_5 || u.muscle_type_3 == x.muscle_6 || u.muscle_type_3 == x.muscle_7 || u.muscle_type_3 == x.muscle_8 || u.muscle_type_3 == x.muscle_9
+          -#     %tr
+          -#       = u.exercise_name
+
+
 
 
 

@@ -1,7 +1,7 @@
 class ProgressesController < ApplicationController
   before_action :authenticate_user!
   def index
-    @title = "Progress"
+    @title = "Tools"
     @user = current_user
     @logs = Log.where(user_id: current_user.id)
     @exercises = Exercise.all
@@ -10,12 +10,13 @@ class ProgressesController < ApplicationController
   end
 
   def show
-    @title = "Progress"
+    @title = "Tools"
     @muscles = Muscle.all
     @user = current_user
     @logs = Log.where(user_id: current_user.id)
     @exercises = Exercise.all
     @progress = Progress.find(params[:id])
+    @routines = Routine.all
   end
 
 

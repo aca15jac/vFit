@@ -13,7 +13,7 @@
     - counter += 1
     .card
       .card_header{:id => "heading#{counter}", :onclick => "tog = this.parentElement.getElementsByClassName('collapse').item(0).getAttribute('class'); if (tog === 'collapse') {this.parentElement.getElementsByClassName('collapse').item(0).className = 'collapse show'} else {this.parentElement.getElementsByClassName('collapse').item(0).className = 'collapse'}", :class => "text-center"}
-        %h5.mb-0
+        %h5.mb-0.background-light-grey
           %button.btn.btn-link{"aria-controls" => "collapse#{counter}", "aria-expanded" => "true", "data-target" => "#collapse#{counter}", "data-toggle" => "collapse", :type => "button"}
             %h5.color-grey.text-center
               = x.muscle_name + "(" + x.muscle_group + ")"
