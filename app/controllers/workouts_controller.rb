@@ -53,7 +53,8 @@ class WorkoutsController < ApplicationController
     @user = current_user
     @current_user_logs = Log.where('(user_id = ?)', current_user.id)
     @log_types = Array.new
-    @workouts = Workout.where(workout_number: params[:id])
+    @workouts = Workout.where(workout_number: params[:id], user_id: current_user.id)
+    @workout_number = params[:id]
 
 
     render 'show'
