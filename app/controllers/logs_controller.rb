@@ -74,22 +74,52 @@ class LogsController < ApplicationController
 
 
   def update
+
     @title = "Logs"
     @exercise = Exercise.find(params[:exercise_id])
     @user = current_user
     @log = Log.find(params[:id])
-    @log.exercise_id = params[:log][:exercise_id]
-    @log.user_id = params[:log][:user_id]
-    @log.weighted = params[:log][:weighted]
-    @log.weight = params[:log][:weight]
-    @log.reps = params[:log][:reps]
-    @log.active = params[:log][:active]
-    if @log.save
+    if params[:log][:weight].present? && params[:log][:reps].present?
+
+      @log.exercise_id = params[:log][:exercise_id]
+      @log.user_id = params[:log][:user_id]
+      @log.weighted = params[:log][:weighted]
+      @log.weight = params[:log][:weight]
+      @log.reps = params[:log][:reps]
+      @log.active = params[:log][:active]
+      if (@log.weight.is_a? Numeric) && (@log.reps.is_a? Numeric)
+        if @log.weighted
+          if @log.weight > 0 && @log.reps > 0 && @log.weight <= 300 && @log.reps <= 50
+            if @log.save
+              @logsave = true
+            end
+          end
+        end
+        if !@log.weighted
+
+          if @log.reps > 0 && @log.reps <= 50
+            if @log.save
+              @logsave = true
+            end
+          end
+        end
+      end
+    end
+    if !@logsave
+      redirect_to edit_exercise_log_path(@exercise.id, @log.id, failure:true)
+    end
+
+    if @logsave
       render 'update'
     end
   end
 
   def edit
+    if params[:failure].present?
+      @failure = true
+    else
+      @failure = false
+    end
     @title = "Logs"
     @exercise = Exercise.find(params[:exercise_id])
     @log = Log.find(params[:id])

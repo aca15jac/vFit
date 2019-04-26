@@ -27,6 +27,9 @@
               = f.input :reps, required: true, placeholder: "Number of reps", label: false, :input_html => { :class => 'logs_input reps2' }
             = f.input :weight, required: true, label: false, as: "hidden", :input_html => {:value => 0}
           = f.input :active, required: true, label: false, :input_html => { :value => true}, as: "hidden"
+          - if @failure == true
+            .text-center.padding-top-half.error
+              Values need to be numerical and greater than 0
         .text-center.padding-top-half.logs_submit
           = f.button :submit, "Update log", :method => :patch, :class => "btn btn-secondary"
       .text-center.padding-top-half.logs_submit
