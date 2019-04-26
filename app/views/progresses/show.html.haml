@@ -74,6 +74,8 @@
                 = image_tag(tag, :alt => "#{y.exercise_name} image")
             %td.not_like_link.line-height_55
               = link_to "#{y.exercise_name}", progress_exercise_path(@progress.id, y.id)
+
+
     - if @progress.name == "Suggested exercises"
       %h3.color-grey.text-center.padding-bottom-quarter.width_85
         Select a your daily routine

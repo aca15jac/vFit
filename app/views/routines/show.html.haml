@@ -94,21 +94,29 @@
               - if weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id].nil?
                 - weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id] = 3
 
-              -# - if !Muscle.where(muscle_name: Exercise.find(g).muscle_type_2).nil?
-              -#   - if !weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_2).first.id].nil?
-              -#     - weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_2).first.id] += 2
-              -#   - if weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_2).first.id].nil?
-              -#     - weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_2).first.id] = 2
-              -# - if !Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).nil?
-              -#   - if !weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id].nil?
-              -#     - weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id] += 1
-              -#   - if weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id].nil?
-              -#     - weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id] = 1
+
+              - if !Muscle.where(muscle_name: Exercise.find(g).muscle_type_2).nil?
+                - if !Muscle.where(muscle_name: Exercise.find(g).muscle_type_2).first.nil?
+                  - if !weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_2).first.id].nil?
+                    - weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_2).first.id] += 2
+                  - if weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_2).first.id].nil?
+                    - weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_2).first.id] = 2
+
+              - if !Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).nil?
+                - if !Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.nil?
+                  - if !weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id].nil?
+                    - weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id] += 1
+                  - if weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id].nil?
+                    - weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id] = 1
 
 
   = suggestions
   %p Weighted muscles
   = weighted_muscles
+  %br
+  - weighted_muscles.each do |i|
+    = "|" + Muscle.find(i[0]).muscle_name + " " + i[0].to_s + ", " + i[1].to_s
+  = "|"
 
 
 

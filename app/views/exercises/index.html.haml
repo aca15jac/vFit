@@ -39,7 +39,7 @@
       = link_to image_tag("back-calves-left.png", id:"back-calves-left"), ("/muscles/#{Muscle.where(muscle_name:"Calves").take.id}")
       = link_to image_tag("back-calves-right.png", id:"back-calves-right"), ("/muscles/#{Muscle.where(muscle_name:"Calves").take.id}")
       -# NEED TO ADD: TRANSVERSE ABDOMINIS, OBLIQUES, ADDUCTORS, ABDUCTORS AND POSTERIOR DELTOIDS
-      .tiny-text Note: The images used for this muscle map were taken from MuscleWiki.org
+    .tiny-text.text-center Note: The images used for this muscle map are from MuscleWiki.org
     .card-body
       = button_to("Or click here to view all exercises", '/muscles/index', :class => "btn btn-primary btn-lg btn-block", :method => "get")
 

@@ -9,7 +9,7 @@ class RoutinesController < ApplicationController
   def show
     @title = "Routines"
     @routine = Routine.find(params[:id])
-    @current_user_logs = Log.where(user_id: current_user.id)
+    @current_user_logs = Log.where(user_id: current_user.id, active: true)
     @exercises = Exercise.all
     @muscles = Muscle.all
     if !params[:progress_ID].nil?
