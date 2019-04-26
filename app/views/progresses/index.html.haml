@@ -11,12 +11,12 @@
         %td Metric
         %td Description
       - progress_list.each do |y|
-
-        %tr{:onclick => "location.href = this.getElementsByTagName('a').item(0).getAttribute('href');"}
-          %td.not_like_link
-            = link_to "#{y.name}", progress_path(y)
-            %td.not_like_link#description-text
-              = link_to "#{y.description}", progress_path(y)
+        - if y.name != "Suggested exercises"
+          %tr{:onclick => "location.href = this.getElementsByTagName('a').item(0).getAttribute('href');"}
+            %td.not_like_link
+              = link_to "#{y.name}", progress_path(y)
+              %td.not_like_link#description-text
+                = link_to "#{y.description}", progress_path(y)
 
 
     %a.btn.btn-primary{:href => "/logs", :class => "margin-top-half"} Logs

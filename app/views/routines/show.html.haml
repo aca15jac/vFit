@@ -69,6 +69,7 @@
         - if Exercise.find(s.exercise_id).muscle_type_3 == Muscle.find(a.id).muscle_name
           - weighted_muscles[a.id] += 1
   - weighted_muscles = weighted_muscles.sort_by{|i, o| o}.to_h
+
   - weighted_muscles2 = weighted_muscles.sort_by{|i, o| o}
 
   %p
@@ -76,39 +77,101 @@
   %p Weighted muscles
   = weighted_muscles.to_h
 
+
+
+
+  -# %p suggestions
+  -# - suggestions = Hash.new(0)
+  -# - first_max = max = weighted_muscles2.last[1]
+  -# - 20.times do
+  -#   - weighted_muscles.each do |j, k|
+  -#     - max = weighted_muscles2.last
+  -#     - if k < (max[1] - 2)
+  -#       - @exercise_hash.each do |g, h|
+  -#         - suggestion_compare = suggestions
+  -#         - if Exercise.find(g).muscle_type_1 != Muscle.find(max[0].to_i).muscle_name && Exercise.find(g).muscle_type_2 != Muscle.find(max[0].to_i).muscle_name && Exercise.find(g).muscle_type_3 != Muscle.find(max[0].to_i).muscle_name
+  -#           - if Exercise.find(g).muscle_type_1 == Muscle.find(j).muscle_name || Exercise.find(g).muscle_type_2 == Muscle.find(j).muscle_name || Exercise.find(g).muscle_type_3 == Muscle.find(j).muscle_name
+  -#             - if
+  -#             - suggestions[g] = suggestions[g] + 1
+  -#             - if !weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id].nil?
+  -#               - weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id] += 3
+  -#
+  -#             - if weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id].nil?
+  -#               - weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id] = 3
+  -#
+  -#
+  -#             - if !Muscle.where(muscle_name: Exercise.find(g).muscle_type_2).nil?
+  -#               - if !Muscle.where(muscle_name: Exercise.find(g).muscle_type_2).first.nil?
+  -#                 - if !weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_2).first.id].nil?
+  -#                   - weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_2).first.id] += 2
+  -#                 - if weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_2).first.id].nil?
+  -#                   - weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_2).first.id] = 2
+  -#
+  -#             - if !Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).nil?
+  -#               - if !Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.nil?
+  -#                 - if !weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id].nil?
+  -#                   - weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id] += 1
+  -#                 - if weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id].nil?
+  -#                   - weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id] = 1
   %p suggestions
   - suggestions = Hash.new(0)
   - first_max = max = weighted_muscles2.last[1]
-  - 20.times do
+  - 2.times do
     - weighted_muscles.each do |j, k|
       - max = weighted_muscles2.last
-      - if k < (max[1] - 2)
+      - if k < (max[1])
         - @exercise_hash.each do |g, h|
+          - suggestions_compare = suggestions
+          - weighted_muscles_compare = weighted_muscles
           - if Exercise.find(g).muscle_type_1 != Muscle.find(max[0].to_i).muscle_name && Exercise.find(g).muscle_type_2 != Muscle.find(max[0].to_i).muscle_name && Exercise.find(g).muscle_type_3 != Muscle.find(max[0].to_i).muscle_name
             - if Exercise.find(g).muscle_type_1 == Muscle.find(j).muscle_name || Exercise.find(g).muscle_type_2 == Muscle.find(j).muscle_name || Exercise.find(g).muscle_type_3 == Muscle.find(j).muscle_name
-
-              - suggestions[g] = suggestions[g] + 1
-              - if !weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id].nil?
-                - weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id] += 3
-
-              - if weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id].nil?
-                - weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id] = 3
-
-
+              - suggestions_compare[g] = suggestions[g] + 1
+              - if !weighted_muscles_compare[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id].nil?
+                - weighted_muscles_compare[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id] = weighted_muscles_compare[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id].to_i + 3
+              - if weighted_muscles_compare[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id].nil?
+                - weighted_muscles_compare[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id] = 3
               - if !Muscle.where(muscle_name: Exercise.find(g).muscle_type_2).nil?
                 - if !Muscle.where(muscle_name: Exercise.find(g).muscle_type_2).first.nil?
-                  - if !weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_2).first.id].nil?
-                    - weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_2).first.id] += 2
-                  - if weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_2).first.id].nil?
-                    - weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_2).first.id] = 2
-
+                  - if !weighted_muscles_compare[Muscle.where(muscle_name: Exercise.find(g).muscle_type_2).first.id].nil?
+                    - weighted_muscles_compare[Muscle.where(muscle_name: Exercise.find(g).muscle_type_2).first.id] = weighted_muscles_compare[Muscle.where(muscle_name: Exercise.find(g).muscle_type_2).first.id].to_i + 2
+                  - if weighted_muscles_compare[Muscle.where(muscle_name: Exercise.find(g).muscle_type_2).first.id].nil?
+                    - weighted_muscles_compare[Muscle.where(muscle_name: Exercise.find(g).muscle_type_2).first.id] = 2
               - if !Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).nil?
                 - if !Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.nil?
-                  - if !weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id].nil?
-                    - weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id] += 1
-                  - if weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id].nil?
-                    - weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id] = 1
+                  - if !weighted_muscles_compare[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id].nil?
+                    - weighted_muscles_compare[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id] = weighted_muscles_compare[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id].to_i + 1
+                  - if weighted_muscles_compare[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id].nil?
+                    - weighted_muscles_compare[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id] = 1
+              - @over = false
+              - weighted_muscles_compare.each do |w|
+                %br
+                = w[1].to_s + " " + max[1].to_s
+                - if w[1] >= max[1] - 1
+                  - @over = true
+              = @over
+              - if @over == false
+                = "doing"
+                - suggestions[g] = suggestions[g] + 1
+                - if !weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id].nil?
+                  - weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id] = weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id].to_i + 3
 
+                - if weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id].nil?
+                  - weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id] = 3
+
+
+                - if !Muscle.where(muscle_name: Exercise.find(g).muscle_type_2).nil?
+                  - if !Muscle.where(muscle_name: Exercise.find(g).muscle_type_2).first.nil?
+                    - if !weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_2).first.id].nil?
+                      - weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_2).first.id] = weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_2).first.id].to_i + 2
+                    - if weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_2).first.id].nil?
+                      - weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_2).first.id] = 2
+
+                - if !Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).nil?
+                  - if !Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.nil?
+                    - if !weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id].nil?
+                      - weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id] = weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id].to_i + 1
+                    - if weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id].nil?
+                      - weighted_muscles[Muscle.where(muscle_name: Exercise.find(g).muscle_type_1).first.id] = 1
 
   = suggestions
   %p Weighted muscles
