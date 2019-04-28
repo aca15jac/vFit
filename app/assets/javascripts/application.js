@@ -15,10 +15,10 @@
 //= require turbolinks
 //= require_tree .
 //= require serviceworker-companion
-//= require jquery
-//= require jquery_ujs
+
 //= require Chart.bundle
 //= require chartkick
+
 //= navbar
 //= bootstrap
 //= click_row
