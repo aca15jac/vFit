@@ -19,7 +19,6 @@
 //= require jquery_ujs
 //= require Chart.bundle
 //= require chartkick
-//= jquery-3.3.1
 //= navbar
 //= bootstrap
 //= click_row
