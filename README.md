@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+In order to get the app up and running first run "bundle install".
+Then run "bundle exec rails db:migrate"
+Then run "bundle exec rails db:seed"
+Then run "rails s"
 
-Things you may want to cover:
+Then visit "localhost:3000"
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The system should be up and running.
+You will need to create an account before using the app
